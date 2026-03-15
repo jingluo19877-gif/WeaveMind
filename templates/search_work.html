@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>文创搜索结果</title>
+    <!-- Bootstrap CSS Link -->
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" media="all">
+    <!-- Owl Carousel CSS Link -->
+    <link rel="stylesheet" href="static/css/owl.carousel.min.css" type="text/css" media="all">
+    <!-- Animate CSS Link -->
+    <link rel="stylesheet" href="static/css/animate.css" type="text/css" media="all">
+    <!-- Animated text CSS Link -->
+    <link rel="stylesheet" href="static/css/animated-text.css" type="text/css" media="all">
+    <!-- Font Awesome CSS Link -->
+    <link rel="stylesheet" href="static/css/all.min.css" type="text/css" media="all">
+    <!-- Font Flaticon CSS Link -->
+    <link rel="stylesheet" href="static/css/flaticon.css" type="text/css" media="all">
+    <!-- Custom default CSS Link -->
+    <link rel="stylesheet" href="static/css/custom-default.css" type="text/css" media="all">
+    <!-- Meanmenu CSS Link -->
+    <link rel="stylesheet" href="static/css/meanmenu.min.css" type="text/css" media="all">
+    <!-- Transitions CSS Link -->
+    <link rel="stylesheet" href="static/css/owl.transitions.css" type="text/css" media="all">
+    <!-- Venobox CSS Link -->
+    <link rel="stylesheet" href="static/css/venobox.css" type="text/css" media="all">
+    <!-- Bootstrap Icons Link -->
+    <link rel="stylesheet" href="static/css/bootstrap-icons.css" type="text/css" media="all">
+    <!-- Custom Style CSS Link -->
+    <link rel="stylesheet" href="static/css/style.css" type="text/css" media="all">
+    <!-- Responsive CSS Link -->
+    <link rel="stylesheet" href="static/css/responsive.css" type="text/css" media="all">
+    <link href="static/css/clash-display.css" rel="stylesheet">
+
+    <style>
+        .search-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-gap: 40px;
+}
+    </style>
+    <style>
+
+        /* 自定义弹窗背景样式 */
+        .modal-content {
+            background-image: url('static/picture/tab-22-L.jpg'); /* 设置背景图片路径 */
+            background-size: cover; /* 背景图片铺满模态框 */
+            border-radius: 10px; /* 设置边框圆角 */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* 设置阴影效果 */
+        }
+    </style>
+</head>
+<body>
+
+<div class="loader_bg">
+    <div class="loader"></div>
+    <h4 class="loading-title">Loading...</h4>
+</div>
+
+
+<header class="header-manu-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-10">
+                <nav class="header-menu ">
+                    <ul>
+                        <li><a href="index.html" class="active">首页 <i class="bi bi-chevron-down"></i></a>
+                        </li>
+                        <li><a href="w_MLanguageSupport.html">非遗档案<i class="bi "></i></a>
+                        </li>
+                        <li><a href="#">文创<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="work.html">文创精选</a></li>
+                                    <li><a href="mycollectp.html#potfolio-details-section-2">文创助手</a></li>
+                                    <li><a href="dream.html">非遗游戏</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="heartpp.html">智能推荐<i class="bi "></i></a>
+                        </li>
+                        <li><a href="#">数字非遗<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="number.html">非遗数字体验馆</a></li>
+                                    <li><a href="knowledge.html">非遗知识图谱</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">非遗旅游<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="mycollectp.html#potfolio-details-section-1">非遗旅游AI定制</a></li>
+                                    <li><a href="appointment.html">【中国非物质遗产文化馆】预约</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">探索 <i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="z_map.html">非遗地图</a></li>
+                                    <li><a href="t_line.html">非遗传承人</a></li>
+                                    <li><a href="z_test.html">非遗测试</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">欢迎, {{ session['username'] }}<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="mycollectp.html"> {{ session['username'] }}的收藏</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!--==================================================-->
+<!-- End Adira City Header Main Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Main Menu Area -->
+<!--==================================================-->
+<div class="mobile-menu-area sticky d-sm-block d-md-block d-lg-none ">
+    <div class="mobile-menu">
+        <nav class="header-menu">
+            <ul class="nav_scroll">
+                <li class="menu-item-has-children"><a href="index.html">首页</a>
+                </li>
+                <li class="menu-item-has-children"><a href="w_MLanguageSupport.html">非遗档案</a>
+                </li>
+                <li class="menu-item-has-children"><a href="#">文创</a>
+                    <ul class="sub-menu">
+                        <li><a href="work.html">文创精选</a></li>
+                        <li><a href="mycollectp.html#potfolio-details-section-2">文创助手</a></li>
+                        <li><a href="dream.html">非遗游戏</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="heartpp.html">智能推荐</a></li>
+                <li class="menu-item-has-children"><a href="#">数字非遗</a>
+                    <ul class="sub-menu">
+                        <li><a href="number.html">非遗数字体验馆</a></li>
+                        <li><a href="knowledge.html">非遗知识图谱</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">非遗旅游</a>
+                    <ul class="sub-menu">
+                        <li><a href="mycollectp.html#potfolio-details-section-1">非遗旅游AI定制</a></li>
+                        <li><a href="appointment.html">【中国非物质遗产文化馆】预约</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">探索</a>
+                    <ul class="sub-menu">
+                        <li><a href="z_map.html">非遗地图</a></li>
+                        <li><a href="t_line.html">非遗传承人</a></li>
+                        <li><a href="z_test.html">非遗测试</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<!--==================================================-->
+<!-- End Main Menu Area -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Adira City Banner Inner Section -->
+<!--==================================================-->
+<section class="banner-inner-section-base">
+    <div class="container ">
+        <div class="row ">
+            <div class="col-lg-12">
+                <div class="banner-inner-section-title wow fadeInRight animated">
+                    <h1>文创搜索结果</h1>
+                </div>
+                <div class="banner-inner-link wow fadeInRight animated">
+                    <a href="index.html"><i class="fas fa-home"></i> home </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="successModalLabel">成功添加到收藏夹</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- 可选：添加成功提示信息 -->
+                <p>已成功添加到您的收藏夹，在“我的收藏”中可查看收藏内容</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 主体内容区域 -->
+
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+
+
+<!-- 搜索结果区域 -->
+<section class="potfolio-details-section-1">
+    <div class="container">
+        {% if search_results %}
+        {% for project in search_results %}
+        <div class="portfolio-info-4">
+            <div class="tab-item">
+                <div class="row align-items-center">
+                    <div class="col-lg-3">
+                        <div class="shop-content-thumb">
+                            {% set image_path = 'projectm/' + project.specific_number + '.png' %}
+                            <img src="{{ url_for('static', filename=image_path) }}" alt="thumb">
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="shop-tab-details">
+                            <div class="tab-item-title">
+                                <h4>{{ project.work_name }}</h4>
+                            </div>
+                            <div class="item-rate">
+                                <div class="item-rate-icon">
+                                    <ul>
+                                        <li><i class="bi bi-star-fill"></i></li>
+                                        <li><i class="bi bi-star-fill"></i></li>
+                                        <li><i class="bi bi-star-fill"></i></li>
+                                        <li><i class="bi bi-star-fill"></i></li>
+                                        <li><i class="bi bi-star-half"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab-item-desc">
+                                <p>大类：{{ project.category_big }}</p>
+                            </div>
+                            <div class="tab-item-desc">
+                                <p>小类：{{ project.category_small }}</p>
+                            </div>
+                            <div class="tab-item-desc">
+                                <p>价格：{{ project.price }}</p>
+                            </div>
+                            <div class="add-to-cart">
+                                <a href="#"
+                                   onclick="openTaobaoSearch('{{ project.work_name }}'); handleBrowse_work('{{ project.id }}'); return false;"><i
+                                        class="bi "></i> 购买</a>
+
+                                <a href="#"
+                                   onclick="handleLikeClick_work('{{ project.id }}','{{ project.work_name }}', '{{ project.category_big }}'); return false;"
+                                   id="likeButton2{{ project.id }}" data-project-id="{{ project.id }}"><i
+                                        class="bi "></i>收藏</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+        {% else %}
+        <p>No results found.</p>
+        {% endif %}
+    </div>
+</section>
+
+<footer class="footer-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 wow fadeInLeft animated">
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInDown animated">
+                <div class="footer-explore">
+                    <div class="footer-explore-title">
+                        <h6>友情链接</h6>
+                    </div>
+                    <ul>
+                        <li><a href="https://www.mct.gov.cn/">中华人民共和国文化和旅游部</a></li>
+                        <li><a href="https://fyrhome.cn/">中国非物质文化遗产网</a></li>
+                        <li><a href="http://www.ncha.gov.cn/">国家文物局</a></li>
+                        <li><a href="https://www.chinesefolklore.org.cn/">中国民俗学网</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <div class="footer-bootom">
+                        <p>“遗”见倾心<a></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+    function handleBrowse_work(workId) {
+        // Send AJAX request to Flask backend
+        fetch('/log_work_interaction', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                work_id: workId
+            })
+        })
+        .then(function(response) {
+            if (response.ok) {
+                console.log('work interaction logged successfully.');
+                // Optionally update the UI or perform other actions upon success
+            } else {
+                throw new Error('Failed to log work interaction.');
+            }
+        })
+        .catch(function(error) {
+            console.error('Error logging work interaction:', error);
+        });
+    }
+</script>
+<script>
+    // JavaScript 函数用于在居中位置打开淘宝搜索窗口
+    function openTaobaoSearch(workName) {
+        // 构造淘宝搜索链接
+        var searchUrl = 'https://s.taobao.com/search?q=' + encodeURIComponent(workName);
+
+        // 定义窗口大小和居中位置
+        var windowWidth = 800;
+        var windowHeight = 600;
+        var windowLeft = (window.screen.width - windowWidth) / 2;
+        var windowTop = (window.screen.height - windowHeight) / 2;
+
+        // 构建窗口特性字符串
+        var windowFeatures = 'width=' + windowWidth + ',height=' + windowHeight + ',left=' + windowLeft + ',top=' + windowTop +
+                             ',menubar=no,toolbar=no,location=no,resizable=yes,scrollbars=yes,status=yes';
+
+        // 打开新窗口以居中显示淘宝搜索结果
+        var taobaoSearchWindow = window.open(searchUrl, '_blank', windowFeatures);
+
+        if (taobaoSearchWindow) {
+            // 等待新窗口加载完成后填入搜索框
+            taobaoSearchWindow.addEventListener('load', function() {
+                // 在新窗口中查找搜索框元素
+                var searchInput = taobaoSearchWindow.document.getElementById('q');
+
+                // 将关键词填入搜索框
+                if (searchInput) {
+                    searchInput.value = decodeURIComponent(workName); // 将 URL 编码的关键词解码后填入搜索框
+
+                    // 触发搜索（可选）
+                    searchInput.form.submit(); // 提交搜索表单，执行搜索
+                }
+            });
+
+            // 在新窗口加载完成后可以进行其他操作（可选）
+            console.log('成功打开淘宝搜索窗口。');
+
+        } else {
+            // 处理弹窗被阻止的情况（如果适用）
+            console.error('无法打开淘宝搜索窗口。可能被弹窗阻止了。');
+        }
+    }
+</script>
+<script>
+
+    function handleLikeClick_work(workId,workName, categoryBig) {
+        addToFavorites_work(workName, categoryBig);
+        addToFavorites_2_work(workId);
+    }
+</script>
+<script>
+    function addToFavorites_work(workName, categoryBig) {
+        // 这里可以添加向后端发送请求将项目添加到收藏夹的逻辑
+
+        // 设置弹窗消息内容
+        var successMessage = "项目名称：" + workName + "<br>大类：" + categoryBig;
+
+        // 显示弹窗
+        var modal = $('#successModal2');
+        var messageElement = $('#successMessage');
+        messageElement.html(successMessage);
+        modal.modal('show'); // 使用 Bootstrap modal 方法显示弹窗
+    }
+
+    // 在点击“喜欢”按钮时调用 addToFavorites 方法
+    $(document).ready(function() {
+        // 使用 jQuery 来绑定点击事件
+        $('a.like-button').click(function(event) {
+            event.preventDefault(); // 阻止默认链接行为
+
+            // 获取项目名称和大类信息
+            var workName = $(this).data('work-name');
+            var categoryBig = $(this).data('category-big');
+
+            // 调用 addToFavorites 方法
+            addToFavorites(workName, categoryBig);
+        });
+    });
+</script>
+<script>
+    function addToFavorites_2_work(workId) {
+fetch('/favorite_work', {
+   method: 'POST',
+   headers: {
+       'Content-Type': 'application/json',
+   },
+   body: JSON.stringify({
+       work_id: workId
+   }),
+})
+.then(response => {
+   if (response.ok) {
+       // 更新按钮状态为已收藏
+       const likeButton = document.getElementById('likeButton2' + workId); // 使用 projectId 动态获取按钮元素
+       likeButton.innerHTML = '<i class="bi"></i> 已收藏';
+       likeButton.classList.add('favorited'); // 添加一个CSS类来修改样式
+
+   } else {
+       alert('添加收藏时出现问题，请稍后重试。');
+   }
+})
+.catch(error => {
+   console.error('Error:', error);
+   alert('添加收藏时出现错误，请稍后重试。');
+});
+}
+</script>
+
+
+<script src="static/js/modernizr-3.5.0.min.js"></script>
+<!-- Vendor JS CDN -->
+<script src="static/js/jquery-3.6.2.min.js"></script>
+<!-- Popper JS CDN -->
+<script src="static/js/popper.min.js"></script>
+<!-- Bootstrap JS CDN -->
+<script src="static/js/bootstrap.min.js"></script>
+<!-- Owl Carousel JS CDN -->
+<script src="static/js/owl.carousel.min.js"></script>
+<!-- CounterUp JS CDN -->
+<script src="static/js/jquery.counterup.min.js"></script>
+<!-- WayPoints JS CDN -->
+<script src="static/js/waypoints.min.js"></script>
+<!-- WOW JS CDN -->
+<script src="static/js/wow.js"></script>
+<!-- Imageloaded JS CDN -->
+<script src="static/js/imagesloaded.pkgd.min.js"></script>
+<!-- Venubox JS CDN -->
+<script src="static/js/venobox.js"></script>
+<!-- Animated JS CDN -->
+<script src="static/js/animated-text.js"></script>
+<!-- VenuBox JS CDN -->
+<script src="static/js/venobox.min.js"></script>
+<!-- PKG JS CDN -->
+<script src="static/js/isotope.pkgd.min.js"></script>
+<!-- MeanMenu JS CDN -->
+<script src="static/js/jquery.meanmenu.js"></script>
+<!-- ScrollUp JS CDN -->
+<script src="static/js/jquery.scrollUp.js"></script>
+<!-- Burfiller JS CDN -->
+<script src="static/js/jquery.barfiller.js"></script>
+<!-- Custom JS CDN -->
+<script src="static/js/custom.js"></script>
+</body>
+</html>
+

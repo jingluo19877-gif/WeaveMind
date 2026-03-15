@@ -1,0 +1,981 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>非遗知识趣味测试</title>
+    <!-- Favicon -->
+
+    <!-- Bootstrap CSS Link -->
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" media="all">
+    <!-- Owl Carousel CSS Link -->
+    <link rel="stylesheet" href="static/css/owl.carousel.min.css" type="text/css" media="all">
+    <!-- Animate CSS Link -->
+    <link rel="stylesheet" href="static/css/animate.css" type="text/css" media="all">
+    <!-- Animated text CSS Link -->
+    <link rel="stylesheet" href="static/css/animated-text.css" type="text/css" media="all">
+    <!-- Font Awesome CSS Link -->
+    <link rel="stylesheet" href="static/css/all.min.css" type="text/css" media="all">
+    <!-- Font Flaticon CSS Link -->
+    <link rel="stylesheet" href="static/css/flaticon.css" type="text/css" media="all">
+    <!-- Custom default CSS Link -->
+    <link rel="stylesheet" href="static/css/custom-default.css" type="text/css" media="all">
+    <!-- Meanmenu CSS Link -->
+    <link rel="stylesheet" href="static/css/meanmenu.min.css" type="text/css" media="all">
+    <!-- Transitions CSS Link -->
+    <link rel="stylesheet" href="static/css/owl.transitions.css" type="text/css" media="all">
+    <!-- Venobox CSS Link -->
+    <link rel="stylesheet" href="static/css/venobox.css" type="text/css" media="all">
+    <!-- Bootstrap Icons Link -->
+    <link rel="stylesheet" href="static/css/bootstrap-icons.css" type="text/css" media="all">
+    <!-- Custom Style CSS Link -->
+    <link rel="stylesheet" href="static/css/style.css" type="text/css" media="all">
+    <!-- Responsive CSS Link -->
+    <link rel="stylesheet" href="static/css/responsive.css" type="text/css" media="all">
+    <link href="static/css/clash-display.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+<!-- Preloader -->
+<div class="loader_bg">
+    <div class="loader"></div>
+    <h4 class="loading-title">Loading...</h4>
+</div>
+
+<!--==================================================-->
+<!-- Start Adira City Header Menu Section -->
+<!--==================================================-->
+
+<header class="header-manu-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-10">
+                <nav class="header-menu ">
+                    <ul>
+                        <li><a href="index.html" class="active">首页 <i class="bi bi-chevron-down"></i></a>
+                        </li>
+                        <li><a href="w_MLanguageSupport.html">非遗档案<i class="bi "></i></a>
+                        </li>
+                        <li><a href="#">文创<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="work.html">文创精选</a></li>
+                                    <li><a href="mycollectp.html#potfolio-details-section-2">文创助手</a></li>
+                                    <li><a href="dream.html">非遗游戏</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="heartpp.html">智能推荐<i class="bi "></i></a>
+                        </li>
+                        <li><a href="#">数字非遗<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="number.html">非遗数字体验馆</a></li>
+                                    <li><a href="knowledge.html">非遗知识图谱</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">非遗旅游<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="mycollectp.html#potfolio-details-section-1">非遗旅游AI定制</a></li>
+                                    <li><a href="appointment.html">【中国非物质遗产文化馆】预约</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">探索 <i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="z_map.html">非遗地图</a></li>
+                                    <li><a href="t_line.html">非遗传承人</a></li>
+                                    <li><a href="z_test.html">非遗测试</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">欢迎, {{ session['username'] }}<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="mycollectp.html"> {{ session['username'] }}的收藏</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!--==================================================-->
+<!-- End Adira City Header Main Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Main Menu Area -->
+<!--==================================================-->
+<div class="mobile-menu-area sticky d-sm-block d-md-block d-lg-none ">
+    <div class="mobile-menu">
+        <nav class="header-menu">
+            <ul class="nav_scroll">
+                <li class="menu-item-has-children"><a href="index.html">首页</a>
+                </li>
+                <li class="menu-item-has-children"><a href="w_MLanguageSupport.html">非遗档案</a>
+                </li>
+                <li class="menu-item-has-children"><a href="#">文创</a>
+                    <ul class="sub-menu">
+                        <li><a href="work.html">文创精选</a></li>
+                        <li><a href="mycollectp.html#potfolio-details-section-2">文创助手</a></li>
+                        <li><a href="dream.html">非遗游戏</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="heartpp.html">智能推荐</a></li>
+                <li class="menu-item-has-children"><a href="#">数字非遗</a>
+                    <ul class="sub-menu">
+                        <li><a href="number.html">非遗数字体验馆</a></li>
+                        <li><a href="knowledge.html">非遗知识图谱</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">非遗旅游</a>
+                    <ul class="sub-menu">
+                        <li><a href="mycollectp.html#potfolio-details-section-1">非遗旅游AI定制</a></li>
+                        <li><a href="appointment.html">【中国非物质遗产文化馆】预约</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">探索</a>
+                    <ul class="sub-menu">
+                        <li><a href="z_map.html">非遗地图</a></li>
+                        <li><a href="t_line.html">非遗传承人</a></li>
+                        <li><a href="z_test.html">非遗测试</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<!--==================================================-->
+<!-- End Adira City Header Main Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Main Menu Area -->
+<!--==================================================-->
+
+<!--==================================================-->
+<!-- End Main Menu Area -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Adira City Banner Inner Section -->
+<!--==================================================-->
+<section class="banner-inner-section-z">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="adiracity-section-sub-title wow fadeInLeft animated">
+                    <h4>How much do you know about <br>intangible cultural heritage?</h4>
+                </div>
+                <div class="banner-inner-section-title wow fadeInRight animated">
+                    <h1>你对非物质文化遗产<br>了解多少呢?</h1>
+                </div>
+                <div class="banner-inner-link wow fadeInRight animated">
+                    <a href="index.html"><i class="fas fa-home"></i> home </a>
+                    <span>.</span>
+                    <!--						<a href="">Portfolio</a>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--==================================================-->
+<!-- End Adira City Banner Inner Section -->
+<!--==================================================-->
+
+
+<!--================照片==================================-->
+<!-- Start Adira City Case Study Section -->
+<!--==================================================-->
+<section class="case-study-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="case-study-top">
+                    <div class="adiracity-section-sub-title wow fadeInLeft animated">
+                        <h1>非遗知识小测验</h1>
+                    </div>
+                    <!--						<div class="adiracity-section-title wow fadeInLeft animated">-->
+                    <!--							<h1>WEB DESIGN BEST CASE STUDIES</h1>-->
+                    <!--						</div>-->
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="case-study-grid-items wow fadeInLeft animated">
+                <div class="case-study-grid-item">
+                    <img src="static/picture/z_test_con_1.jpg" alt="thumb">
+                    <div class="case-study-thumb-inner">
+                        <a class="portfolio-icon venobox vbox-item" data-gall="myportfolio"
+                           href="static/picture/z_test_con_1.jpg"><i class="bi bi-plus-lg"></i></a>
+                    </div>
+                </div>
+                <div class="case-study-grid-item wow fadeInDown animated">
+                    <img src="static/picture/z_test_con_2.jpg" alt="thumb">
+                    <div class="case-study-thumb-inner">
+                        <a class="portfolio-icon venobox vbox-item" data-gall="myportfolio"
+                           href="static/picture/z_test_con_2.jpg"><i class="bi bi-plus-lg"></i></a>
+                    </div>
+                </div>
+                <div class="case-study-grid-item wow fadeInUp animated">
+                    <img src="static/picture/z_test_con_3.jpg" alt="thumb">
+                    <div class="case-study-thumb-inner">
+                        <a class="portfolio-icon venobox vbox-item" data-gall="myportfolio"
+                           href="static/picture/z_test_con_3.jpg"><i class="bi bi-plus-lg"></i></a>
+                    </div>
+                </div>
+                <div class="case-study-grid-item wow fadeInRight animated">
+                    <img src="static/picture/z_test_con_4.jpg" alt="thumb">
+                    <div class="case-study-thumb-inner">
+                        <a class="portfolio-icon venobox vbox-item" data-gall="myportfolio"
+                           href="static/picture/z_test_con_4.jpg"><i class="bi bi-plus-lg"></i></a>
+                    </div>
+                </div>
+                <div class="case-study-grid-item wow fadeInLeft animated">
+                    <img src="static/picture/z_test_con_5.jpg" alt="thumb">
+                    <div class="case-study-thumb-inner">
+                        <a class="portfolio-icon venobox vbox-item" data-gall="myportfolio"
+                           href="static/picture/z_test_con_5.jpg"><i class="bi bi-plus-lg"></i></a>
+                    </div>
+                </div>
+                <div class="case-study-grid-item wow fadeInRight animated">
+                    <img src="static/picture/z_test_con_6.jpg" alt="">
+                    <div class="case-study-thumb-inner">
+                        <a class="portfolio-icon venobox vbox-item" data-gall="myportfolio"
+                           href="static/picture/z_test_con_6.jpg"><i class="bi bi-plus-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--==================================================-->
+<!-- End Adira City Case Study Section -->
+<!--==================================================-->
+<!--	跳转页面-->
+<div class="col-lg-12">
+    <div class="tabs-btn wow fadeInRight animated">
+        <ul>
+            <li>
+                <button type="button" class="tab-btn active">初级难度</button>
+            </li>
+            <li>
+                <button type="button" class="tab-btn ">进阶难度</button>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<!--初级	选择题-->
+<div class="tab-view active">
+    <section class="case-study-section">
+        <div class="container">
+            <div class="card-header bg-dark text-white"> 1、截至2023年12月，
+                联合国教科文组织非物质文化遗产名录（名册）共收录730项遗产项目，
+                对应于145个国家。其中，中国列入总数位居世界（）。
+            </div>
+            <div class="card-body">
+                <div class="form-check" style="margin-bottom: 10px;">
+                    <input type="radio" class="form-check-input" name="optradio1" value="A">A. 第一
+                </div>
+                <div class="form-check" style="margin-bottom: 10px;">
+                    <input type="radio" class="form-check-input" name="optradio1" value="B">B. 第二
+                </div>
+                <div class="form-check" style="margin-bottom: 10px;">
+                    <input type="radio" class="form-check-input" name="optradio1" value="C">C. 第三
+                </div>
+                <div class="form-check" style="margin-bottom: 10px;">
+                    <input type="radio" class="form-check-input" name="optradi01" value="D"> D. 第四
+                </div>
+                <div>
+                    <!--第二题-->
+                    <div class="card-header bg-dark text-white">
+                        2、中国非物质文化遗产中的“黄梅戏”是哪个省份的传统戏曲表演形式？
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio2" value="A">A. 安徽
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio2" value="B">B. 河北
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio2" value="C">C. 江苏
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio2" value="D">D. 浙江
+                    </div>
+                    <!--			第三题-->
+                    <div class="card-header bg-dark text-white"> 3、蒙古族呼麦是一种怎样的艺术形式？</div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio3" value="A">A. 单声部的歌唱
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio3" value="B">B. 多声部的喉音唱法
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio3" value="C">C. 敲击乐器的表演
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio3" value="D">D. 舞蹈与歌唱的结合
+                    </div>
+
+                    <!--第四题-->
+                    <div class="card-header bg-dark text-white"> 4、唐卡是哪个民族的传统艺术形式？</div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio4" value="A">A. 彝族
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio4" value="B">B. 满族
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio4" value="C">C. 藏族
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio4" value="D">D. 维吾尔族
+                    </div>
+
+                    <!--第五题-->
+                    <div class="card-header bg-dark text-white"> 5、舞狮在中国传统文化中主要象征着什么？</div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio5" value="A">A. 英勇善战
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio5" value="B">B. 智慧聪颖
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio5" value="C">C. 驱邪避灾
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio5" value="D">D. 喜庆吉祥
+                    </div>
+
+                    <!--第六题-->
+                    <div class="card-header bg-dark text-white">
+                        6、中国非物质文化遗产“蜀绣”是指哪个省份的传统刺绣技艺？
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio6" value="A">A. 四川
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio6" value="B">B. 湖北
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio6" value="C">C. 江西
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio6" value="D">D. 广东
+                    </div>
+                    <!--第七题-->
+                    <div class="card-header bg-dark text-white">
+                        7、哪种非遗技艺主要以竹篾为骨架，以纸或绢为面料，通过扎制、裱糊、彩绘等工序制作而成，常用于节日庆典或民间活动中？
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio7" value="A">A. 剪纸
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio7" value="B">B. 皮影戏
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio7" value="C">C. 风筝
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio7" value="D">D. 木偶戏
+                    </div>
+                    <!--			第八题-->
+                    <div class="card-header bg-dark text-white"> 8、中医认为人体的健康和疾病与哪种因素密切相关?
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio8" value="A">A. 季节变化
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio8" value="B">B. 阴阳平衡
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio8" value="C">C. 饮食习惯
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio8" value="D">D. 情绪波动
+                    </div>
+                    <!--			第九题-->
+                    <div class="card-header bg-dark text-white">
+                        9、中国非物质文化遗产“传统园林艺术”中，苏州的传统园林被列为非物质文化遗产，以下哪座园林属于苏州园林？
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio9" value="A">A. 圆明园
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio9" value="B">B. 拙政园
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio9" value="C">C. 颐和园
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio9" value="D">D. 圆觉禅寺
+                    </div>
+                    <!--			第十题-->
+                    <div class="card-header bg-dark text-white"> 10、以下哪个不是五禽戏的动物形象？</div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio10" value="A">A. 鸟
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio10" value="B">B. 虎
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio10" value="C">C. 鹿
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio10" value="D">D. 蛇
+                    </div>
+
+                    <!--提交跳转-->
+                    <button onclick="check()" class="btn btn-primary mt-3">提交答案</button>
+
+                </div>
+            </div>
+            <!--	在本页面展示解析和得分-->
+            <div id="result1"></div>
+            <div id="result2"></div>
+            <div id="result3"></div>
+            <div id="result4"></div>
+            <div id="result5"></div>
+            <div id="result6"></div>
+            <div id="result7"></div>
+            <div id="result8"></div>
+            <div id="result9"></div>
+            <div id="result10"></div>
+            <div id="score"></div>
+        </div>
+    </section>
+    <!--	判断正误-->
+    <script>
+        function check() {
+            console.log("Function called")
+            var userAnswer1 = $("input[name='optradio1']:checked").val();
+            var correctAnswer1 = 'A';
+            var explanation1 = '截至2023年12月，联合国教科文组织非物质文化遗产名录（名册）共收录730项遗产项目，对应于145个国家。其中，中国列入总数共计43项，位居世界第一。';
+
+            var userAnswer2 = $("input[name='optradio2']:checked").val();
+            var correctAnswer2 = 'A';
+            var explanation2 = '黄梅戏与京剧、越剧、评剧 、豫剧并称“中国五大戏曲剧种”，也是安徽省的主要地方戏曲剧种。';
+
+            var userAnswer3 = $("input[name='optradio3']:checked").val();
+            var correctAnswer3 = 'B';
+            var explanation3 = '蒙古族呼麦，又称喉音唱法、双声唱法或多声唱法，是蒙古民族最古老的艺术形式之一。它运用特殊的声音技巧，一人同时唱出两个或更多声部，形成罕见的多声部形态。演唱者运用闭气技巧，使气息猛烈冲击声带，发出粗壮的气泡音，形成低音声部；同时，巧妙调节口腔共鸣，强化和集中泛音，唱出透明清亮、带有金属声的高音声部。这种发声原理特殊，有时声带振动，有时不振动，是用腔体内的气量产生共鸣。';
+
+            var userAnswer4 = $("input[name='optradio4']:checked").val();
+            var correctAnswer4 = 'C';
+            var explanation4 = '唐卡是藏族文化中一种独具特色的绘画艺术形式，盛行于西藏、青海、四川、甘肃、云南等地的藏族聚居区，具有鲜明的民族特点、浓郁的宗教色彩和独特的艺术风格，是中华民族民间艺术中弥足珍贵的非物质文化遗产。';
+
+            var userAnswer5 = $("input[name='optradio5']:checked").val();
+            var correctAnswer5 = 'D';
+            var explanation5 = '舞狮是中国优秀的民间艺术，也是中华人民共和国正式开展的体育项目。在中国传统文化中，舞狮主要象征着喜庆吉祥。表演时，狮子通过舞动展现各种形态，传递出欢乐和祝福的氛围。特别是在庆祝节日、开业庆典等场合，舞狮表演常作为重要的节目之一，用以增添喜庆气氛，祈求吉祥如意。因此，正确答案为B项，即喜庆吉祥。';
+
+            var userAnswer6 = $("input[name='optradio6']:checked").val();
+            var correctAnswer6 = 'A';
+            var explanation6 = '蜀绣，是巴蜀地区流行的一种民间工艺，分为川西和川东(今重庆)两大流派，中国国家地理标志产品。';
+
+            var userAnswer7 = $("input[name='optradio7']:checked").val();
+            var correctAnswer7 = 'C';
+            var explanation7 = '风筝主要以竹篾为骨架，以纸或绢为面料，通过扎制、裱糊、彩绘等工序制作而成。它在节日庆典或民间活动中常被放飞，既是一种娱乐方式，也寓意着吉祥和美好。剪纸是一种通过剪刀在纸上剪刻出花纹的技艺，皮影戏和木偶戏则是戏剧形式。';
+
+            var userAnswer8 = $("input[name='optradio8']:checked").val();
+            var correctAnswer8 = 'B';
+            var explanation8 = '中医认为人体的健康和疾病与阴阳平衡密切相关。阴阳是中医理论中的核心概念，它代表着宇宙间相互对立又相互依存的两个方面。在人体内，阴阳平衡是维持生命活动正常运行的基础，一旦阴阳失衡，就会导致疾病的发生。';
+
+            var userAnswer9 = $("input[name='optradio9']:checked").val();
+            var correctAnswer9 = 'B';
+            var explanation9= '拙政园（Humble Administrator’s Garden），位于江苏省苏州市姑苏区东北街178号。 [3]明正德八年（1513年），解官回乡的御史王献臣，以大弘寺基建造宅园，取西晋潘岳《闲居赋》“筑室种树……此亦拙者之为政也”之意题名拙政园。';
+
+            var userAnswer10 = $("input[name='optradio10']:checked").val();
+            var correctAnswer10 = 'D';
+            var explanation10 = '华佗在《庄子》“二禽戏”（“熊经鸟伸”）的基础上创编了“五禽戏”。其名称及功效据《后汉书·方术列传·华佗传》记载：“吾有一术，名五禽之戏：一曰虎，二曰鹿，三曰熊，四曰猿，五曰鸟';
+
+
+            var score = 0;
+
+            if (userAnswer1 === correctAnswer1) {
+                score += 10;
+            } else {
+                document.getElementById('result1').innerHTML = '第一题：你的答案：' + userAnswer1 + ' - 错误！<br>' + '<b>解析：</b>' + explanation1;
+            }
+
+                if (userAnswer2 === correctAnswer2) {
+                score += 10;
+            } else {
+                document.getElementById('result2').innerHTML = '第二题：你的答案：' + userAnswer2 + ' - 错误！<br>' + '<b>解析：</b>' + explanation2;
+            }
+
+            if (userAnswer3 === correctAnswer3) {
+                score += 10;
+            } else {
+                document.getElementById('result3').innerHTML = '第三题：你的答案：' + userAnswer3 + ' - 错误！<br>' + '<b>解析：</b>' + explanation3;
+            }
+
+            if (userAnswer4 === correctAnswer4) {
+                score += 10;
+            } else {
+                document.getElementById('result4').innerHTML = '第四题：你的答案：' + userAnswer4 + ' - 错误！<br>' + '<b>解析：</b>' + explanation4;
+            }
+            if (userAnswer5 === correctAnswer5) {
+                score += 10;
+            } else {
+                document.getElementById('result5').innerHTML = '第五题：你的答案：' + userAnswer5 + ' - 错误！<br>' + '<b>解析：</b>' + explanation5;
+            }
+            if (userAnswer6 === correctAnswer6) {
+                score += 10;
+            } else {
+                document.getElementById('result6').innerHTML = '第六题：你的答案：' + userAnswer6 + ' - 错误！<br>' + '<b>解析：</b>' + explanation6;
+            }if (userAnswer7 === correctAnswer7) {
+                score += 10;
+            } else {
+                document.getElementById('result7').innerHTML = '第七题：你的答案：' + userAnswer7 + ' - 错误！<br>' + '<b>解析：</b>' + explanation7;
+            }if (userAnswer8 === correctAnswer8) {
+                score += 10;
+            } else {
+                document.getElementById('result8').innerHTML = '第八题：你的答案：' + userAnswer8 + ' - 错误！<br>' + '<b>解析：</b>' + explanation8;
+            }if (userAnswer9 === correctAnswer9) {
+                score += 10;
+            } else {
+                document.getElementById('result9').innerHTML = '第九题：你的答案：' + userAnswer9 + ' - 错误！<br>' + '<b>解析：</b>' + explanation9;
+            }if (userAnswer10 === correctAnswer10) {
+                score += 10;
+            } else {
+                document.getElementById('result10').innerHTML = '第十题：你的答案：' + userAnswer10 + ' - 错误！<br>' + '<b>解析：</b>' + explanation10;
+            }
+                document.getElementById('score').innerHTML = '您在初级难度的测试中得分为：' + score + ' 分';
+            }
+    </script>
+
+
+</div>
+<!--中级	选择题-->
+<div class="tab-view">
+    <section class="case-study-section">
+        <div class="container">
+            <div class="card-header bg-dark text-white"> 1、以下关于苗族摆手舞的描述，哪一项是正确的？
+            </div>
+            <div class="card-body">
+                <div class="form-check" style="margin-bottom: 10px;">
+                    <input type="radio" class="form-check-input" name="optradio21" value="A">A. 摆手舞是苗族的传统舞蹈，主要在婚礼上表演。
+                </div>
+                <div class="form-check" style="margin-bottom: 10px;">
+                    <input type="radio" class="form-check-input" name="optradio21" value="B">B. 摆手舞是一种快节奏、动感十足的现代舞蹈。
+                </div>
+                <div class="form-check" style="margin-bottom: 10px;">
+                    <input type="radio" class="form-check-input" name="optradio21" value="C">C.
+                    摆手舞通过手舞足蹈的方式，模拟农业生产和生活中的动作。
+                </div>
+                <div class="form-check" style="margin-bottom: 10px;">
+                    <input type="radio" class="form-check-input" name="optradio21" value="D"> D. 其他民族也有类似的舞蹈形式。
+                </div>
+                <div>
+                    <!--第二题-->
+                    <div class="card-header bg-dark text-white">
+                        2、以下哪项非遗技艺涉及多种材料和独特的制作工艺，且产品以精细、剔透而著称？
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio22" value="A">A. 蓝印花布
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio22" value="B">B. 内画
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio22" value="C">C. 泥人张
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio22" value="D">D. 风筝制作
+                    </div>
+                    <!--			第三题-->
+                    <div class="card-header bg-dark text-white"> 3、木刻版画作为古代流行的文化产物，顾名思义，
+                        就是用刻刀在木板上刻出反向图像，再印在纸上的一种版画艺术，发展历史源远流长。木版年画发源于四大名镇中的哪个？
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio23" value="A">A. 汉口镇
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio23" value="B">B. 朱仙镇
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio23" value="C">C. 景德镇
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio23" value="D">D. 佛山镇
+                    </div>
+                    <!--第四题-->
+                    <div class="card-header bg-dark text-white">
+                        4、京剧的表演形式中，哪一种行当以面部化妆为主要特点，通常通过夸张的颜色和图案来展现人物的性格和身份？
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio24" value="A">A. 生
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio24" value="B">B. 旦
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio24" value="C">C. 净
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio24" value="D">D. 丑
+                    </div>
+
+                    <!--第五题-->
+                    <div class="card-header bg-dark text-white"> 5、石湾陶塑技艺在什么时候达到顶峰？</div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio25" value="A">A. 东汉
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio25" value="B">B. 宋代
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio25" value="C">C. 明代
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio25" value="D">D. 清朝
+                    </div>
+
+                    <!--第六题-->
+                    <div class="card-header bg-dark text-white">
+                        6、侗族大歌主要在哪个地方流行？
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio26" value="A">A. 四川
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio26" value="B">B. 湖北
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio26" value="C">C. 贵州
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio26" value="D">D. 广东
+                    </div>
+                    <!--第七题-->
+                    <div class="card-header bg-dark text-white">
+                        7、视频中展示的是什么非遗项目？
+                    </div>
+                    <video width="320" height="240" controls>
+                        <source src="static/video/z_shange.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio27" value="A">A. 内蒙古长调民歌
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio27" value="B">B. 当涂民歌
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio27" value="C">C. 客家山歌
+                    </div>
+                    <div class="form-check" style="margin-bottom: 10px;">
+                        <input type="radio" class="form-check-input" name="optradio27" value="D">D. 彝族海菜腔
+                    </div>
+                    <!--			第八题-->
+                    <!--						<div class="card-header bg-dark text-white"> 8、木刻版画作为古代流行的文化产物，顾名思义，-->
+                    <!--							就是用刻刀在木板上刻出反向图像，再印在纸上的一种版画艺术，发展历史源远流长。木版年画发源于四大名镇中的哪个？-->
+                    <!--						</div>-->
+                    <!--						<div class="form-check" style="margin-bottom: 10px;">-->
+                    <!--							<input type="radio" class="form-check-input" name="optradio28" value="A">A. 汉口镇-->
+                    <!--						</div>-->
+                    <!--						<div class="form-check" style="margin-bottom: 10px;">-->
+                    <!--							<input type="radio" class="form-check-input" name="optradio28" value="B">B. 朱仙镇-->
+                    <!--						</div>-->
+                    <!--						<div class="form-check" style="margin-bottom: 10px;">-->
+                    <!--							<input type="radio" class="form-check-input" name="optradio28" value="C">C. 景德镇-->
+                    <!--						</div>-->
+                    <!--						<div class="form-check" style="margin-bottom: 10px;">-->
+                    <!--							<input type="radio" class="form-check-input" name="optradio28" value="D">D. 佛山镇-->
+                    <!--						</div>-->
+                    <!--						&lt;!&ndash;			第九题&ndash;&gt;-->
+                    <!--						<div class="card-header bg-dark text-white">-->
+                    <!--							9、中国非物质文化遗产“传统园林艺术”中，苏州的传统园林被列为非物质文化遗产，以下哪座园林属于苏州园林？-->
+                    <!--						</div>-->
+                    <!--						<div class="form-check" style="margin-bottom: 10px;">-->
+                    <!--							<input type="radio" class="form-check-input" name="optradio29" value="A">A. 圆明园-->
+                    <!--						</div>-->
+                    <!--						<div class="form-check" style="margin-bottom: 10px;">-->
+                    <!--							<input type="radio" class="form-check-input" name="optradio29" value="B">B. 拙政园-->
+                    <!--						</div>-->
+                    <!--						<div class="form-check" style="margin-bottom: 10px;">-->
+                    <!--							<input type="radio" class="form-check-input" name="optradio29" value="C">C. 颐和园-->
+                    <!--						</div>-->
+                    <!--						<div class="form-check" style="margin-bottom: 10px;">-->
+                    <!--							<input type="radio" class="form-check-input" name="optradio29" value="D">D. 圆觉禅寺-->
+                    <!--						</div>-->
+                    <!--						&lt;!&ndash;			第十题&ndash;&gt;-->
+                    <!--						<div class="card-header bg-dark text-white"> 10、以下哪个不是五禽戏的动物形象？</div>-->
+                    <!--						<div class="form-check" style="margin-bottom: 10px;">-->
+                    <!--							<input type="radio" class="form-check-input" name="optradio210" value="A">A. 鸟-->
+                    <!--						</div>-->
+                    <!--						<div class="form-check" style="margin-bottom: 10px;">-->
+                    <!--							<input type="radio" class="form-check-input" name="optradio210" value="B">B. 虎-->
+                    <!--						</div>-->
+                    <!--						<div class="form-check" style="margin-bottom: 10px;">-->
+                    <!--							<input type="radio" class="form-check-input" name="optradio210" value="C">C. 鹿-->
+                    <!--						</div>-->
+                    <!--						<div class="form-check" style="margin-bottom: 10px;">-->
+                    <!--							<input type="radio" class="form-check-input" name="optradio120" value="D">D. 蛇-->
+                    <!--						</div>-->
+                    <!--提交跳转-->
+                    <button onclick="check2()" class="btn btn-primary mt-3">提交答案</button>
+                </div>
+            </div>
+            <!--在本页面展示解析和得分-->
+            <div id="result21"></div>
+            <div id="result22"></div>
+            <div id="result23"></div>
+            <div id="result24"></div>
+            <div id="result25"></div>
+            <div id="result26"></div>
+            <div id="result27"></div>
+            <div id="score2"></div>
+        </div>
+    </section>
+
+    <!--	判断正误-->
+    <script>
+        function check2() {
+            console.log("Function2 called")
+            var userAnswer1 = $("input[name='optradio21']:checked").val();
+            var correctAnswer1 = 'C';
+            var explanation1 = '苗族摆手舞是苗族的传统舞蹈，它通过手舞足蹈的方式，模拟了农业生产和生活中的一些动作，如耕种、插秧、收割、打谷等，富有生活气息。';
+
+            var userAnswer2 = $("input[name='optradio22']:checked").val();
+            var correctAnswer2 = 'B';
+            var explanation2 = '内画是一种在透明或半透明的材质内部进行绘画的技艺，其作品精细、剔透，体现了极高的艺术价值。蓝印花布、泥人张和风筝制作虽然也各自具有独特的工艺，但并不以精细、剔透为特点。';
+
+            var userAnswer3 = $("input[name='optradio23']:checked").val();
+            var correctAnswer3 = 'B';
+            var explanation3 = '木板年画发源于四大名镇中的河南朱仙镇。2006年5月20日，朱仙镇木版年画经国务院批准列入第一批国家级非物质文化遗产名录。2008年6月7日，木版年画经国务院批准列入第二批国家级非物质文化遗产名录。';
+
+            var userAnswer4 = $("input[name='optradio24']:checked").val();
+            var correctAnswer4 = 'C';
+            var explanation4 = '京剧的行当分为生、旦、净、丑四大类。其中，净行俗称花脸，又叫花面，一般都是扮演男性角色，面部化妆用脸谱，音色洪亮，表演夸张强烈，是舞台上的性格鲜明的男性形象。因此，通过面部化妆展现人物性格和身份的行当主要是净行。';
+
+            var userAnswer5 = $("input[name='optradio25']:checked").val();
+            var correctAnswer5 = 'B';
+            var explanation5 = '石湾陶塑技艺是广东佛山市民间传统制陶技艺，也是国家级非物质文化遗产之一。这种技艺最早出现在东汉时期，到了宋代达到了鼎盛。';
+
+            var userAnswer6 = $("input[name='optradio26']:checked").val();
+            var correctAnswer6 = 'C';
+            var explanation6 = '侗族大歌是流行于贵州省黔东南地区的黎平县、从江县、榕江县等侗族聚居区和广西壮族自治区三江侗族自治县的一种传统音乐形式，也是中国的国家级非物质文化遗产和人类的非物质文化遗产之一。';
+
+            var userAnswer7 = $("input[name='optradio27']:checked").val();
+            var correctAnswer7 = 'C';
+            var explanation7 = '视频中展示的是客家山歌《秋香拜月》的片段。';
+
+<!--                var userAnswer8 = $("input[name='optradio28']:checked").val();-->
+<!--                var correctAnswer8 = 'B';-->
+<!--                var explanation8 = '木板年画发源于四大名镇中的河南朱仙镇。2006年5月20日，朱仙镇木版年画经国务院批准列入第一批国家级非物质文化遗产名录。2008年6月7日，木版年画经国务院批准列入第二批国家级非物质文化遗产名录。';-->
+
+<!--                var userAnswer9 = $("input[name='optradio29']:checked").val();-->
+<!--                var correctAnswer9 = 'B';-->
+<!--                var explanation9= '拙政园（Humble Administrator’s Garden），位于江苏省苏州市姑苏区东北街178号。 [3]明正德八年（1513年），解官回乡的御史王献臣，以大弘寺基建造宅园，取西晋潘岳《闲居赋》“筑室种树……此亦拙者之为政也”之意题名拙政园。';-->
+
+<!--                var userAnswer10 = $("input[name='optradio210']:checked").val();-->
+<!--                var correctAnswer10 = 'D';-->
+<!--                var explanation10 = 'lala华佗在《庄子》“二禽戏”（“熊经鸟伸”）的基础上创编了“五禽戏”。其名称及功效据《后汉书·方术列传·华佗传》记载：“吾有一术，名五禽之戏：一曰虎，二曰鹿，三曰熊，四曰猿，五曰鸟';-->
+
+
+            var score2 = 0;
+
+            if (userAnswer1 === correctAnswer1) {
+                score2 += 10;
+            } else {
+                document.getElementById('result21').innerHTML = '第一题：你的答案：' + userAnswer1 + ' - 错误！<br>' + '<b>解析：</b>' + explanation1;
+            }
+
+                if (userAnswer2 === correctAnswer2) {
+                score2 += 10;
+            } else {
+                document.getElementById('result22').innerHTML = '第二题：你的答案：' + userAnswer2 + ' - 错误！<br>' + '<b>解析：</b>' + explanation2;
+            }
+
+            if (userAnswer3 === correctAnswer3) {
+                score2 += 10;
+            } else {
+                document.getElementById('result23').innerHTML = '第三题：你的答案：' + userAnswer3 + ' - 错误！<br>' + '<b>解析：</b>' + explanation3;
+            }
+
+            if (userAnswer4 === correctAnswer4) {
+                score2 += 10;
+            } else {
+                document.getElementById('result24').innerHTML = '第四题：你的答案：' + userAnswer4 + ' - 错误！<br>' + '<b>解析：</b>' + explanation4;
+            }
+            if (userAnswer5 === correctAnswer5) {
+                score2 += 10;
+            } else {
+                document.getElementById('result25').innerHTML = '第五题：你的答案：' + userAnswer5 + ' - 错误！<br>' + '<b>解析：</b>' + explanation5;
+            }
+            if (userAnswer6 === correctAnswer6) {
+                score2 += 10;
+            } else {
+                document.getElementById('result26').innerHTML = '第六题：你的答案：' + userAnswer6 + ' - 错误！<br>' + '<b>解析：</b>' + explanation6;
+            }if (userAnswer7 === correctAnswer7) {
+                score2 += 10;
+            } else {
+                document.getElementById('result27').innerHTML = '第七题：你的答案：' + userAnswer7 + ' - 错误！<br>' + '<b>解析：</b>' + explanation7;
+            }
+<!--                if (userAnswer8 === correctAnswer8) {-->
+<!--                    score2 += 10;-->
+<!--                } else {-->
+<!--                    document.getElementById('result28').innerHTML = '第八题：你的答案：' + userAnswer8 + ' - 错误！<br>' + '<b>解析：</b>' + explanation8;-->
+<!--                }if (userAnswer9 === correctAnswer9) {-->
+<!--                    score2 += 10;-->
+<!--                } else {-->
+<!--                    document.getElementById('result29').innerHTML = '第九题：你的答案：' + userAnswer9 + ' - 错误！<br>' + '<b>解析：</b>' + explanation9;-->
+<!--                }if (userAnswer10 === correctAnswer10) {-->
+<!--                    score2 += 10;-->
+<!--                } else {-->
+<!--                    document.getElementById('result210').innerHTML = '第十题：你的答案：' + userAnswer10 + ' - 错误！<br>' + '<b>解析：</b>' + explanation10;-->
+<!--                }-->
+                document.getElementById('score2').innerHTML = '您在进阶难度的测试中得分为：' + score2 + ' 分';
+            }
+    </script>
+</div>
+
+
+<!--==================================================-->
+<!-- Start Adira City Footer Section -->
+<!--==================================================-->
+<footer class="footer-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 wow fadeInLeft animated">
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInDown animated">
+                <div class="footer-explore">
+                    <div class="footer-explore-title">
+                        <h6>友情链接</h6>
+                    </div>
+                    <ul>
+                        <li><a href="https://www.mct.gov.cn/">中华人民共和国文化和旅游部</a></li>
+                        <li><a href="https://fyrhome.cn/">中国非物质文化遗产网</a></li>
+                        <li><a href="http://www.ncha.gov.cn/">国家文物局</a></li>
+                        <li><a href="https://www.chinesefolklore.org.cn/">中国民俗学网</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <div class="footer-bootom">
+                        <p>“遗”见倾心<a></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--==================================================-->
+<!-- End Adira City Footer Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start scrollup Section Here-->
+<!--==================================================-->
+<div class="scroll-area">
+    <div class="top-wrap">
+        <div class="go-top-btn-wraper">
+            <div class="prgoress_indicator active-progress">
+                <svg class="progress-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">
+                    <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+                          style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 270.456;"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+<!--==================================================-->
+<!-- Ends scrollup Section Here -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Search Popup Area -->
+<!--==================================================-->
+<div class="search-popup">
+    <button class="close-search style-two"><i class="fas fa-times"></i></button>
+    <button class="close-search"><i class="fas fa-arrow-up"></i></button>
+    <form method="post" action="#" id="dreamit-forms">
+        <div class="form-group">
+            <input type="search" name="search-field" value="" placeholder="Search Here" required="">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+    </form>
+</div>
+<!--==================================================-->
+<!-- End Search Popup Area -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Curser Section Here -->
+<!--==================================================-->
+<div class="curser"></div>
+<div class="curser2"></div>
+<!--==================================================-->
+<!-- Ends Curser Section Here -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start JavaScrift CDN Section -->
+<!--==================================================-->
+
+<!-- Modernizr JS -->
+<script src="static/js/modernizr-3.5.0.min.js"></script>
+<!-- Vendor JS CDN -->
+<script src="static/js/jquery-3.6.2.min.js"></script>
+<!-- Popper JS CDN -->
+<script src="static/js/popper.min.js"></script>
+<!-- Bootstrap JS CDN -->
+<script src="static/js/bootstrap.min.js"></script>
+<!-- Owl Carousel JS CDN -->
+<script src="static/js/owl.carousel.min.js"></script>
+<!-- CounterUp JS CDN -->
+<script src="static/js/jquery.counterup.min.js"></script>
+<!-- WayPoints JS CDN -->
+<script src="static/js/waypoints.min.js"></script>
+<!-- WOW JS CDN -->
+<script src="static/js/wow.js"></script>
+<!-- Imageloaded JS CDN -->
+<script src="static/js/imagesloaded.pkgd.min.js"></script>
+<!-- Venubox JS CDN -->
+<script src="static/js/venobox.js"></script>
+<!-- Animated JS CDN -->
+<script src="static/js/animated-text.js"></script>
+<!-- VenuBox JS CDN -->
+<script src="static/js/venobox.min.js"></script>
+<!-- PKG JS CDN -->
+<script src="static/js/isotope.pkgd.min.js"></script>
+<!-- MeanMenu JS CDN -->
+<script src="static/js/jquery.meanmenu.js"></script>
+<!-- ScrollUp JS CDN -->
+<script src="static/js/jquery.scrollUp.js"></script>
+<!-- Burfiller JS CDN -->
+<script src="static/js/jquery.barfiller.js"></script>
+<!-- Custom JS CDN -->
+<script src="static/js/custom.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,971 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>非遗数字博物馆</title>
+
+    <style>
+        .custo3333m-font {
+            font-family: "宋体";
+    }
+    </style>
+    <!-- Favicon -->
+
+    <!-- Bootstrap CSS Link -->
+
+    <!-- 引入Bootstrap CSS -->
+
+
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" media="all">
+    <!-- Owl Carousel CSS Link -->
+    <link rel="stylesheet" href="static/css/owl.carousel.min.css" type="text/css" media="all">
+    <!-- Animate CSS Link -->
+    <link rel="stylesheet" href="static/css/animate.css" type="text/css" media="all">
+    <!-- Animated text CSS Link -->
+    <link rel="stylesheet" href="static/css/animated-text.css" type="text/css" media="all">
+    <!-- Font Awesome CSS Link -->
+    <link rel="stylesheet" href="static/css/all.min.css" type="text/css" media="all">
+    <!-- Font Flaticon CSS Link -->
+    <link rel="stylesheet" href="static/css/flaticon.css" type="text/css" media="all">
+    <!-- Custom default CSS Link -->
+    <link rel="stylesheet" href="static/css/custom-default.css" type="text/css" media="all">
+    <!-- Meanmenu CSS Link -->
+    <link rel="stylesheet" href="static/css/meanmenu.min.css" type="text/css" media="all">
+    <!-- Transitions CSS Link -->
+    <link rel="stylesheet" href="static/css/owl.transitions.css" type="text/css" media="all">
+    <!-- Venobox CSS Link -->
+    <link rel="stylesheet" href="static/css/venobox.css" type="text/css" media="all">
+    <!-- Bootstrap Icons Link -->
+    <link rel="stylesheet" href="static/css/bootstrap-icons.css" type="text/css" media="all">
+    <!-- Custom Style CSS Link -->
+    <link rel="stylesheet" href="static/css/style.css" type="text/css" media="all">
+    <!-- Responsive CSS Link -->
+    <link rel="stylesheet" href="static/css/responsive.css" type="text/css" media="all">
+    <link href="static/css/clash-display.css" rel="stylesheet">
+    <style>
+
+        /* 自定义弹窗背景样式 */
+        .modal-content {
+            background-image: url('static/picture/tab-22-L.jpg'); /* 设置背景图片路径 */
+            background-size: cover; /* 背景图片铺满模态框 */
+            border-radius: 10px; /* 设置边框圆角 */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* 设置阴影效果 */
+        }
+    </style>
+
+
+</head>
+
+<body>
+<!---->
+<!---->
+<!-- Preloader -->
+<div class="loader_bg">
+    <div class="loader"></div>
+    <h4 class="loading-title">Loading...</h4>
+</div>
+
+<!--==================================================-->
+<!-- Start Adira City Header Menu Section -->
+<!--==================================================-->
+
+<header class="header-manu-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-10">
+                <nav class="header-menu ">
+                    <ul>
+                        <li><a href="index.html" class="active">首页 <i class="bi bi-chevron-down"></i></a>
+                        </li>
+                        <li><a href="w_MLanguageSupport.html">非遗档案<i class="bi "></i></a>
+                        </li>
+                        <li><a href="#">文创<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="work.html">文创精选</a></li>
+                                    <li><a href="mycollectp.html#potfolio-details-section-2">文创助手</a></li>
+                                    <li><a href="dream.html">非遗游戏</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="heartpp.html">智能推荐<i class="bi "></i></a>
+                        </li>
+                        <li><a href="#">数字非遗<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="number.html">非遗数字体验馆</a></li>
+                                    <li><a href="knowledge.html">非遗知识图谱</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">非遗旅游<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="mycollectp.html#potfolio-details-section-1">非遗旅游AI定制</a></li>
+                                    <li><a href="appointment.html">【中国非物质遗产文化馆】预约</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">探索 <i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="z_map.html">非遗地图</a></li>
+                                    <li><a href="t_line.html">非遗传承人</a></li>
+                                    <li><a href="z_test.html">非遗测试</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">欢迎, {{ session['username'] }}<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="mycollectp.html"> {{ session['username'] }}的收藏</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!--==================================================-->
+<!-- End Adira City Header Main Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Main Menu Area -->
+<!--==================================================-->
+<div class="mobile-menu-area sticky d-sm-block d-md-block d-lg-none ">
+    <div class="mobile-menu">
+        <nav class="header-menu">
+            <ul class="nav_scroll">
+                <li class="menu-item-has-children"><a href="index.html">首页</a>
+                </li>
+                <li class="menu-item-has-children"><a href="w_MLanguageSupport.html">非遗档案</a>
+                </li>
+                <li class="menu-item-has-children"><a href="#">文创</a>
+                    <ul class="sub-menu">
+                        <li><a href="work.html">文创精选</a></li>
+                        <li><a href="mycollectp.html#potfolio-details-section-2">文创助手</a></li>
+                        <li><a href="dream.html">非遗游戏</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="heartpp.html">智能推荐</a></li>
+                <li class="menu-item-has-children"><a href="#">数字非遗</a>
+                    <ul class="sub-menu">
+                        <li><a href="number.html">非遗数字体验馆</a></li>
+                        <li><a href="knowledge.html">非遗知识图谱</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">非遗旅游</a>
+                    <ul class="sub-menu">
+                        <li><a href="mycollectp.html#potfolio-details-section-1">非遗旅游AI定制</a></li>
+                        <li><a href="appointment.html">【中国非物质遗产文化馆】预约</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">探索</a>
+                    <ul class="sub-menu">
+                        <li><a href="z_map.html">非遗地图</a></li>
+                        <li><a href="t_line.html">非遗传承人</a></li>
+                        <li><a href="z_test.html">非遗测试</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+<!--==================================================-->
+<!-- End Adira City Banner Inner Section -->
+<!--==================================================-->
+<section class="banner-section-2 ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="banner-title wow fadeInUp animated">
+                    <h1></h1>
+                    <h1><span></span></h1>
+                </div>
+                <div class="banner-inner-link wow fadeInRight animated">
+                    <a href="index.html"><i class="fas fa-home"></i> home </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="shop-inner-section">
+    <div class="container">
+        <div class="shop-top">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="shop-search wow fadeInLeft animated">
+                        <form method="POST" action="/search_2">
+                            <input type="text" name="search" id="search" placeholder="Search..." required="">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        {% for project in projects.items %}
+        <section class="potfolio-details-section-1">
+            <div class="portfolio-info-3">
+                <div class="tab-item">
+                    <div class="row align-items-center">
+                        <div class="col-lg-3">
+                            <div class="shop-content-thumb">
+                                {% set image_path = 'projectf/' + project.specific_number + '.jpg' %}
+                                <img src="{{ url_for('static', filename=image_path) }}" alt="thumb">
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="shop-tab-details">
+                                <div class="tab-item-title">
+                                    <h4>{{ project.project_name }}</h4>
+                                </div>
+                                <!-- Assuming 'rating' is a field in your model representing the rating -->
+                                <div class="item-rate">
+                                    <div class="item-rate-icon">
+                                        <ul>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-half"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tab-item-desc">
+                                    <p>大类：{{ project.category_big }}</p>
+                                </div>
+                                <div class="tab-item-desc">
+                                    <p>小类：{{ project.category_small }}</p>
+                                </div>
+                                <div class="tab-item-desc">
+                                    <p>简述：{{ project.description }}</p>
+                                </div>
+                                <div class="add-to-cart">
+                                    <!-- 修改前端代码，为浏览按钮添加点击事件 -->
+                                    <a href="#"
+                                       onclick="openBaiduBaike('{{ project.project_name }}'); handleBrowse('{{ project.id }}'); return false;">
+                                        <i class="bi "></i> 浏览
+                                    </a>
+                                    <a href="#" class="like-button"
+                                       onclick="handleLikeClick('{{ project.id }}','{{ project.project_name }}', '{{ project.category_big }}'); return false;"
+                                       id="likeButton{{ project.id }}" data-project-id="{{ project.id }}">
+                                        <i class="bi bi-heart"></i> 收藏
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endfor %}
+
+
+        <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="successModalLabel">成功添加到收藏夹</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 可选：添加成功提示信息 -->
+                        <p>已成功添加到您的收藏夹，在“我的收藏”中可查看收藏内容</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 分页链接 -->
+        <div class="pagination" style="font-size: 18px; color: black;">
+            {% if projects.has_prev %}
+            <a href="?page={{ projects.prev_num }}" style="color: black;">上一页</a>
+            {% endif %}
+            {% for page_num in projects.iter_pages() %}
+            {% if page_num %}
+            {% if projects.page == page_num %}
+            <strong style="color: black;">{{ page_num }}</strong>
+            {% else %}
+            <a href="?page={{ page_num }}" style="color: black; margin-right: 10px;">{{ page_num }}</a>
+            {% endif %}
+            {% else %}
+            ...
+            {% endif %}
+            {% endfor %}
+            {% if projects.has_next %}
+            <a href="?page={{ projects.next_num }}" style="color: black;">下一页</a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<section class="banner-inner-section-knowledge3">
+    <div class="container ">
+        <div class="row ">
+            <div class="col-lg-12">
+                <div class="banner-inner-section-title wow fadeInRight animated">
+                    <h1>非遗风采</h1>
+                </div>
+                <div class="banner-inner-link wow fadeInRight animated">
+                    <a href="index.html"><i class="fas fa-home"></i> home </a>
+                    <span>.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="shop-details-section" id="shop-details">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 ">
+                <div class="thumb-tabs">
+                    <div class="tab-content active">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="shop-details-thumb">
+                                    <img src="static/image/w_jian1.jpg" alt="thumb">
+                                    <div class="add-to-favourite">
+                                        <a href="#"><i class="far fa-heart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="shop-details-thumb">
+                                    <img src="static/image/w_jian2.jpg" alt="thumb">
+                                    <div class="add-to-favourite">
+                                        <a href="#"><i class="far fa-heart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="shop-details-thumb">
+                                    <img src="static/image/w_jian3.jpg" alt="thumb">
+                                    <div class="add-to-favourite">
+                                        <a href="#"><i class="far fa-heart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="thumb-tab-btn">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="tab-btn active">
+                                    <button><img style="max-width: 90%;" src="static/image/w_jian1.jpg" alt="icon">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="tab-btn ">
+                                    <button><img style="max-width: 90%;" src="static/image/w_jian2.jpg" alt="icon">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="tab-btn">
+                                    <button><img style="max-width: 90%;" src="static/image/w_jian3.jpg" alt="icon">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 ">
+                <div class="shop-details-content">
+                    <div class="shop-details-title">
+                        <h2><a href="https://www.sohu.com/a/731313725_121124715">剪梦中华，纸上风采 </a></h2>
+                        <h4><a href="https://www.sohu.com/a/731313725_121124715">Cutting Dreams of China, Elegance on
+                            Paper</a></h4>
+                    </div>
+                    <div class="shop-details-rate">
+                        <div class="rate-left">
+                            <ul>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star-half-alt"></i></li>
+                            </ul>
+                        </div>
+                        <div class="rate-right">
+                            <p>4.5</p>
+                        </div>
+                    </div>
+                    <div class="shop-details-desc">
+                        <p>
+                            剪梦中华，纸上风采——探秘剪纸艺术的魅力合集在璀璨的中华文化瑰宝中，剪纸艺术以其独特的魅力独占一隅。作为一种深受人们喜爱的民间艺术，剪纸不仅承载着深厚的历史文化底蕴，更以其精湛的技艺和吉祥的寓意，成为中华民族传统艺术的重要代表。</p>
+                        <p>Dreamscaping China in Paper Silhouettes: Delving into the Charms of the Paper-cut Artistry
+                            within the resplendent treasure trove of Chinese culture,
+                            paper-cut art stands out as a distinct gem. As a folk art deeply cherished by people,
+                            it not only bears the weight of profound historical and cultural roots but also stands as a
+                            significant representation of traditional Chinese artistry through its exquisite
+                            craftsmanship and auspicious symbolism.</p>
+                    </div>
+                    <div class="blog-btn">
+                        <a href="https://baijiahao.baidu.com/s?id=1790329525135499789&wfr=spider&for=pc">Learn More</a>
+                    </div>
+                    <div class="shop-features">
+                        <table>
+                            <tr>
+                                <td class="table-title">新时代传承人代表: 倪秀梅</td>
+                                <img style="max-width: 50%;" src="static/image/w-118.jpg" alt="icon">
+                            </tr>
+                            <tr>
+                                <td class="table-title">代表作:《植树季节》</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="shop-details-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 ">
+                <div class="thumb-tabs">
+                    <div class="tab-content active">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="shop-details-thumb">
+                                    <img src="static/image/a-117.jpg" alt="thumb">
+                                    <div class="add-to-favourite">
+                                        <a href="#"><i class="far fa-heart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="shop-details-thumb">
+                                    <img src="static/image/a-115.jpg" alt="thumb">
+                                    <div class="add-to-favourite">
+                                        <a href="#"><i class="far fa-heart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="shop-details-thumb">
+                                    <img src="static/image/a-116.jpg" alt="thumb">
+                                    <div class="add-to-favourite">
+                                        <a href="#"><i class="far fa-heart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="thumb-tab-btn">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="tab-btn active">
+                                    <button><img style="max-width: 100%;" src="static/image/a-117.jpg" alt="icon">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="tab-btn ">
+                                    <button><img style="max-width: 100%;" src="static/image/a-115.jpg" alt="icon">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="tab-btn">
+                                    <button><img style="max-width: 100%;" src="static/image/a-117.jpg" alt="icon">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 ">
+                <div class="shop-details-content">
+                    <div class="shop-details-title">
+                        <h2><a href="https://www.yac8.com/">丹青妙手，挽袖添香，在墨海中书写民族文化 </a></h2>
+                        <h4><a href="https://www.yac8.com/">Outstanding artists, sleeves perfumed, skillfully paint the
+                            essence of the nation's culture within the realm of Chinese ink painting.</a></h4>
+                    </div>
+                    <div class="shop-details-rate">
+                        <div class="rate-left">
+                            <ul>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star-half-alt"></i></li>
+                            </ul>
+                        </div>
+                        <div class="rate-right">
+                            <p>4</p>
+                        </div>
+                    </div>
+                    <div class="shop-details-desc">
+                        <p>
+                            从仓颉造字到羲之兰亭，再到如今的次元发展，汉字就是一部华夏文明史，以其独特的造型符号和笔墨流转氤氲成的韵律，诉说着人类与自然的和谐发展和对生命的敬畏与思考，展现着中国人的思维和人格。在挽袖挥毫、丹青妙手下写就了中国“人”字</p>
+                        <p>From the inception of script by Cangjie through the virtuosic calligraphy of Wang Xizhi at
+                            the Orchid Pavilion, and its ongoing metamorphosis into contemporary dimensions, Chinese
+                            characters stand as a testament to the grand narrative of Chinese civilization. They weave
+                            stories of harmony between humans and nature, reflecting profound respect and introspection
+                            on life, all encapsulated within their distinctive, symbol-rich forms and the lyrical dance
+                            of brush and ink. It is in the very act of poised, ink-stained wrists unfurling that the
+                            essence of the Chinese character for
+                            "human" comes alive, illuminating the intellectual depth and moral fabric of the Chinese
+                            psyche.</p>
+                        <div class="blog-btn">
+                            <a href="http://icicc.blcu.edu.cn/col/col15026/index.html">Learn more</a>
+                        </div>
+                        <div class="shop-features">
+                            <table>
+                                <tr>
+                                    <td class="table-title">新时代传承人代表: 刘宗林</td>
+                                    <img style="max-width: 50%;" src="static/image/w-119.jpg" alt="icon">
+                                </tr>
+                                <tr>
+                                    <td class="table-title">代表作：《刘宗林钢笔字速成》</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <!--<button id="navigate-back2" class="latest-news-btn wow fadeInLeft animated">前往非遗引航</button>-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="blog-inner-section custom-font">
+    <div class="container">
+        <div class="blog-inner-item">
+            <div class="row align-items-center">
+                <div class="col-lg-8 ">
+                    <div class="blog-inner-thumb wow fadeInLeft animated">
+                        <img src="static/picture/tab-1-T.jpg" alt="thumb">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="blog-inner-content wow fadeInRight animated">
+                        <div class="blog-post-date">
+                            <h5>非遗推荐·一</h5>
+                        </div>
+                        <div class="blog-title">
+                            <h1>京剧</h1>
+                        </div>
+                        <div class="blog-desc">
+                            <p>
+                                京剧，作为中国最具代表性的戏曲剧种之一，以其独特的艺术魅力、丰富的文化内涵和悠久的历史背景，成为了中华文化的重要代表之一。</p>
+                        </div>
+                        <div class="blog-btn">
+                            <a href="https://baike.baidu.com/item/%E4%BA%AC%E5%89%A7/75719?fr=ge_ala">更多</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blog-inner-item">
+            <div class="row align-items-center">
+                <div class="col-lg-8 ">
+                    <div class="blog-inner-thumb wow fadeInLeft animated">
+                        <img src="static/picture/tab-2-T.png" alt="thumb">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="blog-inner-content wow fadeInRight animated">
+                        <div class="blog-post-date">
+                            <h5>非遗推荐·二</h5>
+                        </div>
+                        <div class="blog-title">
+                            <h1>景德镇手工制瓷技艺</h1>
+                        </div>
+                        <div class="blog-desc">
+                            <p>
+                                千余年来，景德镇制瓷业集中各地技艺之精华，形成了独树一帜的手工制瓷工艺生产体系，创造了中国陶瓷史上最辉煌灿烂的一页。</p>
+                        </div>
+                        <div class="blog-btn">
+                            <a href="https://baike.baidu.com/item/%E6%99%AF%E5%BE%B7%E9%95%87%E6%89%8B%E5%B7%A5%E5%88%B6%E7%93%B7%E6%8A%80%E8%89%BA/5976177?fr=ge_ala">更多</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blog-inner-item">
+            <div class="row align-items-center">
+                <div class="col-lg-8 ">
+                    <div class="blog-inner-thumb wow fadeInLeft animated">
+                        <img src="static/picture/tab-3-T.png" alt="thumb">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="blog-inner-content wow fadeInRight animated">
+                        <div class="blog-post-date">
+                            <h5>非遗推荐·三</h5>
+                        </div>
+                        <div class="blog-title">
+                            <h1>茶艺</h1>
+                        </div>
+                        <div class="blog-desc">
+                            <p>
+                                茶艺是一种文化。茶艺在中国优秀文化的基础上又广泛吸收和借鉴了其它艺术形式，并扩展到文学、艺术等领域，形成了具有浓厚民族特色的中国茶文化。</p>
+                        </div>
+                        <div class="blog-btn">
+                            <a href="https://baike.baidu.com/item/%E8%8C%B6%E8%89%BA/4016?fr=ge_ala">更多</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blog-inner-item">
+            <div class="row align-items-center">
+                <div class="col-lg-8 ">
+                    <div class="blog-inner-thumb wow fadeInLeft animated">
+                        <img src="static/picture/tab-4-T.jpg" alt="thumb">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="blog-inner-content wow fadeInRight animated">
+                        <div class="blog-post-date">
+                            <h5>非遗推荐·四</h5>
+                        </div>
+                        <div class="blog-title">
+                            <h1>剪纸</h1>
+                        </div>
+                        <div class="blog-desc">
+                            <p>
+                                剪纸是我国最普及的民间传统装饰艺术之一，是第一批列入国家级非物质文化遗产名录的非遗项目，也是中国文化的精华。</p>
+                        </div>
+                        <div class="blog-btn">
+                            <a href="https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E5%89%AA%E7%BA%B8/397259?fr=ge_ala">更多</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blog-inner-item">
+            <div class="row align-items-center">
+                <div class="col-lg-8 ">
+                    <div class="blog-inner-thumb wow fadeInLeft animated">
+                        <img src="static/picture/tab-5-T.png" alt="thumb">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="blog-inner-content wow fadeInLeft animated">
+                        <div class="blog-post-date">
+                            <h5>非遗推荐·五</h5>
+                        </div>
+                        <div class="blog-title">
+                            <h1>古琴艺术</h1>
+                        </div>
+                        <div class="blog-desc">
+                            <p>拥有3000多年历史的古琴，是世界上最古老的乐器之一，一向被视为中华文明的一个载体。
+                                在中国古代，俗称“四艺”的琴棋书画是古代文人雅士、上流社会的士大夫修身所必须的技能，所以也被称为“文人四友”。这“四艺”之中，以琴为首。</p>
+                        </div>
+                        <div class="blog-btn">
+                            <a href="https://baike.baidu.com/item/%E5%8F%A4%E7%90%B4%E8%89%BA%E6%9C%AF/6178085?fr=ge_ala">更多</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blog-btn">
+            <a href="https://www.ihchina.cn/movies.html">更多</a>
+        </div>
+    </div>
+</section>
+
+<!--==================================================-->
+<!-- Start Adira City Shop Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- End Adira City Shop Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Adira City Footer Section -->
+<!--==================================================-->
+<footer class="footer-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 wow fadeInLeft animated">
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInDown animated">
+                <div class="footer-explore">
+                    <div class="footer-explore-title">
+                        <h6>友情链接</h6>
+                    </div>
+                    <ul>
+                        <li><a href="https://www.mct.gov.cn/">中华人民共和国文化和旅游部</a></li>
+                        <li><a href="https://fyrhome.cn/">中国非物质文化遗产网</a></li>
+                        <li><a href="http://www.ncha.gov.cn/">国家文物局</a></li>
+                        <li><a href="https://www.chinesefolklore.org.cn/">中国民俗学网</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <div class="footer-bootom">
+                        <p>“遗”见倾心<a></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--==================================================-->
+<!-- End Adira City Footer Section -->
+<!--==================================================-->
+<div class="scroll-area">
+    <div class="top-wrap">
+        <div class="go-top-btn-wraper">
+            <div class="prgoress_indicator active-progress">
+                <svg class="progress-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">
+                    <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+                          style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 270.456;"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--==================================================-->
+<!-- Start Curser Section Here -->
+<!--==================================================-->
+<div class="curser"></div>
+<div class="curser2"></div>
+<!--==================================================-->
+<!-- Ends Curser Section Here -->
+<!--==================================================-->
+
+<!--==================================================-->
+<!-- Start Search Popup Area -->
+<!--==================================================-->
+<div class="search-popup">
+    <button class="close-search style-two"><i class="fas fa-times"></i></button>
+    <button class="close-search"><i class="fas fa-arrow-up"></i></button>
+    <form method="post" action="#" id="dreamit-forms">
+        <div class="form-group">
+            <input type="search" name="search-field" value="" placeholder="Search Here" required="">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+    </form>
+</div>
+<!--==================================================-->
+<!-- End Search Popup Area -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start scrollup Section Here-->
+<!--==================================================-->
+
+<!--==================================================-->
+<!-- Ends scrollup Section Here -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start JavaScrift CDN Section -->
+<!--==================================================-->
+<script>
+
+    function handleLikeClick(projectId,projectName, categoryBig) {
+        addToFavorites(projectName, categoryBig);
+        addToFavorites_2(projectId);
+    }
+</script>
+<script>
+    function addToFavorites(projectName, categoryBig) {
+        // 这里可以添加向后端发送请求将项目添加到收藏夹的逻辑
+
+        // 设置弹窗消息内容
+        var successMessage = "项目名称：" + projectName + "<br>大类：" + categoryBig;
+
+        // 显示弹窗
+        var modal = $('#successModal');
+        var messageElement = $('#successMessage');
+        messageElement.html(successMessage);
+        modal.modal('show'); // 使用 Bootstrap modal 方法显示弹窗
+    }
+
+    // 在点击“喜欢”按钮时调用 addToFavorites 方法
+    $(document).ready(function() {
+        // 使用 jQuery 来绑定点击事件
+        $('a.like-button').click(function(event) {
+            event.preventDefault(); // 阻止默认链接行为
+
+            // 获取项目名称和大类信息
+            var projectName = $(this).data('project-name');
+            var categoryBig = $(this).data('category-big');
+
+            // 调用 addToFavorites 方法
+            addToFavorites(projectName, categoryBig);
+        });
+    });
+</script>
+<script>
+    // JavaScript 函数用于在居中位置打开百度百科搜索窗口
+    function openBaiduBaike(projectName) {
+        // 构造百度百科搜索链接
+        var searchUrl = 'https://baike.baidu.com/item/' + encodeURIComponent(projectName);
+
+        // 定义窗口大小和居中位置
+        var windowWidth = 800;
+        var windowHeight = 600;
+        var windowLeft = (window.screen.width - windowWidth) / 2;
+        var windowTop = (window.screen.height - windowHeight) / 2;
+
+        // 构建窗口特性字符串
+        var windowFeatures = 'width=' + windowWidth + ',height=' + windowHeight + ',left=' + windowLeft + ',top=' + windowTop +
+                             ',menubar=no,toolbar=no,location=no,resizable=yes,scrollbars=yes,status=yes';
+
+        // 打开新窗口以居中显示百度百科搜索结果
+        var baiduBaikeWindow = window.open(searchUrl, '_blank', windowFeatures);
+
+        if (baiduBaikeWindow) {
+            // 窗口成功打开后可以进行其他操作（可选）
+            console.log('成功打开百度百科窗口。');
+
+        } else {
+            // 处理弹窗被阻止的情况（如果适用）
+            console.error('无法打开百度百科窗口。可能被弹窗阻止了。');
+        }
+    }
+</script>
+
+
+<script>
+    function addToFavorites_2(projectId) {
+fetch('/favorite', {
+   method: 'POST',
+   headers: {
+       'Content-Type': 'application/json',
+   },
+   body: JSON.stringify({
+       project_id: projectId
+   }),
+})
+.then(response => {
+   if (response.ok) {
+       // 更新按钮状态为已收藏
+       const likeButton = document.getElementById('likeButton' + projectId); // 使用 projectId 动态获取按钮元素
+       likeButton.innerHTML = '<i class="bi"></i> 已收藏';
+       likeButton.classList.add('favorited'); // 添加一个CSS类来修改样式
+
+   } else {
+       alert('添加收藏时出现问题，请稍后重试。');
+   }
+})
+.catch(error => {
+   console.error('Error:', error);
+   alert('添加收藏时出现错误，请稍后重试。');
+});
+}
+</script>
+
+<script>
+    function handleBrowse(projectId) {
+        // Send AJAX request to Flask backend
+        fetch('/log_project_interaction', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                project_id: projectId
+            })
+        })
+        .then(function(response) {
+            if (response.ok) {
+                console.log('Project interaction logged successfully.');
+                // Optionally update the UI or perform other actions upon success
+            } else {
+                throw new Error('Failed to log project interaction.');
+            }
+        })
+        .catch(function(error) {
+            console.error('Error logging project interaction:', error);
+        });
+    }
+</script>
+
+
+<!-- Modernizr JS -->
+<script src="static/js/modernizr-3.5.0.min.js"></script>
+<!-- Vendor JS CDN -->
+<script src="static/js/jquery-3.6.2.min.js"></script>
+<!-- Popper JS CDN -->
+<script src="static/js/popper.min.js"></script>
+<!-- Bootstrap JS CDN -->
+<script src="static/js/bootstrap.min.js"></script>
+<!-- Owl Carousel JS CDN -->
+<script src="static/js/owl.carousel.min.js"></script>
+<!-- CounterUp JS CDN -->
+<script src="static/js/jquery.counterup.min.js"></script>
+<!-- WayPoints JS CDN -->
+<script src="static/js/waypoints.min.js"></script>
+<!-- WOW JS CDN -->
+<script src="static/js/wow.js"></script>
+<!-- Imageloaded JS CDN -->
+<script src="static/js/imagesloaded.pkgd.min.js"></script>
+<!-- Venubox JS CDN -->
+<script src="static/js/venobox.js"></script>
+<!-- Animated JS CDN -->
+<script src="static/js/animated-text.js"></script>
+<!-- VenuBox JS CDN -->
+<script src="static/js/venobox.min.js"></script>
+<!-- PKG JS CDN -->
+<script src="static/js/isotope.pkgd.min.js"></script>
+<!-- MeanMenu JS CDN -->
+<script src="static/js/jquery.meanmenu.js"></script>
+<!-- ScrollUp JS CDN -->
+<script src="static/js/jquery.scrollUp.js"></script>
+<!-- Burfiller JS CDN -->
+<script src="static/js/jquery.barfiller.js"></script>
+<!-- Custom JS CDN -->
+<script src="static/js/custom.js"></script>
+
+</body>
+
+</html>

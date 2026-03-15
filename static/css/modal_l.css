@@ -1,0 +1,21 @@
+/* 让模态框居中显示 */
+.modal-dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 60px); /* 这里假设顶部有一个高度为60px的导航栏 */
+}
+
+/* 给提示框添加背景图、半透明效果 */
+.modal-content {
+    background-image: url(../image/a-18.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.3); /* 半透明效果 */
+}
+
+/* 消息加粗显示 */
+.modal-body p {
+    font-weight: bold;
+}

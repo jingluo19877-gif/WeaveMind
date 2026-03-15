@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>非遗知识图谱</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="static/assets_3/dist/css/adminx.css" media="screen"/>
+    <!-- Bootstrap CSS Link -->
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" media="all">
+    <!-- Owl Carousel CSS Link -->
+    <link rel="stylesheet" href="static/css/owl.carousel.min.css" type="text/css" media="all">
+    <!-- Animate CSS Link -->
+    <link rel="stylesheet" href="static/css/animate.css" type="text/css" media="all">
+    <!-- Animated text CSS Link -->
+    <link rel="stylesheet" href="static/css/animated-text.css" type="text/css" media="all">
+    <!-- Font Awesome CSS Link -->
+    <link rel="stylesheet" href="static/css/all.min.css" type="text/css" media="all">
+    <!-- Font Flaticon CSS Link -->
+    <link rel="stylesheet" href="static/css/flaticon.css" type="text/css" media="all">
+    <!-- Custom default CSS Link -->
+    <link rel="stylesheet" href="static/css/custom-default.css" type="text/css" media="all">
+    <!-- Meanmenu CSS Link -->
+    <link rel="stylesheet" href="static/css/meanmenu.min.css" type="text/css" media="all">
+    <!-- Transitions CSS Link -->
+    <link rel="stylesheet" href="static/css/owl.transitions.css" type="text/css" media="all">
+    <!-- Venobox CSS Link -->
+    <link rel="stylesheet" href="static/css/venobox.css" type="text/css" media="all">
+    <!-- Bootstrap Icons Link -->
+    <link rel="stylesheet" href="static/css/bootstrap-icons.css" type="text/css" media="all">
+    <!-- Custom Style CSS Link -->
+    <link rel="stylesheet" href="static/css/style.css" type="text/css" media="all">
+    <!-- Responsive CSS Link -->
+    <link rel="stylesheet" href="static/css/responsive.css" type="text/css" media="all">
+    <link href="static/css/clash-display.css" rel="stylesheet">
+    <script src="static/js/vintage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.2/dist/echarts.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* 设置图表容器的样式 */
+        #chart-container {
+            width: 100vw; /* 宽度占据整个视口宽度 */
+            height: 100vh; /* 高度占据整个视口高度 */
+            margin: 0; /* 去除默认的外边距 */
+            padding: 0; /* 去除默认的内边距 */
+            overflow: auto; /* 启用滚动条，以便查看超出屏幕范围的内容 */
+        }
+        /* 设置图表容器的样式 */
+        #chart-container-2 {
+            width: 100vw; /* 宽度占据整个视口宽度 */
+            height: 100vh; /* 高度占据整个视口高度 */
+            margin: 0; /* 去除默认的外边距 */
+            padding: 0; /* 去除默认的内边距 */
+            overflow: auto; /* 启用滚动条，以便查看超出屏幕范围的内容 */
+        }
+
+        /* 自定义弹窗背景样式 */
+        .modal-content {
+            background-image: url('static/picture/tab-22-L.jpg'); /* 设置背景图片路径 */
+            background-size: cover; /* 背景图片铺满模态框 */
+            border-radius: 10px; /* 设置边框圆角 */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* 设置阴影效果 */
+        }
+    </style>
+
+    <!--
+      # Optional Resources
+      Feel free to delete these if you don't need them in your project
+    -->
+</head>
+<body>
+<!-- Preloader -->
+<div class="loader_bg">
+    <div class="loader"></div>
+    <h4 class="loading-title">Loading...</h4>
+</div>
+
+
+<!--==================================================-->
+<!-- End Adira City Header Main Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Main Menu Area -->
+<!--==================================================-->
+
+<div class="adminx-container">
+    <nav class="navbar navbar-expand justify-content-between fixed-top">
+        <a class="navbar-brand mb-0 h1 d-none d-md-block" href="index.html">
+            <img src="static/assets_3/demo/img/s1.png" class="navbar-brand-image d-inline-block align-top mr-2" alt="">
+            非遗知识图谱
+        </a>
+
+        <form class="form-inline form-quicksearch d-none d-md-block mx-auto" id="searchForm">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-icon">
+                        <i data-feather="search"></i>
+                    </div>
+                </div>
+                <input type="text" class="form-control" id="search" placeholder="请输入非遗项目...">
+            </div>
+        </form>
+
+        <div class="d-flex flex-1 d-block d-md-none">
+            <a href="#" class="sidebar-toggle ml-3">
+                <i data-feather="menu"></i>
+            </a>
+        </div>
+
+
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const layoutOptionsLink = document.getElementById('layoutOptionsLink');
+
+            // 添加点击事件监听器
+            layoutOptionsLink.addEventListener('click', function(event) {
+                event.preventDefault(); // 阻止默认链接行为
+
+                // 显示或隐藏各个部分
+                document.getElementById('section1').style.display = 'none';
+                document.getElementById('section2').style.display = 'block';
+                document.getElementById('section3').style.display = 'none';
+            });
+        });
+    </script>
+
+    <!-- expand-hover push -->
+    <!-- Sidebar -->
+    <div class="adminx-sidebar expand-hover push">
+        <ul class="sidebar-nav">
+            <li class="sidebar-nav-item">
+                <a href="index.html" class="sidebar-nav-link active">
+              <span class="sidebar-nav-icon">
+                <i data-feather="home"></i>
+              </span>
+                    <span class="sidebar-nav-name">
+                Home
+              </span>
+                    <span class="sidebar-nav-end">
+
+              </span>
+                </a>
+            </li>
+
+            <li class="sidebar-nav-item">
+                <a href="#section2" class="sidebar-nav-link" id="layoutOptionsLink">
+              <span class="sidebar-nav-icon">
+                <i data-feather="layout"></i>
+              </span>
+                    <span class="sidebar-nav-name">
+                全国各省份非物质文化遗产
+              </span>
+                    <span class="sidebar-nav-end">
+                <span class="badge badge-info"></span>
+              </span>
+                </a>
+            </li>
+        </ul>
+    </div><!-- Sidebar End -->
+
+    <!-- adminx-content-aside -->
+    <div class="adminx-content">
+        <!-- <div class="adminx-aside">
+
+        </div> -->
+        <!--==================================================-->
+        <!-- Start Adira City Testimonial Study Section -->
+        <!--==================================================-->
+        <section id="section1" class="testimonial-section-1 style-two style-three">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="case-study-top">
+                            <div class="adiracity-section-sub-title wow fadeInLeft animated">
+                                <h4>Non-material Cultural Heritage Knowledge Graph</h4>
+                            </div>
+                            <div class="adiracity-section-title wow fadeInLeft animated">
+                                <h1>非物质文化遗产知识图谱</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slider owl-carousel">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="testimonial-shape">
+                                <i class="bi bi-quote"></i>
+                            </div>
+                            <div class="testimonial-desc wow fadeInUp animated">
+                                <p>
+                                    非物质文化遗产知识图谱是非物质文化遗产保护和传承的一种重要工具。它通过将非物质文化遗产的相关信息进行系统化、结构化的整合，形成一种图谱形式的知识体系，旨在更好地保护和传承这些珍贵的文化遗产。
+                                    The knowledge graph of intangible cultural heritage serves as a vital tool for the
+                                    protection and transmission of intangible cultural heritage. By systematically and
+                                    structurally integrating relevant information about intangible cultural heritage, it
+                                    forms a graphical knowledge system aimed at better safeguarding and transmitting
+                                    these valuable cultural legacies.
+                                </p>
+
+                            </div>
+                            <div class="testimonial-profile wow fadeInRight animated">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-lg-12">
+                        <div class="testimonail-btn">
+                            <a href="/index.html">退出</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--==================================================-->
+        <!-- End Adira City Testimonial Study Section -->
+        <!--==================================================-->
+        <section id="section2" class="testimonial-section-2 style-two style-three" style="display: none;">
+            <div class="shop-top-left">
+                <select name="select" id="select" onchange="getSelectedProvince()">
+                    <option value="北京">省份选择</option>
+                    <option value="北京">北京</option>
+                    <option value="天津">天津</option>
+                    <option value="河北">河北</option>
+                    <option value="山西">山西</option>
+                    <option value="内蒙古">内蒙古</option>
+                    <option value="辽宁">辽宁</option>
+                    <option value="吉林">吉林</option>
+                    <option value="黑龙江">黑龙江</option>
+                    <option value="上海">上海</option>
+                    <option value="江苏">江苏</option>
+                    <option value="浙江">浙江</option>
+                    <option value="安徽">安徽</option>
+                    <option value="福建">福建</option>
+                    <option value="江西">江西</option>
+                    <option value="山东">山东</option>
+                    <option value="河南">河南</option>
+                    <option value="湖北">湖北</option>
+                    <option value="湖南">湖南</option>
+                    <option value="广东">广东</option>
+                    <option value="广西">广西</option>
+                    <option value="海南">海南</option>
+                    <option value="重庆">重庆</option>
+                    <option value="四川">四川</option>
+                    <option value="贵州">贵州</option>
+                    <option value="云南">云南</option>
+                    <option value="西藏">西藏</option>
+                    <option value="陕西">陕西</option>
+                    <option value="甘肃">甘肃</option>
+                    <option value="青海">青海</option>
+                    <option value="宁夏">宁夏</option>
+                    <option value="新疆">新疆</option>
+                    <option value="台湾">台湾</option>
+                    <option value="香港">香港</option>
+                    <option value="澳门">澳门</option>
+                </select>
+            </div>
+            <div id="chart-container"></div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                var selectElement = document.getElementById('select');
+
+                selectElement.addEventListener('change', function() {
+                getSelectedProvince();
+       });
+
+       function getSelectedProvince() {
+           var selectedProvince = selectElement.options[selectElement.selectedIndex].value;
+           console.log("Selected Province:", selectedProvince);
+
+           fetch(`/data?province=${selectedProvince}`)
+               .then(response => response.json())
+               .then(data => {
+
+
+                   console.log("Received data from server:", data);
+
+                   // 提取所有节点名称并去重
+                   let allNodes = [];
+                   data.forEach(edge => {
+                       allNodes.push(edge.source);
+                       allNodes.push(edge.target);
+                   });
+                   let uniqueNodes = Array.from(new Set(allNodes));
+
+                   // 根据节点类型设置固定颜色
+                   let nodes = uniqueNodes.map(name => {
+                   let color = name === selectedProvince ? '#7C4449' : '#F3E5E1'; // 设置节点颜色
+
+                       return {
+                           name,
+                           itemStyle: {
+                               color,
+
+                               opacity: 1, // 不透明
+                               shadowBlur: 10, // 阴影模糊大小
+                               shadowColor: 'rgba(0, 0, 0, 0.5)' // 阴影颜色
+                           },
+                           label: {
+                               show: true,
+                               formatter: function (params) {
+                                   let maxLength = 2; // 最大显示字符数
+                                   if (params.name.length > maxLength) {
+                                       return params.name.substr(0, maxLength) + '...'; // 超出部分用省略号表示
+                                   } else {
+                                       return params.name;
+                                   }
+                               },
+                               fontSize: 12,
+                               color: 'black'
+                           },
+                           symbol: 'circle',
+                           symbolSize: 53
+
+                       };
+                   });
+
+                   let links = data.map(edge => ({
+                       source: edge.source,
+                       target: edge.target
+                   }));
+
+                   console.log("Nodes Data:", nodes);
+                   console.log("Edges Data:", links);
+
+                   var myChart = echarts.init(document.getElementById('chart-container'), 'vintage');
+
+                   var option = {
+                       title: {
+                           text: ''
+                       },
+                       tooltip: {},
+                       series: [{
+                           type: 'graph',
+                           layout: 'force',
+                           force: {
+                               repulsion: 330,
+                               edgeLength: [50, 180]
+                           },
+                           data: nodes,
+                           edges: links,
+                           draggable: true
+
+                       }]
+                   };
+
+
+
+                   myChart.setOption(option);
+
+                   myChart.on('click', function (params) {
+                    if (params.dataType === 'node') {
+                    var clickedNodeValue = params.data.name; // 获取点击节点的值
+                    console.log("Clicked Node Value:", clickedNodeValue);
+
+
+                    var searchUrl = "https://baike.baidu.com/search/word?word=" + encodeURIComponent(clickedNodeValue);
+
+                    // 创建一个自定义尺寸和位置的弹出窗口
+                    var popupWindow = window.open(searchUrl, "PopupWindow", "width=800,height=600,top=100,left=100");
+
+                    // 焦点设置到弹出窗口
+                    if (window.focus) {
+                    popupWindow.focus();
+        }
+    }
+});
+
+                   window.addEventListener('resize', function () {
+                       myChart.resize();
+                   });
+               })
+               .catch(error => {
+                   console.error('获取数据出错:', error);
+               });
+       }
+
+       // 初始化页面加载时获取数据
+       getSelectedProvince();
+
+   });
+            </script>
+
+
+        </section>
+        <section id="section3" class="testimonial-section-2 " style="display: none;">
+            <div id="chart-container-2"></div>
+        </section>
+        <!-- 弹窗模态框 -->
+        <div class="modal fade" id="nodeModal" tabindex="-1" aria-labelledby="nodeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="nodeModalLabel">详细信息</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div id="nodeInfoLabel"></div>
+                        <button type="button" class="btn btn-primary mt-3" id="searchWikiBtn">了解更多</button>
+                        <button type="button" class="btn btn-info mt-3" id="searchMapBtn">一键导航</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const searchForm = document.getElementById('searchForm');
+                const searchInput = document.getElementById('search');
+                const section3 = document.getElementById('section3');
+                const section1 = document.getElementById('section1');
+                const section2 = document.getElementById('section2');
+
+                searchForm.addEventListener('submit', function(event) {
+                    event.preventDefault();
+
+                    const searchKeyword = searchInput.value.trim();
+
+                    fetch(`/visualize_node_detail?search_keyword=${searchKeyword}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            section3.style.display = 'block';
+                            section1.style.display = 'none';
+                            section2.style.display = 'none';
+
+                            updateChartWithData(data);
+                        })
+                        .catch(error => {
+                            console.error('Error fetching node detail information:', error);
+                        });
+                });
+
+                function updateChartWithData(data) {
+                    const myChart = echarts.init(document.getElementById('chart-container-2'));
+
+                    if (Array.isArray(data) && data.length > 0) {
+                        const nodes = [];
+                        const edges = [];
+
+                        data.forEach((item, index) => {
+                            const nodeId = 'node_' + index;
+                            const displayedName = item.name.length > 2 ? item.name.substr(0, 2) + '...' : item.name;
+                            nodes.push({
+                                id: nodeId,
+                                name: item.name,
+                                shortName: displayedName,
+                                category: item.category,
+                                proj_num: item.proj_num,
+                                label: {
+                                    show: true,
+                                    formatter: function (params) {
+                                        return params.data.shortName;
+                                    },
+                                    fontSize: 12,
+                                    color: 'black'
+                                },
+                                itemStyle: {
+                                    color: '#F8C6B5',
+                                    shadowBlur: 10, // 节点阴影模糊大小
+                                    shadowColor: 'rgba(0, 0, 0, 0.3)' // 节点阴影颜色
+                                },
+                                symbolSize: 50 // 设置节点的大小
+                            });
+
+                            const existingNode = nodes.find(node => node.proj_num === item.proj_num);
+                            if (existingNode && existingNode.id !== nodeId) {
+                                edges.push({
+                                    source: existingNode.id,
+                                    target: nodeId,
+                                    lineStyle: {
+                                        width: 2, // 连接线宽度
+                                        color: 'gray', // 连接线颜色
+                                        type: 'curve',
+                                        curveness: 0.3
+                                    }
+                                });
+                            }
+                        });
+
+                        const option = {
+                            series: [{
+                                type: 'graph',
+                                layout: 'force',
+                                force: {
+                                    repulsion: 250 // 增大节点之间的距离
+                                },
+                                draggable: true,
+                                data: nodes,
+                                links: edges,
+                            }]
+                        };
+
+                        myChart.setOption(option);
+
+                        myChart.on('click', function (params) {
+                            if (params.data && params.data.id) {
+                                const nodeInfo = {
+                                    id: params.data.id,
+                                    name: params.data.name,
+                                    category: params.data.category,
+                                    proj_num: params.data.proj_num,
+                                    province: data[params.dataIndex].province,
+                                    region: data[params.dataIndex].region,
+                                    unit: data[params.dataIndex].unit
+                                };
+
+                                showNodeInfo(nodeInfo);
+                            }
+                        });
+
+                        function showNodeInfo(nodeInfo) {
+                            const modalBody = document.getElementById('nodeInfoLabel');
+                            modalBody.innerHTML = `
+                                <strong>ID:</strong> ${nodeInfo.id}<br>
+                                <strong>名称:</strong> ${nodeInfo.name}<br>
+                                <strong>类别:</strong> ${nodeInfo.category}<br>
+                                <strong>编号:</strong> ${nodeInfo.proj_num}<br>
+                                <strong>所在省份:</strong> ${nodeInfo.province}<br>
+                                <strong>所在区域:</strong> ${nodeInfo.region}<br>
+                                <strong>保护单位:</strong> ${nodeInfo.unit}<br>
+                            `;
+
+                            const searchWikiBtn = document.getElementById('searchWikiBtn');
+                            searchWikiBtn.addEventListener('click', function() {
+                                const searchUrl = `https://baike.baidu.com/item/${encodeURIComponent(nodeInfo.name)}`;
+                                window.open(searchUrl, '_blank'); // 在新标签页打开百度百科搜索页面
+                            });
+
+                            const searchMapBtn = document.getElementById('searchMapBtn');
+                            searchMapBtn.addEventListener('click', function() {
+                                const searchUrl = `https://www.amap.com/search?query=${encodeURIComponent(nodeInfo.unit)}`;
+                                window.open(searchUrl, '_blank');
+                            });
+
+                            const nodeModal = new bootstrap.Modal(document.getElementById('nodeModal'));
+                            nodeModal.show();
+                        }
+                    } else {
+                        console.log("输入数据为空或格式不正确");
+                    }
+                }
+            });
+        </script>
+
+
+    </div>
+</div>
+
+
+<!-- If you prefer jQuery these are the required scripts -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<script src="static/assets_3/dist/js/vendor.js"></script>
+<script src="static/assets_3/dist/js/adminx.js"></script>
+
+
+<!-- If you prefer vanilla JS these are the only required scripts -->
+<!-- script src="static/assets_3/dist/js/vendor.js"></script>
+<script src="static/assets_3/dist/js/adminx.vanilla.js"></script-->
+<!-- Modernizr JS -->
+<script src="static/js/modernizr-3.5.0.min.js"></script>
+<!-- Vendor JS CDN -->
+<script src="static/js/jquery-3.6.2.min.js"></script>
+<!-- Popper JS CDN -->
+<script src="static/js/popper.min.js"></script>
+<!-- Bootstrap JS CDN -->
+<script src="static/js/bootstrap.min.js"></script>
+<!-- Owl Carousel JS CDN -->
+<script src="static/js/owl.carousel.min.js"></script>
+<!-- CounterUp JS CDN -->
+<script src="static/js/jquery.counterup.min.js"></script>
+<!-- WayPoints JS CDN -->
+<script src="static/js/waypoints.min.js"></script>
+<!-- WOW JS CDN -->
+<script src="static/js/wow.js"></script>
+<!-- Imageloaded JS CDN -->
+<script src="static/js/imagesloaded.pkgd.min.js"></script>
+<!-- Venubox JS CDN -->
+<script src="static/js/venobox.js"></script>
+<!-- Animated JS CDN -->
+<script src="static/js/animated-text.js"></script>
+<!-- VenuBox JS CDN -->
+<script src="static/js/venobox.min.js"></script>
+<!-- PKG JS CDN -->
+<script src="static/js/isotope.pkgd.min.js"></script>
+<!-- MeanMenu JS CDN -->
+<script src="static/js/jquery.meanmenu.js"></script>
+<!-- ScrollUp JS CDN -->
+<script src="static/js/jquery.scrollUp.js"></script>
+<!-- Burfiller JS CDN -->
+<script src="static/js/jquery.barfiller.js"></script>
+<!-- Custom JS CDN -->
+<script src="static/js/custom.js"></script>
+
+</body>
+</html>

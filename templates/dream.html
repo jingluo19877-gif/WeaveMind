@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="astro HTML5 Boostrap website Template">
+
+    <title>互动游戏</title>
+
+    <!-- Favicon -->
+
+
+    <!-- All CSS files -->
+    <link rel="stylesheet" href="static/css/bootstrap_l.min.css">
+    <link rel="stylesheet" href="static/css/font-awesome_l.css">
+    <link rel="stylesheet" href="static/css/slick_l.css">
+    <link rel="stylesheet" href="static/css/slick-theme_l.css">
+    <link rel="stylesheet" href="static/css/sal_l.css">
+    <link rel="stylesheet" href="static/css/app_l.css">
+
+    <!-- Bootstrap CSS Link -->
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" media="all">
+    <!-- Owl Carousel CSS Link -->
+    <link rel="stylesheet" href="static/css/owl.carousel.min.css" type="text/css" media="all">
+    <!-- Animate CSS Link -->
+    <link rel="stylesheet" href="static/css/animate.css" type="text/css" media="all">
+    <!-- Animated text CSS Link -->
+    <link rel="stylesheet" href="static/css/animated-text.css" type="text/css" media="all">
+    <!-- Font Awesome CSS Link -->
+    <link rel="stylesheet" href="static/css/all.min.css" type="text/css" media="all">
+    <!-- Font Flaticon CSS Link -->
+    <link rel="stylesheet" href="static/css/flaticon.css" type="text/css" media="all">
+    <!-- Custom default CSS Link -->
+    <link rel="stylesheet" href="static/css/custom-default.css" type="text/css" media="all">
+    <!-- Meanmenu CSS Link -->
+    <link rel="stylesheet" href="static/css/meanmenu.min.css" type="text/css" media="all">
+    <!-- Transitions CSS Link -->
+    <link rel="stylesheet" href="static/css/owl.transitions.css" type="text/css" media="all">
+    <!-- Venobox CSS Link -->
+    <link rel="stylesheet" href="static/css/venobox.css" type="text/css" media="all">
+    <!-- Bootstrap Icons Link -->
+    <link rel="stylesheet" href="static/css/bootstrap-icons.css" type="text/css" media="all">
+    <!-- Custom Style CSS Link -->
+    <link rel="stylesheet" href="static/css/style.css" type="text/css" media="all">
+    <!-- Responsive CSS Link -->
+    <link rel="stylesheet" href="static/css/responsive.css" type="text/css" media="all">
+    <link href="static/css/clash-display.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/modal_l.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/button_l.css') }}">
+    <link rel="stylesheet" href="static/assets_2/css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="static/assets_2/css/custom.css">
+
+</head>
+
+<body>
+<!-- Preloader -->
+<div class="loader_bg">
+    <div class="loader"></div>
+    <h4 class="loading-title">Loading...</h4>
+</div>
+
+<div id="preloader">
+    <div class="three-body">
+        <div class="three-body__dot"></div>
+        <div class="three-body__dot"></div>
+        <div class="three-body__dot"></div>
+    </div>
+</div>
+
+<!-- Back To Top Start -->
+<a href="#main-wrapper" id="backto-top" class="back-to-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+<!-- Main Wrapper Start -->
+<div id="main-wrapper" class="main-wrapper overflow-hidden">
+
+    <!-- Header Area Start -->
+    <header class="header-manu-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-10">
+                <nav class="header-menu ">
+                    <ul>
+                        <li><a href="index.html" class="active">首页 <i class="bi bi-chevron-down"></i></a>
+                        </li>
+                        <li><a href="w_MLanguageSupport.html">非遗档案<i class="bi "></i></a>
+                        </li>
+                        <li><a href="#">文创<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="work.html">文创精选</a></li>
+                                    <li><a href="mycollectp.html#potfolio-details-section-2">文创助手</a></li>
+                                    <li><a href="dream.html">非遗游戏</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="heartpp.html">智能推荐<i class="bi "></i></a>
+                        </li>
+                        <li><a href="#">数字非遗<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="number.html">非遗数字体验馆</a></li>
+                                    <li><a href="knowledge.html">非遗知识图谱</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">非遗旅游<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="mycollectp.html#potfolio-details-section-1">非遗旅游AI定制</a></li>
+                                    <li><a href="appointment.html">【中国非物质遗产文化馆】预约</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">探索 <i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="z_map.html">非遗地图</a></li>
+                                    <li><a href="t_line.html">非遗传承人</a></li>
+                                    <li><a href="z_test.html">非遗测试</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">欢迎, {{ session['username'] }}<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="mycollectp.html"> {{ session['username'] }}的收藏</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!--==================================================-->
+<!-- End Adira City Header Main Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Main Menu Area -->
+<!--==================================================-->
+<div class="mobile-menu-area sticky d-sm-block d-md-block d-lg-none ">
+    <div class="mobile-menu">
+        <nav class="header-menu">
+            <ul class="nav_scroll">
+                <li class="menu-item-has-children"><a href="index.html">首页</a>
+                </li>
+                <li class="menu-item-has-children"><a href="w_MLanguageSupport.html">非遗档案</a>
+                </li>
+                <li class="menu-item-has-children"><a href="#">文创</a>
+                    <ul class="sub-menu">
+                        <li><a href="work.html">文创精选</a></li>
+                        <li><a href="mycollectp.html#potfolio-details-section-2">文创助手</a></li>
+                        <li><a href="dream.html">非遗游戏</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="heartpp.html">智能推荐</a></li>
+                <li class="menu-item-has-children"><a href="#">数字非遗</a>
+                    <ul class="sub-menu">
+                        <li><a href="number.html">非遗数字体验馆</a></li>
+                        <li><a href="knowledge.html">非遗知识图谱</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">非遗旅游</a>
+                    <ul class="sub-menu">
+                        <li><a href="mycollectp.html#potfolio-details-section-1">非遗旅游AI定制</a></li>
+                        <li><a href="appointment.html">【中国非物质遗产文化馆】预约</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">探索</a>
+                    <ul class="sub-menu">
+                        <li><a href="z_map.html">非遗地图</a></li>
+                        <li><a href="t_line.html">非遗传承人</a></li>
+                        <li><a href="z_test.html">非遗测试</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+    <!-- Header Area end -->
+
+    <!-- Banner Area start -->
+    <section class="banner">
+        <div class="container">
+            <h2 class="fw-6 fs-80 "><b class="color-light">非遗游戏集</b><br></h2>
+            <div class="col-xl-3 col-lg-5 col-sm-7 ms-64">
+                <p class="fw-5 fs-19 ">
+                    非遗游戏集中包含了三款小游戏：遗趣消消乐，非遗爱拼图，都来学剪纸，旨在通过趣味小游戏的方式传承和弘扬非物质文化遗产。</p>
+            </div>
+            <a href="#" id="reading-btn" class="light-btn">非遗游戏集说明指南</a>
+        </div>
+    </section>
+    <!-- 添加JavaScript代码 -->
+    <script>
+        // 获取按钮元素
+        const readingBtn = document.getElementById('reading-btn');
+        // 给按钮添加点击事件监听器
+        readingBtn.addEventListener('click', function(event) {
+            // 阻止默认的跳转行为
+            event.preventDefault();
+            // 获取about部分元素
+            const aboutSection = document.querySelector('.about');
+            // 使用scrollIntoView方法将页面滚动到about部分
+            aboutSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+    <!-- Banner Area end -->
+
+    <!-- about Area start -->
+    <section class="about bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 mb-32">
+                    <h2 class="fw-4 fs-80 "><b>非遗</b> 游戏集</h2>
+                    <div class="horoscope-slider">
+                        <div class="item">
+                            <a href="horoscope-detail.html">
+                                <span>民间</span>
+                                <span class="light-text">文学</span>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="horoscope-detail.html">
+                                <span>传统</span>
+                                <span class="light-text">音乐</span>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="horoscope-detail.html">
+                                <span>传统</span>
+                                <span class="light-text">舞蹈</span>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="horoscope-detail.html">
+                                <span>传统</span>
+                                <span class="light-text">戏剧</span>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="horoscope-detail.html">
+                                <span>曲</span>
+                                <span class="light-text">艺</span>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="horoscope-detail.html">
+                                <span>传统</span>
+                                <span class="light-text">体育、游艺与杂技</span>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="horoscope-detail.html">
+                                <span>传统</span>
+                                <span class="light-text">美术</span>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="horoscope-detail.html">
+                                <span>传统</span>
+                                <span class="light-text">技艺</span>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="horoscope-detail.html">
+                                <span>传统</span>
+                                <span class="light-text">医药</span>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="horoscope-detail.html">
+                                <span>民</span>
+                                <span class="light-text">俗</span>
+                            </a>
+                        </div>
+
+                    </div>
+                    <p>
+                        点击下方开启游戏集按钮，页面跳转后，首先选择开始游戏，之后页面会显示三个非遗小游戏，然后选择您感兴趣的非遗趣味游戏</p>
+                    <a href="非遗游戏集-1.0-web/index.html" class="light-btn active">
+                        <span>开启游戏集</span>
+                        <span>Start Games</span>
+                    </a>
+
+                </div>
+                <div class="col-xl-7 offset-xl-1">
+                    <div class="about-detail">
+                        <div class="row">
+                            <div class="col-xxl-7 col-xl-6 mb-48 text-xl-end order-xl-4 order-3 ">
+                                <h2 class="fw-7 fs-47">遗趣消消乐</h2>
+                                <p>
+                                    “遗趣消消乐”——一款融合传统文化与现代乐趣的非遗主题益智小游戏。在这里，非物质文化遗产不再是遥远的概念，而是化身为一个个生动有趣的图腾，跃然于您的指尖之下。
+                                </p>
+                            </div>
+                            <div class="col-xxl-5 col-xl-6 order-xl-3 order-4 mb-48">
+                                <img src="static/image/c110.png" alt="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xxl-7 col-xl-6 mb-48 text-xl-end order-xl-4 order-3 ">
+                                <h2 class="fw-7 fs-47">非遗爱拼图</h2>
+                                <p>
+                                    “非遗爱拼图”——一款寓教于乐的非物质文化遗产主题拼图游戏。在这里，每一片拼图都承载着悠久的历史与精湛的技艺，等待您亲手解锁与复原，让传统文化在指尖重焕生机。
+                                </p>
+                            </div>
+                            <div class="col-xxl-5 col-xl-6 order-xl-3 order-4 mb-48">
+                                <img src="static/image/c111.png" alt="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xxl-7 col-xl-6 mb-48 text-xl-end order-xl-4 order-3 ">
+                                <h2 class="fw-7 fs-47">都来学剪纸</h2>
+                                <p>
+                                    “都来学剪纸”——一款充满创意与传统文化魅力的非遗互动学习小游戏。在这里，您将化身为剪纸艺术的小工匠，通过趣味横生的互动教程，一步步掌握这项源远流长的民间艺术，让指尖舞动，创造属于您的剪纸佳作。
+                                </p>
+                            </div>
+                            <div class="col-xxl-5 col-xl-6 order-xl-3 order-4 mb-48">
+                                <img src="static/image/c112.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- about Area end -->
+</div>
+
+<!-- Jquery Js -->
+<script src="static/js/jquery-3.6.3_l.min.js"></script>
+<script src="static/js/bootstrap_l.min.js"></script>
+<script src="static/js/slick_l.min.js"></script>
+<script src="static/js/jquery-appear_l.js"></script>
+<script src="static/js/jquery-validator_l.js"></script>
+<!-- Site Scripts -->
+<script src="static/js/app_l.js"></script>
+
+<!-- Modernizr JS -->
+<script src="static/js/modernizr-3.5.0.min.js"></script>
+<!-- Vendor JS CDN -->
+<script src="static/js/jquery-3.6.2.min.js"></script>
+<!-- Popper JS CDN -->
+<script src="static/js/popper.min.js"></script>
+<!-- Bootstrap JS CDN -->
+<script src="static/js/bootstrap.min.js"></script>
+<!-- Owl Carousel JS CDN -->
+<script src="static/js/owl.carousel.min.js"></script>
+<!-- CounterUp JS CDN -->
+<script src="static/js/jquery.counterup.min.js"></script>
+<!-- WayPoints JS CDN -->
+<script src="static/js/waypoints.min.js"></script>
+<!-- WOW JS CDN -->
+<script src="static/js/wow.js"></script>
+<!-- Imageloaded JS CDN -->
+<script src="static/js/imagesloaded.pkgd.min.js"></script>
+<!-- Venubox JS CDN -->
+<script src="static/js/venobox.js"></script>
+<!-- Animated JS CDN -->
+<script src="static/js/animated-text.js"></script>
+<!-- VenuBox JS CDN -->
+<script src="static/js/venobox.min.js"></script>
+<!-- PKG JS CDN -->
+<script src="static/js/isotope.pkgd.min.js"></script>
+<!-- MeanMenu JS CDN -->
+<script src="static/js/jquery.meanmenu.js"></script>
+<!-- ScrollUp JS CDN -->
+<script src="static/js/jquery.scrollUp.js"></script>
+<!-- Burfiller JS CDN -->
+<script src="static/js/jquery.barfiller.js"></script>
+<!-- Custom JS CDN -->
+<script src="static/js/custom.js"></script>
+<script src="static/assets_2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="static/assets_2/js/front.js"></script>
+<!-- jQuery and Bootstrap JS -->
+<script src="/static/js/jquery-3.6.2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

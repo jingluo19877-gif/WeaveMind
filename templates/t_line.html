@@ -1,0 +1,1678 @@
+<!DOCTYPE HTML>
+<html lang="en-US" xmlns:max-width="http://www.w3.org/1999/xhtml">
+
+<head>
+    <script>
+        function toggleVideoAndAudio() {
+        var video = document.getElementById("myVideo");
+        var audio = document.getElementById("myAudio");
+        if (video.paused && audio.paused) {
+        video.play();
+        audio.play();
+        } else {
+            video.pause();
+            audio.pause();
+        }
+        }
+    </script>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>非遗传承人连线</title>
+    <!-- Favicon -->
+
+    <!-- Bootstrap CSS Link -->
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" media="all">
+    <!-- Owl Carousel CSS Link -->
+    <link rel="stylesheet" href="static/css/owl.carousel.min.css" type="text/css" media="all">
+    <!-- Animate CSS Link -->
+    <link rel="stylesheet" href="static/css/animate.css" type="text/css" media="all">
+    <!-- Animated text CSS Link -->
+    <link rel="stylesheet" href="static/css/animated-text.css" type="text/css" media="all">
+    <!-- Font Awesome CSS Link -->
+    <link rel="stylesheet" href="static/css/all.min.css" type="text/css" media="all">
+    <!-- Font Flaticon CSS Link -->
+    <link rel="stylesheet" href="static/css/flaticon.css" type="text/css" media="all">
+    <!-- Custom default CSS Link -->
+    <link rel="stylesheet" href="static/css/custom-default.css" type="text/css" media="all">
+    <!-- Meanmenu CSS Link -->
+    <link rel="stylesheet" href="static/css/meanmenu.min.css" type="text/css" media="all">
+    <!-- Transitions CSS Link -->
+    <link rel="stylesheet" href="static/css/owl.transitions.css" type="text/css" media="all">
+    <!-- Venobox CSS Link -->
+    <link rel="stylesheet" href="static/css/venobox.css" type="text/css" media="all">
+    <!-- Bootstrap Icons Link -->
+    <link rel="stylesheet" href="static/css/bootstrap-icons.css" type="text/css" media="all">
+    <!-- Custom Style CSS Link -->
+    <link rel="stylesheet" href="static/css/style.css" type="text/css" media="all">
+    <!-- Responsive CSS Link -->
+    <link rel="stylesheet" href="static/css/responsive.css" type="text/css" media="all">
+    <link href="static/css/clash-display.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/modal_l.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/button_l.css') }}">
+
+    <style>
+        .custom-select {
+            height: 30px; /* 自定义高度 */
+            overflow-y: auto; /* 开启垂直滚动条 */
+        }
+
+        .custom-font {
+            font-family: "宋体";
+        }
+
+        /* 可选：为对话框添加样式 */
+        .modal1 {
+            display: none; /* 默认隐藏 */
+            position: fixed; /* 固定定位，防止滚动条影响 */
+            z-index: 1; /* 确保在其他元素之上 */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; /* 滚动条 */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* 半透明黑色背景 */
+        }
+        .modal1-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 使对话框居中 */
+            padding: 50px;
+            border: 1px solid #888;
+            width: 45%; /* 调整对话框宽度 */
+        }
+
+	 /* 基础按钮样式 */
+        .styled-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            user-select: none; /* 防止文字被选中 */
+        }
+
+        /* 默认按钮样式 */
+        .styled-button.default {
+            background-color: #4CAF50; /* 绿色背景 */
+            color: white;
+        }
+
+        /* 自定义其他样式 */
+        .styled-button.primary {
+            background-color: red; /* 蓝色背景 */
+            color: white;
+        }
+
+        .styled-button.yellow {
+            background-color: #FFCC00; /* 黄色背景 */
+            color: white;
+        }
+
+        .button-container {
+        display: flex;
+        justify-content: space-between; /* 两侧对齐，按钮间留空 */
+        align-items: center; /* 垂直居中对齐 */
+    	}
+
+		label {
+		color: black;
+		font-size: 25px;
+		}
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- Button to trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#messageModal" id="messageBtn"
+        style="display: none;">
+    Open Modal
+</button>
+
+<form action="/reserve" method="post">
+    <div id="myModal" class="modal1">
+        <div class="modal1-content">
+            <label for="inheritor" style="font-size: 21px;color: black;">请选择一位传承人：</label>
+            <select class="custom-select" id="inheritor" name="inheritor">
+                <option value="01">民间文学-芮时龙</option>
+                <option value="02">民间文学-崔保光（崔谷禅）</option>
+                <option value="03">民间文学-肖秋林</option>
+                <option value="04">民间文学-杨文英</option>
+                <option value="05">传统音乐-刘雯雯</option>
+                <option value="06">传统音乐-胡格吉勒图</option>
+                <option value="07">传统音乐-张旭武</option>
+                <option value="08">传统音乐-李海术</option>
+                <option value="09">传统舞蹈-苏建国</option>
+                <option value="10">传统舞蹈-杨敬伟</option>
+                <option value="11">传统舞蹈-鲁朝金</option>
+                <option value="12">传统舞蹈-毋启富</option>
+                <option value="13">传统戏剧-果小菁</option>
+                <option value="14">传统戏剧-陈俐</option>
+                <option value="15">传统戏剧-魏金全</option>
+                <option value="16">传统戏剧-肖玉玲</option>
+                <option value="17">曲艺-马志明</option>
+                <option value="18">曲艺-金丽生</option>
+                <option value="19">曲艺-李秀媛</option>
+                <option value="20">曲艺-孙镇业</option>
+                <option value="21">传统体育、游艺与杂技-国庆尊（法号释延尊）</option>
+                <option value="22">传统体育、游艺与杂技-何雨</option>
+                <option value="23">传统体育、游艺与杂技-吴晓光</option>
+                <option value="24">传统体育、游艺与杂技-赵子瑜</option>
+                <option value="25">传统美术-扎西当周</option>
+                <option value="26">传统美术-刘洁</option>
+                <option value="27">传统美术-刘霞冰</option>
+                <option value="28">传统美术-姚建萍</option>
+                <option value="29">传统技艺-傅长敏</option>
+                <option value="30">传统技艺-吴元新</option>
+                <option value="31">传统技艺-葛才金</option>
+                <option value="32">传统技艺-郑福年</option>
+                <option value="33">传统医药-张海英</option>
+                <option value="34">传统医药-金瑛</option>
+                <option value="35">传统医药-刘钢</option>
+                <option value="36">传统医药-申屠银洪</option>
+                <option value="37">民俗-林金榜</option>
+                <option value="38">民俗-杨建军</option>
+                <option value="39">民俗-陶美元</option>
+                <option value="40">民俗-李文广</option>
+            </select>
+            <div style="font-size: 21px;color: black;">请选择一个时间段：</div>
+            <div style="text-align: center;">
+                <p style="font-size: 21px;text-align: center;color: black;">上午：</p>
+                <label for="optionA">9:00 ~ 10:00 </label>
+                <input type="radio" id="optionA" name="time_slot" value="Slot 1">
+                <label for="optionB">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10:00 ~ 11:00 </label>
+                <input type="radio" id="optionB" name="time_slot" value="Slot 2">
+                <label for="optionC">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11:00 ~ 12:00 </label>
+                <input type="radio" id="optionC" name="time_slot" value="Slot 3">
+            </div>
+            <div style="text-align: center;">
+                <p style="font-size: 21px;text-align: center;color: black;">下午：</p>
+                <label for="optionD">14:00 ~ 15:00 </label>
+                <input type="radio" id="optionD" name="time_slot" value="Slot 4">
+                <label for="optionE">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15:00 ~ 16:00 </label>
+                <input type="radio" id="optionE" name="time_slot" value="Slot 5">
+                <label for="optionF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16:00 ~ 17:00 </label>
+                <input type="radio" id="optionF" name="time_slot" value="Slot 6">
+            </div>
+            <div class="button-container">
+                <div id="cancelBtn" class="styled-button primary">取消</div>
+                <button type="submit" id="confirmBtn" class="styled-button default">确定</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<!-- Modal -->
+<div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="messageModalLabel">Message</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="messageText"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery and Bootstrap JS -->
+<script src="/static/js/jquery-3.6.2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Script to trigger modal with message -->
+<script>
+    // Function to show message modal
+    function showMessageModal(message) {
+        $('#messageText').text(message);
+        $('#messageModal').modal('show');
+    }
+
+    // Check if message is available, then show modal
+    $(document).ready(function() {
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    showMessageModal("{{ message }}");
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    });
+
+
+	function showAlert() {
+	// 显示弹窗
+	document.getElementById("myModal").style.display = "block";
+
+	// 添加弹窗的事件监听器
+	document.getElementById("cancelBtn").addEventListener("click", function() {
+    	document.getElementById("myModal").style.display = "none";
+	});
+	document.getElementById("confirmBtn").addEventListener("click", function() {
+    	document.getElementById("myModal").style.display = "none";
+	});
+    }
+
+
+</script>
+
+<!-- Preloader -->
+<div class="loader_bg">
+    <div class="loader"></div>
+    <h4 class="loading-title">Loading...</h4>
+</div>
+
+<!--==================================================-->
+<!-- Start Adira City Header Menu Section -->
+<!--==================================================-->
+
+
+<header class="header-manu-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-10">
+                <nav class="header-menu ">
+                    <ul>
+                        <li><a href="index.html" class="active">首页 <i class="bi bi-chevron-down"></i></a>
+                        </li>
+                        <li><a href="w_MLanguageSupport.html">非遗档案<i class="bi "></i></a>
+                        </li>
+                        <li><a href="#">文创<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="work.html">文创精选</a></li>
+                                    <li><a href="mycollectp.html#potfolio-details-section-2">文创助手</a></li>
+                                    <li><a href="dream.html">非遗游戏</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="heartpp.html">智能推荐<i class="bi "></i></a>
+                        </li>
+                        <li><a href="#">数字非遗<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="number.html">非遗数字体验馆</a></li>
+                                    <li><a href="knowledge.html">非遗知识图谱</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">非遗旅游<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="mycollectp.html#potfolio-details-section-1">非遗旅游AI定制</a></li>
+                                    <li><a href="appointment.html">【中国非物质遗产文化馆】预约</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">探索 <i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="z_map.html">非遗地图</a></li>
+                                    <li><a href="t_line.html">非遗传承人</a></li>
+                                    <li><a href="z_test.html">非遗测试</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">欢迎, {{ session['username'] }}<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="mycollectp.html"> {{ session['username'] }}的收藏</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!--==================================================-->
+<!-- End Adira City Header Main Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Main Menu Area -->
+<!--==================================================-->
+<div class="mobile-menu-area sticky d-sm-block d-md-block d-lg-none ">
+    <div class="mobile-menu">
+        <nav class="header-menu">
+            <ul class="nav_scroll">
+                <li class="menu-item-has-children"><a href="index.html">首页</a>
+                </li>
+                <li class="menu-item-has-children"><a href="w_MLanguageSupport.html">非遗档案</a>
+                </li>
+                <li class="menu-item-has-children"><a href="#">文创</a>
+                    <ul class="sub-menu">
+                        <li><a href="work.html">文创精选</a></li>
+                        <li><a href="mycollectp.html#potfolio-details-section-2">文创助手</a></li>
+                        <li><a href="dream.html">非遗游戏</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="heartpp.html">智能推荐</a></li>
+                <li class="menu-item-has-children"><a href="#">数字非遗</a>
+                    <ul class="sub-menu">
+                        <li><a href="number.html">非遗数字体验馆</a></li>
+                        <li><a href="knowledge.html">非遗知识图谱</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">非遗旅游</a>
+                    <ul class="sub-menu">
+                        <li><a href="mycollectp.html#potfolio-details-section-1">非遗旅游AI定制</a></li>
+                        <li><a href="appointment.html">【中国非物质遗产文化馆】预约</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">探索</a>
+                    <ul class="sub-menu">
+                        <li><a href="z_map.html">非遗地图</a></li>
+                        <li><a href="t_line.html">非遗传承人</a></li>
+                        <li><a href="z_test.html">非遗测试</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<!--==================================================-->
+<!-- End Adira City Header Main Section -->
+<!--==================================================-->
+
+<!--==================================================-->
+<!-- Start Main Menu Area -->
+<!--==================================================-->
+<!--==================================================-->
+<!-- End Main Menu Area -->
+<!--==================================================-->
+
+<!--==================================================-->
+<!-- Start Adira City Banner Inner Section -->
+<!--==================================================-->
+<section class="banner-inner-section-collection">
+    <div class="container ">
+        <div class="row ">
+            <div class="col-lg-12">
+                <div class="custom-font">
+                    <h5>Intangible Cultural Heritage Inheritor Connection</h5>
+                </div>
+                <div class="custom-font">
+                    <h1>非遗传承人</h1>
+                </div>
+                <div class="banner-inner-link wow fadeInRight animated">
+                    <a href="index.html"><i class="fas fa-home"></i> home </a>
+                    <span>.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--==================================================-->
+<!-- End Adira City Banner Inner Section -->
+<!--==================================================-->
+
+<!--==================================================-->
+<!-- Start Adira City Testimonial Study Section -->
+<!--==================================================-->
+<section class="testimonial-section">
+    <div class="testimonial-slider owl-carousel">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div>
+                        <i class="bi bi-chat-dots-fill" style="font-size: 2em;"></i>
+                    </div>
+                    <div class="testimonial-desc ">
+                        <p>非物质文化遗产传承人是指在非物质文化遗产保护工作中承担着传承和发展各项非物质文化遗产任务的个人。
+                            他们通过传承和实践，保护和弘扬了各种传统技艺和文化表现形式。
+                        </p>
+                    </div>
+                    <div>
+                        <i class="bi bi-chat-dots-fill" style="font-size: 2em;"></i>
+                    </div>
+                    <div class="testimonial-desc ">
+                        <p>中国的非物质文化遗产分为十大类型。
+                            这十大类型分别是民间文学、传统音乐、传统舞蹈、传统戏剧、曲艺、传统体育、游艺与杂技、传统美术、传统技艺、传统医药和民俗。
+                            每一类非遗都有非常优秀的传承人代表。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--==================================================-->
+<!-- End Adira City Testimonial Study Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Adira City Tabs Section -->
+<!--==================================================-->
+<section class="tabs-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="tabs-btn wow fadeInRight animated">
+                    <ul>
+                        <li>
+                            <button type="button" class="tab-btn active">民间文学</button>
+                        </li>
+                        <li>
+                            <button type="button" class="tab-btn ">传统音乐</button>
+                        </li>
+                        <li>
+                            <button type="button" class="tab-btn">传统舞蹈</button>
+                        </li>
+                        <li>
+                            <button type="button" class="tab-btn">传统戏剧</button>
+                        </li>
+                        <li>
+                            <button type="button" class="tab-btn">曲艺</button>
+                        </li>
+                        <!--<li><button type="button" class="tab-btn">Who WE are</button></li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 民间文学 -->
+        <div class="tab-view active">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="adiracity-section-sub-title wow fadeInLeft animated">
+                            <h4>Inheritor of Intangible Cultural Heritage</h4>
+                        </div>
+                        <div class="adiracity-section-title wow fadeInLeft animated">
+                            <h1>非遗传承人</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="latest-news-box">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="latest-news-single-box wow fadeInLeft animated">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_20.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>芮时龙</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>国家级非物质文化遗产项目宝卷（吴地宝卷）代表性传承人</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://baike.baidu.com/item/%E8%8A%AE%E6%97%B6%E9%BE%99/22308993">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInDown animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_21jpg.jpeg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>崔保光（崔谷禅）</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>国家非物质文化遗产极禅道真气养生功传承人</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://baijiahao.baidu.com/s?id=1757349806653569091&wfr=spider&for=pc">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInUp animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_22.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>肖秋林</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>国家级非物质文化遗产代表性项目客家古文省级代表性传承人</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="http://www.gndaily.com/kj/system/2018/04/20/001887442.shtml">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInRight animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_23.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>杨文英</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>吴歌非物质文化遗产传承人
+                                            短山歌《小调皮》、《山歌泱泱唱开场》、新民歌《分湖边上新事多》等入选《中国 .
+                                            芦墟山歌集》</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://baike.baidu.com/item/%E6%9D%A8%E6%96%87%E8%8B%B1/7546102?lemmaFrom=lemma_starMap&fromModule=lemma_starMap&starNodeId=7026008872557e03991d3ae3&lemmaIdFrom=22308993">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 传统音乐 -->
+        <div class="tab-view ">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="adiracity-section-sub-title wow fadeInLeft animated">
+                            <h4>Inheritor of Intangible Cultural Heritage</h4>
+                        </div>
+                        <div class="adiracity-section-title wow fadeInLeft animated">
+                            <h1>非遗传承人</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="latest-news-box">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="latest-news-single-box wow fadeInLeft animated">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_24.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>刘雯雯</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>中国第一位唢呐博士
+                                            原本活跃在民间“红白喜事”上的小众乐器唢呐，彻底颠覆了人们的认知。</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://baijiahao.baidu.com/s?id=1770386229488749597&wfr=spider&for=pc">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInDown animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_00.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>胡格吉勒图</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>内蒙古传统音乐蒙古族呼麦(世界级传承人</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://www.dhhtopp.com/2024/03/07/%E5%86%85%E8%92%99%E5%8F%A4%E4%BC%A0%E7%BB%9F%E9%9F%B3%E4%B9%90%E8%92%99%E5%8F%A4%E6%97%8F%E5%91%BC%E9%BA%A6%E4%B8%96%E7%95%8C%E7%BA%A7%E4%BC%A0%E6%89%BF%E4%BA%BA%E8%83%A1%E6%A0%BC%E5%90%89%E5%8B%92-3/">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInUp animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_00.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>张旭武</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>乐亭大鼓省级非遗传承人</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="http://news.sohu.com/a/521453933_120578424">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInRight animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_26.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>李海术</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>云南省省级非物质文化遗产普米族“四弦舞乐”项目代表性传承人</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://mp.weixin.qq.com/s?__biz=MzUyMjMzNDczMg==&mid=2247617331&idx=1&sn=b5652ce11f369a9d7b9d6f08d3fb6148&chksm=f9ce2c50ceb9a5462f4fab944cb34c0f118a1433294e77274836410f2a6cdd07b5be758d065f&scene=27">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 传统舞蹈 -->
+        <div class="tab-view ">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="adiracity-section-sub-title wow fadeInLeft animated">
+                            <h4>Inheritor of Intangible Cultural Heritage</h4>
+                        </div>
+                        <div class="adiracity-section-title wow fadeInLeft animated">
+                            <h1>非遗传承人</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="latest-news-box">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="latest-news-single-box wow fadeInLeft animated">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_27.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>苏建国</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>绥德踢场子省级代表性传承人。</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="http://www.sxsd.gov.cn/html/xwzx/xzbm/202312/42662.html">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInDown animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_28.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>杨敬伟</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>狮舞（白纸坊太狮）国家级非遗传承人</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://baike.baidu.com/item/%E6%9D%A8%E6%95%AC%E4%BC%9F/22479899?fr=ge_ala">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInUp animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_29.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>鲁朝金</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>国家级非物质文化遗产项目彝族跳菜代表性传承人。</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://baike.baidu.com/item/%E9%B2%81%E6%9C%9D%E9%87%91/22841787?fr=ge_ala">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInRight animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_30.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>毋启富</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>灯舞（苏家作龙凤灯舞）代表性传承人。</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="http://hn.cnr.cn/sp/20190612/t20190612_524647311.shtml">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 传统戏剧 -->
+        <div class="tab-view ">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="adiracity-section-sub-title wow fadeInLeft animated">
+                            <h4>Inheritor of Intangible Cultural Heritage</h4>
+                        </div>
+                        <div class="adiracity-section-title wow fadeInLeft animated">
+                            <h1>非遗传承人</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="latest-news-box">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="latest-news-single-box wow fadeInLeft animated">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_31.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>果小菁</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>京剧传承人，代表作品有《我的女神》，《霸王别姬》，《梨花颂》</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://baike.baidu.com/item/%E6%9E%9C%E5%B0%8F%E8%8F%81/57966281?fr=ge_ala">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInDown animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_32.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>陈俐</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>当代赣剧领军人物 ，国家非物质文化遗产（赣剧）传承人，
+                                            曾获戏剧界最高奖项“梅花奖”</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://baijiahao.baidu.com/s?id=1794189620420452560&wfr=spider&for=pc">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInUp animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_34.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>魏金全</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>国家级非物质文化遗产项目皮影戏（华县皮影戏）代表性传承人。</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://baike.baidu.com/item/%E9%AD%8F%E9%87%91%E5%85%A8/5231805?fr=ge_ala">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInRight animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_33.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>肖玉玲</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>国家级非物质文化遗产秦腔项目传承人</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://baijiahao.baidu.com/s?id=1791473688680233411&wfr=spider&for=pc">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 曲艺 -->
+        <div class="tab-view ">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="adiracity-section-sub-title wow fadeInLeft animated">
+                            <h4>Inheritor of Intangible Cultural Heritage</h4>
+                        </div>
+                        <div class="adiracity-section-title wow fadeInLeft animated">
+                            <h1>非遗传承人</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="latest-news-box">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="latest-news-single-box wow fadeInLeft animated">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_00.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>马志明</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>
+                                            中国内地相声表演艺术家，马氏相声传人，国家一级演员，第五批国家级非物质文化遗产代表性项目代表性传承人</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://baike.baidu.com/item/%E9%A9%AC%E5%BF%97%E6%98%8E/1260216">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInDown animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_35.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>金丽生</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>国家一级演员，国家级非物质文化遗产“苏州评弹”代表性传承人。</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://www.sohu.com/a/745721473_121123529">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInUp animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_36.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>李秀媛</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>国家级非物质文化遗产项目东北二人转代表性传承人。</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://baike.baidu.com/item/%E6%9D%8E%E7%A7%80%E5%AA%9B/8366397">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInRight animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_37.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>孙镇业</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>国家级非物质文化遗产项目山东快书代表性传承人，国家一级演员</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://baike.baidu.com/item/%E5%AD%99%E9%95%87%E4%B8%9A/10766121?fr=aladdin">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--==================================================-->
+<!-- End Adira City Tabs Section -->
+<!--==================================================-->
+
+<!--==================================================-->
+<!-- Start Adira City Tabs Section -->
+<!--==================================================-->
+<section class="tabs-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="tabs-btn wow fadeInRight animated">
+                    <ul>
+                        <li>
+                            <button type="button" class="tab-btn active">传统体育、游艺与杂技</button>
+                        </li>
+                        <li>
+                            <button type="button" class="tab-btn ">传统美术</button>
+                        </li>
+                        <li>
+                            <button type="button" class="tab-btn">传统技艺</button>
+                        </li>
+                        <li>
+                            <button type="button" class="tab-btn">传统医药</button>
+                        </li>
+                        <li>
+                            <button type="button" class="tab-btn">民俗</button>
+                        </li>
+                        <!--<li><button type="button" class="tab-btn">Who WE are</button></li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 传统体育、游艺与杂技 -->
+        <div class="tab-view active">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="adiracity-section-sub-title wow fadeInLeft animated">
+                            <h4>Inheritor of Intangible Cultural Heritage</h4>
+                        </div>
+                        <div class="adiracity-section-title wow fadeInLeft animated">
+                            <h1>非遗传承人</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="latest-news-box">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="latest-news-single-box wow fadeInLeft animated">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_01.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>国庆尊（法号释延尊）</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>
+                                            非遗少林庆尊益阳功传承人，少林庆尊益阳功创始人，在"释德水，释悟静"俩位活佛提悟下，创立“气功热动力疗法”</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://www.meipian.cn/c/2450805">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInDown animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_01jpg.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>何雨</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>
+                                            飞虎拳非遗传承人，自幼拜第五代飞虎拳大师孟召坤为师学艺，深得飞虎拳精髓与要理。</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="http://ichpc.org.cn/new/new2/2023-03-24/487.html">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInUp animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_02.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>吴晓光</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>
+                                            杨式太极拳非遗传承人，泰安市杨氏太极拳研究发展中心法人、总教练，杨式太极拳第六代传人（师承傅声远宗师）</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://www.meipian.cn/c/8882032">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInRight animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_03.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>赵子瑜</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>形意拳、八极拳非遗传承人。师承：形意拳.八极拳名家.赵飞.</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="http://ichpc.org.cn/new/new1/2023-03-12/363.html">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 传统美术 -->
+        <div class="tab-view ">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="adiracity-section-sub-title wow fadeInLeft animated">
+                            <h4>Inheritor of Intangible Cultural Heritage</h4>
+                        </div>
+                        <div class="adiracity-section-title wow fadeInLeft animated">
+                            <h1>非遗传承人</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="latest-news-box">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="latest-news-single-box wow fadeInLeft animated">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_05.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>扎西当周</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>国家级非物质文化遗产热贡艺术代表性传承人,热贡地区远近闻名的唐卡绘画大师</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://baike.baidu.com/item/%E6%89%8E%E8%A5%BF%E5%BD%93%E5%91%A8/344221?fr=ge_ala">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInDown animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_06.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>刘洁</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>湖北省工艺美术大师，非物质文化遗产武汉面塑代表性传承人</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://baike.baidu.com/item/%E5%88%98%E6%B4%81/19684404?fr=ge_ala">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInUp animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_07.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>刘霞冰</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>灵山竹编非遗技艺第五代传承人。家族竹编生意，回乡继承父辈手艺。</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://www.thepaper.cn/newsDetail_forward_23998127">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInRight animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_08.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>姚建萍</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>第一批国家级非物质文化遗产项目苏绣代表性传承人。</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="http://ichpc.org.cn/new/new1/2023-03-12/363.html">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 传统技艺 -->
+        <div class="tab-view ">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="adiracity-section-sub-title wow fadeInLeft animated">
+                            <h4>Inheritor of Intangible Cultural Heritage</h4>
+                        </div>
+                        <div class="adiracity-section-title wow fadeInLeft animated">
+                            <h1>非遗传承人</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="latest-news-box">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="latest-news-single-box wow fadeInLeft animated">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_09.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>傅长敏</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>国家级非物质文化遗产粉彩代表性传承人，中国工艺美术大师</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://www.bilibili.com/read/cv23972835/">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInDown animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_10.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>吴元新</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>蓝印花布印染技艺传承人、江苏南通蓝印花布博物馆馆长</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://baijiahao.baidu.com/s?id=1790475503687695974&wfr=spider&for=pc">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInUp animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_11.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>葛才金</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>第六批国家级非物质文化遗产南京金箔锻制技艺代表性传承人</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://mp.weixin.qq.com/s?__biz=MzIwMzEyOTczNA==&mid=2654478532&idx=2&sn=6ebfa8a93a1da5e525066d82324498ce">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInRight animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_12.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>郑福年</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>绿茶制作技艺（紫笋茶制作技艺）传承人</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://www.sohu.com/a/247242383_711444">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 传统医药 -->
+        <div class="tab-view ">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="adiracity-section-sub-title wow fadeInLeft animated">
+                            <h4>Inheritor of Intangible Cultural Heritage</h4>
+                        </div>
+                        <div class="adiracity-section-title wow fadeInLeft animated">
+                            <h1>非遗传承人</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="latest-news-box">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="latest-news-single-box wow fadeInLeft animated">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_13.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>张海英</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>传统古中医疑难杂症调理非遗传承人</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="http://www.ichpc.org.cn/new/new1/2023-12-30/1995.html">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInDown animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_14.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>金瑛</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>国家非物质文化遗产项目针灸（杨继洲针灸）的国家级代表性传承人</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="http://zyy.dingxi.gov.cn/art/2023/2/24/art_12320_1625746.html">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInUp animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_15.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>刘钢</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>
+                                            国家级非物质文化遗产项目中医正骨疗法（宫廷正骨）代表性传承人。北京市级名老中医。</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://baijiahao.baidu.com/s?id=1791109681602192391&wfr=spider&for=pc">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInRight animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_16.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>申屠银洪</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>中药炮制技能大师，医药工程工程师，省级非遗代表性传承人</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://www.sohu.com/a/492803405_121106832">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 民俗 -->
+        <div class="tab-view ">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="adiracity-section-sub-title wow fadeInLeft animated">
+                            <h4>Inheritor of Intangible Cultural Heritage</h4>
+                        </div>
+                        <div class="adiracity-section-title wow fadeInLeft animated">
+                            <h1>非遗传承人</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="latest-news-box">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="latest-news-single-box wow fadeInLeft animated">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_00.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>林金榜</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>国家级非物质文化遗产项目妈祖祭典代表性传承人。莆田湄洲妈祖祖庙的董事长。</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://baike.baidu.com/item/%E6%9E%97%E9%87%91%E6%A6%9C/418415?fr=ge_ala">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInDown animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_17.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>杨建军</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>“东风夜放花千树，更吹落，星如雨”，确山打铁花非遗传承人。
+                                            他组建的“确山铁花表演队”多次应邀赴北京、天津、广东等地表演，
+                                            惊艳四方，还先后参与拍摄了孙周导演的微电影《铁树银花》和电影《时代狂人》，走上了2017年春晚，
+                                            于2019年登上《我要上春晚》。</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://baijiahao.baidu.com/s?id=1787710003651953046&wfr=spider&for=pc">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInUp animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_18.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>陶美元</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>苗族服饰（昌宁苗族服饰）代表性传承人。</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://baijiahao.baidu.com/s?id=1734400573823540803&wfr=spider&for=pc">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInRight animated">
+                            <div class="latest-news-single-box">
+                                <div class="new-single-box-thumb">
+                                    <img src="static/picture/t_19.jpg" alt="thumb">
+                                </div>
+                                <div class="news-single-box-content">
+                                    <div class="news-single-box-title">
+                                        <h6>李文广</h6>
+                                    </div>
+                                    <div class="news-single-content-desc">
+                                        <p>国家级非物质文化遗产祭孔大典代表性传承人</p>
+                                    </div>
+                                    <div class="news-single-box-btn">
+                                        <a href="https://baike.baidu.com/item/%E6%9D%8E%E6%96%87%E5%B9%BF/59181885?fr=ge_ala">了解更多<i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--==================================================-->
+<!-- End Adira City Tabs Section -->
+<!--==================================================-->
+
+<section class="tabs-section">
+    <div style="text-align: center;">
+        <p>—————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+    </div>
+    <div class="latest-news-btn wow fadeInLeft animated  bi bi-star-fill" style="font-size: 2em;">
+    </div>
+    <div style="text-align: center;">
+        <p>—————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+    </div>
+</section>
+<!--==================================================-->
+<!-- Start Adira City Footer Section -->
+<!--==================================================-->
+<footer class="footer-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 wow fadeInLeft animated">
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInDown animated">
+                <div class="footer-explore">
+                    <div class="footer-explore-title">
+                        <h6>友情链接</h6>
+                    </div>
+                    <ul>
+                        <li><a href="https://www.mct.gov.cn/">中华人民共和国文化和旅游部</a></li>
+                        <li><a href="https://fyrhome.cn/">中国非物质文化遗产网</a></li>
+                        <li><a href="http://www.ncha.gov.cn/">国家文物局</a></li>
+                        <li><a href="https://www.chinesefolklore.org.cn/">中国民俗学网</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <div class="footer-bootom">
+                        <p>“遗”见倾心<a></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--==================================================-->
+<!-- End Adira City Footer Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start scrollup Section Here-->
+<!--==================================================-->
+<div class="scroll-area">
+    <div class="top-wrap">
+        <div class="go-top-btn-wraper">
+            <div class="prgoress_indicator active-progress">
+                <svg class="progress-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">
+                    <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+                          style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 270.456;"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+<!--==================================================-->
+<!-- Ends scrollup Section Here -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Curser Section Here -->
+<!--==================================================-->
+<div class="curser"></div>
+<div class="curser2"></div>
+<!--==================================================-->
+<!-- Ends Curser Section Here -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Search Popup Area -->
+<!--==================================================-->
+<div class="search-popup">
+    <button class="close-search style-two"><i class="fas fa-times"></i></button>
+    <button class="close-search"><i class="fas fa-arrow-up"></i></button>
+    <form method="post" action="#" id="dreamit-forms">
+        <div class="form-group">
+            <input type="search" name="search-field" value="" placeholder="Search Here" required="">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+    </form>
+</div>
+<!--==================================================-->
+<!-- End Search Popup Area -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start JavaScrift CDN Section -->
+<!--==================================================-->
+
+<!-- Modernizr JS -->
+<script src="static/js/modernizr-3.5.0.min.js"></script>
+<!-- Vendor JS CDN -->
+<script src="static/js/jquery-3.6.2.min.js"></script>
+<!-- Popper JS CDN -->
+<script src="static/js/popper.min.js"></script>
+<!-- Bootstrap JS CDN -->
+<script src="static/js/bootstrap.min.js"></script>
+<!-- Owl Carousel JS CDN -->
+<script src="static/js/owl.carousel.min.js"></script>
+<!-- CounterUp JS CDN -->
+<script src="static/js/jquery.counterup.min.js"></script>
+<!-- WayPoints JS CDN -->
+<script src="static/js/waypoints.min.js"></script>
+<!-- WOW JS CDN -->
+<script src="static/js/wow.js"></script>
+<!-- Imageloaded JS CDN -->
+<script src="static/js/imagesloaded.pkgd.min.js"></script>
+<!-- Venubox JS CDN -->
+<script src="static/js/venobox.js"></script>
+<!-- Animated JS CDN -->
+<script src="static/js/animated-text.js"></script>
+<!-- VenuBox JS CDN -->
+<script src="static/js/venobox.min.js"></script>
+<!-- PKG JS CDN -->
+<script src="static/js/isotope.pkgd.min.js"></script>
+<!-- MeanMenu JS CDN -->
+<script src="static/js/jquery.meanmenu.js"></script>
+<!-- ScrollUp JS CDN -->
+<script src="static/js/jquery.scrollUp.js"></script>
+<!-- Burfiller JS CDN -->
+<script src="static/js/jquery.barfiller.js"></script>
+<!-- Custom JS CDN -->
+<script src="static/js/custom.js"></script>
+</body>
+
+</html>

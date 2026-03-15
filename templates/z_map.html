@@ -1,0 +1,750 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <script src="static/js/z_echarts.js"></script>
+    <!--    <script src="static/js/z_chain.js"></script>-->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>非遗地图</title>
+    <!-- Favicon -->
+
+    <!-- Bootstrap CSS Link -->
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" media="all">
+    <!-- Owl Carousel CSS Link -->
+    <link rel="stylesheet" href="static/css/owl.carousel.min.css" type="text/css" media="all">
+    <!-- Animate CSS Link -->
+    <link rel="stylesheet" href="static/css/animate.css" type="text/css" media="all">
+    <!-- Animated text CSS Link -->
+    <link rel="stylesheet" href="static/css/animated-text.css" type="text/css" media="all">
+    <!-- Font Awesome CSS Link -->
+    <link rel="stylesheet" href="static/css/all.min.css" type="text/css" media="all">
+    <!-- Font Flaticon CSS Link -->
+    <link rel="stylesheet" href="static/css/flaticon.css" type="text/css" media="all">
+    <!-- Custom default CSS Link -->
+    <link rel="stylesheet" href="static/css/custom-default.css" type="text/css" media="all">
+    <!-- Meanmenu CSS Link -->
+    <link rel="stylesheet" href="static/css/meanmenu.min.css" type="text/css" media="all">
+    <!-- Transitions CSS Link -->
+    <link rel="stylesheet" href="static/css/owl.transitions.css" type="text/css" media="all">
+    <!-- Venobox CSS Link -->
+    <link rel="stylesheet" href="static/css/venobox.css" type="text/css" media="all">
+    <!-- Bootstrap Icons Link -->
+    <link rel="stylesheet" href="static/css/bootstrap-icons.css" type="text/css" media="all">
+    <!-- Custom Style CSS Link -->
+    <link rel="stylesheet" href="static/css/style.css" type="text/css" media="all">
+    <!-- Responsive CSS Link -->
+    <link rel="stylesheet" href="static/css/responsive.css" type="text/css" media="all">
+    <link href="static/css/clash-display.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+<!-- Preloader -->
+<div class="loader_bg">
+    <div class="loader"></div>
+    <h4 class="loading-title">Loading...</h4>
+</div>
+
+<!--==================================================-->
+<!-- Start Adira City Header Menu Section -->
+<!--==================================================-->
+
+<header class="header-manu-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-10">
+                <nav class="header-menu ">
+                    <ul>
+                        <li><a href="index.html" class="active">首页 <i class="bi bi-chevron-down"></i></a>
+                        </li>
+                        <li><a href="w_MLanguageSupport.html">非遗档案<i class="bi "></i></a>
+                        </li>
+                        <li><a href="#">文创<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="work.html">文创精选</a></li>
+                                    <li><a href="mycollectp.html#potfolio-details-section-2">文创助手</a></li>
+                                    <li><a href="dream.html">非遗游戏</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="heartpp.html">智能推荐<i class="bi "></i></a>
+                        </li>
+                        <li><a href="#">数字非遗<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="number.html">非遗数字体验馆</a></li>
+                                    <li><a href="knowledge.html">非遗知识图谱</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">非遗旅游<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="mycollectp.html#potfolio-details-section-1">非遗旅游AI定制</a></li>
+                                    <li><a href="appointment.html">【中国非物质遗产文化馆】预约</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">探索 <i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="z_map.html">非遗地图</a></li>
+                                    <li><a href="t_line.html">非遗传承人</a></li>
+                                    <li><a href="z_test.html">非遗测试</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">欢迎, {{ session['username'] }}<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="mycollectp.html"> {{ session['username'] }}的收藏</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!--==================================================-->
+<!-- End Adira City Header Main Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Main Menu Area -->
+<!--==================================================-->
+<div class="mobile-menu-area sticky d-sm-block d-md-block d-lg-none ">
+    <div class="mobile-menu">
+        <nav class="header-menu">
+            <ul class="nav_scroll">
+                <li class="menu-item-has-children"><a href="index.html">首页</a>
+                </li>
+                <li class="menu-item-has-children"><a href="w_MLanguageSupport.html">非遗档案</a>
+                </li>
+                <li class="menu-item-has-children"><a href="#">文创</a>
+                    <ul class="sub-menu">
+                        <li><a href="work.html">文创精选</a></li>
+                        <li><a href="mycollectp.html#potfolio-details-section-2">文创助手</a></li>
+                        <li><a href="dream.html">非遗游戏</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="heartpp.html">智能推荐</a></li>
+                <li class="menu-item-has-children"><a href="#">数字非遗</a>
+                    <ul class="sub-menu">
+                        <li><a href="number.html">非遗数字体验馆</a></li>
+                        <li><a href="knowledge.html">非遗知识图谱</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">非遗旅游</a>
+                    <ul class="sub-menu">
+                        <li><a href="mycollectp.html#potfolio-details-section-1">非遗旅游AI定制</a></li>
+                        <li><a href="appointment.html">【中国非物质遗产文化馆】预约</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">探索</a>
+                    <ul class="sub-menu">
+                        <li><a href="z_map.html">非遗地图</a></li>
+                        <li><a href="t_line.html">非遗传承人</a></li>
+                        <li><a href="z_test.html">非遗测试</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<!--==================================================-->
+<!-- End Adira City Header Main Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Main Menu Area -->
+<!--==================================================-->
+<div class="mobile-menu-area sticky d-sm-block d-md-block d-lg-none ">
+    <div class="mobile-menu">
+        <nav class="header-menu">
+            <ul class="nav_scroll">
+                <li class="menu-item-has-children"><a href="index.html">首页</a>
+                </li>
+                <li class="menu-item-has-children"><a href="#">导览</a>
+                    <ul class="sub-menu">
+                        <li><a href="appointment.html">在线预约</a></li>
+                        <li><a href="appointment.html#portfolio-strategy">参观须知</a></li>
+                        <li><a href="appointment.html#portfolio-info-2">交通路线</a></li>
+                        <li><a href="linyun_2.html">非遗智问</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">探索</a>
+                    <ul class="sub-menu">
+                        <li><a href="z_map.html">非遗地图</a></li>
+                        <li><a href="knowledge.html">非遗知识图谱</a></li>
+                        <li><a href="w_MLanguageSupport.html">非遗数字博物馆</a></li>
+                        <li><a href="number.html">非遗数字体验馆</a></li>
+                        <li><a href="t_line.html">非遗传承人</a></li>
+                        <li><a href="z_test.html">非遗测试</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="heartpp.html">智能推荐</a>
+                <li><a href="mycollectp.html">我的收藏<i class="bi"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<!--==================================================-->
+<!-- End Adira City Header Main Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Main Menu Area -->
+<!--==================================================-->
+<!--==================================================-->
+<!-- End Main Menu Area -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Adira City Banner Inner Section -->
+<!--==================================================-->
+<section class="banner-inner-section-map  ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="adiracity-section-sub-title wow fadeInLeft animated">
+                    <h4>The five batches of national-level project directories consist of 1557 national-level intangible
+                        cultural heritage items, totaling 3610 sub-items.</h4>
+                </div>
+                <div class="banner-inner-section-title wow fadeInRight animated">
+                    <h1><strong class="bold">五批</strong>国家级项目名录<br><strong class="bold">1557</strong>
+                        个国家级非物质文化遗产<br><strong class="bold">3610</strong>个子项</h1>
+                </div>
+                <div class="banner-inner-link wow fadeInRight animated">
+                    <a href="index.html"><i class="fas fa-home"></i> home </a>
+                    <span>.</span>
+                    <!--						<a href="">Portfolio</a>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--==================================================-->
+<!-- End Adira City Banner Inner Section -->
+<!--==================================================-->
+
+
+<!--    简介-->
+<section class="counter-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 wow fadeInLeft animated">
+                <div class="counter-box">
+
+                    <div class="counter-number">
+                        <h1 class="counter">5</h1>
+                    </div>
+                    <div class="counter-title">
+                        <h5>国务院先后于2006年、2008年、2011年、2014年和2021公布了五批国家级项目名录</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInDown animated">
+                <div class="counter-box style2">
+                    <div class="counter-number">
+                        <h1 class="counter">10</h1>
+                    </div>
+                    <div class="counter-title">
+                        <h5>
+                            家级名录将非物质文化遗产分为十大门类分别为：民间文学，传统音乐，传统舞蹈，传统戏剧，曲艺，传统体育、游艺与杂技，传统美术，传统技艺，传统医药，民俗。</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInRight animated">
+                <div class="counter-box style4">
+                    <div class="counter-number">
+                        <h1 class="counter">1557</h1>
+                    </div>
+                    <div class="counter-title">
+                        <h5>共计1557个国家级非物质文化遗产代表性项目（</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 wow fadeInUp animated">
+                <div class="counter-box style3">
+                    <div class="counter-number">
+                        <h1 class="counter">3610</h1>
+                    </div>
+                    <div class="counter-title">
+                        <h5>按照申报地区或单位进行逐一统计，共计3610个子项</h5>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!--地图-->
+
+<section class="case-study-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="case-study-top">
+                    <div class="adiracity-section-sub-title wow fadeInLeft animated">
+                        <h1>全国非遗数量分布</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="box" style="height: 800px;border:1px solid #000;"></div>
+        <script type="text/javascript">
+            //数据
+           var rawData = [
+         {
+             "ProvinceCN":"云南省",
+             "Count":145,
+             "Re":"牡帕密帕、傣族孔雀舞"
+         },
+         {
+             "ProvinceCN":"内蒙古自治区",
+             "Count":106,
+             "Re":"蒙古族长调民歌、蒙古族驼球"
+         },
+         {
+             "ProvinceCN":"北京市",
+             "Count":164,
+             "Re":"古琴艺术，京剧"
+         },
+         {
+             "ProvinceCN":"吉林省",
+             "Count":55,
+             "Re":"辽宁鼓乐、东北大鼓、东北二人转"
+         },
+         {
+             "ProvinceCN":"四川省",
+             "Count":153,
+             "Re":"川江号子、川剧"
+         },
+         {
+             "ProvinceCN":"天津市",
+             "Count":47,
+             "Re":"津门法鼓、泥人张"
+         },
+         {
+             "ProvinceCN":"宁夏回族自治区",
+             "Count":28,
+             "Re":"回族服饰"
+         },
+         {
+             "ProvinceCN":"安徽省",
+             "Count":99,
+             "Re":"当涂民歌、徽剧"
+         },
+         {
+             "ProvinceCN":"山东省",
+             "Count":186,
+             "Re":"梁祝传说、秧歌"
+         },
+         {
+             "ProvinceCN":"山西省",
+             "Count":182,
+             "Re":"河曲民歌、高跷"
+         },
+         {
+             "ProvinceCN":"广东省",
+             "Count":164,
+             "Re":"粤剧、龙舞"
+         },
+         {
+             "ProvinceCN":"广西壮族自治区",
+             "Count":71,
+             "Re":"桂剧、壮剧"
+         },
+         {
+             "ProvinceCN":"新疆维吾尔自治区",
+             "Count":149,
+             "Re":"玛纳斯、新疆曲子"
+         },
+         {
+             "ProvinceCN":"江苏省",
+             "Count":161,
+             "Re":"扬剧、秦淮灯会"
+         },
+         {
+             "ProvinceCN":"江西省",
+             "Count":88,
+             "Re":"徽剧、傩舞"
+         },
+         {
+             "ProvinceCN":"河北省",
+             "Count":162,
+             "Re":"河北梆子、评剧"
+         },
+         {
+             "ProvinceCN":"河南省",
+             "Count":125,
+             "Re":"豫剧、少林功夫"
+         },
+         {
+             "ProvinceCN":"浙江省",
+             "Count":257,
+             "Re":"越剧、皮影戏"
+         },
+         {
+             "ProvinceCN":"海南省",
+             "Count":44,
+             "Re":"崖州民歌、黎族打柴舞"
+         },
+         {
+             "ProvinceCN":"湖北省",
+             "Count":145,
+             "Re":"玛纳斯、新疆曲子"
+         },
+         {
+             "ProvinceCN":"湖南省",
+             "Count":137,
+             "Re":"桑植民歌、土家族摆手舞"
+         },
+         {
+             "ProvinceCN":"澳门",
+             "Count":11,
+             "Re":"粤剧、凉茶"
+         },
+         {
+             "ProvinceCN":"甘肃省",
+             "Count":83,
+             "Re":"河西宝卷、兰州鼓子"
+         },
+         {
+             "ProvinceCN":"福建省",
+             "Count":146,
+             "Re":"畲族民歌、泉州北管"
+         },
+         {
+             "ProvinceCN":"西藏自治区",
+             "Count":105,
+             "Re":"唐卡、藏戏"
+         },
+         {
+             "ProvinceCN":"贵州省",
+             "Count":159,
+             "Re":"苗族古歌、侗族大歌"
+         },
+         {
+             "ProvinceCN":"辽宁省",
+             "Count":76,
+             "Re":"皮影戏、乌力格尔"
+         },
+         {
+             "ProvinceCN":"重庆市",
+             "Count":53,
+             "Re":"川江号子、梁平木版年画"
+         },
+         {
+             "ProvinceCN":"陕西省",
+             "Count":91,
+             "Re":"秦腔、安塞腰鼓"
+         },
+         {
+             "ProvinceCN":"青海省",
+             "Count":88,
+             "Re":"格萨（斯）尔、锅庄舞"
+         },
+         {
+             "ProvinceCN":"香港",
+             "Count":12,
+             "Re":"粤剧、凉茶"
+         },
+         {
+             "ProvinceCN":"黑龙江省",
+             "Count":42,
+             "Re":"蒙古族四胡音乐、满族刺绣"
+         }
+     ];
+
+             // 转换数据
+              var data = rawData.map(function (item) {
+                 return {
+                     name: item.ProvinceCN, // 省份
+                     value: item.Count // 数量值
+                 };
+             });
+
+
+             // 初始化echarts实例
+             var myChart = echarts.init(document.getElementById('box'));
+
+             // 加载json文件
+             fetch('static/json/z_中华人民共和国.json')
+             .then(response => response.json())
+             .then(chinaJson => {
+
+             // 注册地图数据
+               echarts.registerMap('china', chinaJson);
+
+
+             // 指定图表的配置项和数据
+             var option = {
+                 visualMap: { // 映射数值到颜色
+                     min: 0, // 最小值
+                     max: 300, // 最大值
+                     left: 'left', // 组件的位置
+                     top: 'bottom',
+                     text: ['高', '低'], // 文本，
+                     calculable: true, // 显示拖拽条
+                     inRange: {
+                         color: ['#FDE6E0', '#800000'] // 颜色范围
+                     }
+                 },
+                 series: [{
+                     name: '中国',
+                     type: 'map',
+                     map: 'china', // 使用中国地图
+                     roam: false, // 禁止鼠标缩放和平移漫游
+                     data: data // 使用转换后的数据
+                 }]
+             };
+             // 使用刚指定的配置项和数据显示图表。
+             myChart.setOption(option);
+
+
+              myChart.on('click', function (params) {
+                // 查找点击区域的原始数据
+             const clickedData = rawData.find(item => item.ProvinceCN === params.name);
+              if (clickedData) {
+              // 如果找到了对应的数据，则弹出一个提示框
+              alert(clickedData.ProvinceCN+"的代表非遗项目为："+clickedData.Re);
+ }
+});
+
+
+     var graphic = echarts.graphic;
+     var zr = myChart.getZr();
+     var group = new graphic.Group();
+     zr.add(group);
+     group.add(new graphic.Text({
+         style: {
+             text: '审图号: GS京(2022)1061号',
+             x: 10,
+             y: 30,
+             textBaseline: 'top',
+             textAlign: 'left',
+             textStyle: {
+                 fontSize: 20,
+                 fill: '#999'
+             }
+         }
+     }));
+
+
+      group.add(new graphic.Text({
+         style: {
+             text: '地图来源: https://datav.aliyun.com/portal/school/atlas/area_selector',
+             x: 10,
+             y: 50,
+             textBaseline: 'top',
+             textAlign: 'left',
+             textStyle: {
+                 fontSize: 20,
+                 fill: '#999'
+             }
+         }
+      }));
+
+      group.add(new graphic.Text({
+         style: {
+             text: '数据来源: 中国非物质文化遗产网·中国非物质文化遗产数字博物馆',
+             x: 10,
+             y: 70,
+             textBaseline: 'top',
+             textAlign: 'left',
+             textStyle: {
+                 fontSize: 20,
+                 fill: '#999'
+             }
+         }
+      }));
+
+
+             })
+        </script>
+    </div>
+</section>
+<!--==================================================-->
+<!-- Start Adira City Footer Section -->
+<!--==================================================-->
+<footer class="footer-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 wow fadeInLeft animated">
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInDown animated">
+                <div class="footer-explore">
+                    <div class="footer-explore-title">
+                        <h6>友情链接</h6>
+                    </div>
+                    <ul>
+                        <li><a href="https://www.mct.gov.cn/">中华人民共和国文化和旅游部</a></li>
+                        <li><a href="https://fyrhome.cn/">中国非物质文化遗产网</a></li>
+                        <li><a href="http://www.ncha.gov.cn/">国家文物局</a></li>
+                        <li><a href="https://www.chinesefolklore.org.cn/">中国民俗学网</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <div class="footer-bootom">
+                        <p>“遗”见倾心<a></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--<div class="col-lg-3 col-md-6 wow fadeInUp animated">
+    <div class="footer-instagram">
+        <div class="footer-instagram-title">
+            <h6>GALLERY</h6>
+        </div>
+        <ul>
+            <li><a href="404.html"><img src="static/picture/footer-thumb.jpg" alt="thumb"></a></li>
+            <li><a href="404.html"><img src="static/picture/footer-thumb-2.jpg" alt="thumb"></a></li>
+            <li><a href="404.html"><img src="static/picture/footer-thumb-3.jpg" alt="thumb"></a></li>
+            <li><a href="404.html"><img src="static/picture/footer-thumb-4.jpg" alt="thumb"></a></li>
+        </ul>
+    </div>
+</div>
+<div class="col-lg-3 col-md-6 wow fadeInRight animated">
+    <div class="footer-contact">
+        <div class="footer-contact-title">
+            <h6>CONTACT US</h6>
+        </div>
+        <ul>
+            <li><a href="#">mailto:example@gmail.com</a></li>
+            <li>
+                30 Commercial Road
+                Fratton, Australia</li>
+            <li>Mon – Sat: 8:00 am to 6:00 pm
+                Sunday: Closed</li>
+        </ul>
+    </div>
+</div>
+</div>
+<div class="row text-center">
+<div class="col-lg-12">
+    <div class="footer-subscribe">
+        <form action="#" method="POST" id="dreamit-form">
+            <input type="email" name="email" id="email" placeholder="Enter Your E-Mail." required="">
+            <button type="submit">SUBSCRIBE</button>
+        </form>
+    </div>
+</div>
+</div>-->
+
+
+<!--==================================================-->
+<!-- End Adira City Footer Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start scrollup Section Here-->
+<!--==================================================-->
+<div class="scroll-area">
+    <div class="top-wrap">
+        <div class="go-top-btn-wraper">
+            <div class="prgoress_indicator active-progress">
+                <svg class="progress-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">
+                    <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+                          style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 270.456;"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+<!--==================================================-->
+<!-- Ends scrollup Section Here -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Search Popup Area -->
+<!--==================================================-->
+<div class="search-popup">
+    <button class="close-search style-two"><i class="fas fa-times"></i></button>
+    <button class="close-search"><i class="fas fa-arrow-up"></i></button>
+    <form method="post" action="#" id="dreamit-forms">
+        <div class="form-group">
+            <input type="search" name="search-field" value="" placeholder="Search Here" required="">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+    </form>
+</div>
+<!--==================================================-->
+<!-- End Search Popup Area -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Curser Section Here -->
+<!--==================================================-->
+<div class="curser"></div>
+<div class="curser2"></div>
+<!--==================================================-->
+<!-- Ends Curser Section Here -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start JavaScrift CDN Section -->
+<!--==================================================-->
+
+
+<!-- Modernizr JS -->
+<script src="static/js/modernizr-3.5.0.min.js"></script>
+<!-- Vendor JS CDN -->
+<script src="static/js/jquery-3.6.2.min.js"></script>
+<!-- Popper JS CDN -->
+<script src="static/js/popper.min.js"></script>
+<!-- Bootstrap JS CDN -->
+<script src="static/js/bootstrap.min.js"></script>
+<!-- Owl Carousel JS CDN -->
+<script src="static/js/owl.carousel.min.js"></script>
+<!-- CounterUp JS CDN -->
+<script src="static/js/jquery.counterup.min.js"></script>
+<!-- WayPoints JS CDN -->
+<script src="static/js/waypoints.min.js"></script>
+<!-- WOW JS CDN -->
+<script src="static/js/wow.js"></script>
+<!-- Imageloaded JS CDN -->
+<script src="static/js/imagesloaded.pkgd.min.js"></script>
+<!-- Venubox JS CDN -->
+<script src="static/js/venobox.js"></script>
+<!-- Animated JS CDN -->
+<script src="static/js/animated-text.js"></script>
+<!-- VenuBox JS CDN -->
+<script src="static/js/venobox.min.js"></script>
+<!-- PKG JS CDN -->
+<script src="static/js/isotope.pkgd.min.js"></script>
+<!-- MeanMenu JS CDN -->
+<script src="static/js/jquery.meanmenu.js"></script>
+<!-- ScrollUp JS CDN -->
+<script src="static/js/jquery.scrollUp.js"></script>
+<!-- Burfiller JS CDN -->
+<script src="static/js/jquery.barfiller.js"></script>
+<!-- Custom JS CDN -->
+<script src="static/js/custom.js"></script>
+
+</body>
+
+</html>

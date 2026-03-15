@@ -1,0 +1,28 @@
+ .comment-block {
+
+        margin-bottom: 20px; /* 这里可以根据需要调整间距大小 */
+
+    }
+
+    #comments-section {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 1em; /* 这里设置每条评论之间的垂直间距 */
+
+    }
+
+
+
+    .blog-comment {
+
+        display: flex;
+
+        flex-direction: row;
+
+        align-items: flex-start;
+
+    }
+

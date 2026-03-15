@@ -1,0 +1,20 @@
+/* CSS文件或<style>标签内 */
+
+.responsive-image {
+
+    max-width: 100%;
+
+    height: auto;
+
+}
+
+
+/* 可以根据需要添加媒体查询 */
+
+@media (min-width: 768px) {
+
+    .responsive-image {
+
+        max-width: 30%; /* 或其他你需要的百分比 */
+
+    }

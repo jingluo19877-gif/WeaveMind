@@ -1,0 +1,899 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>推荐中心</title>
+    <!-- Favicon -->
+
+    <!-- Bootstrap CSS Link -->
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" media="all">
+    <!-- Owl Carousel CSS Link -->
+    <link rel="stylesheet" href="static/css/owl.carousel.min.css" type="text/css" media="all">
+    <!-- Animate CSS Link -->
+    <link rel="stylesheet" href="static/css/animate.css" type="text/css" media="all">
+    <!-- Animated text CSS Link -->
+    <link rel="stylesheet" href="static/css/animated-text.css" type="text/css" media="all">
+    <!-- Font Awesome CSS Link -->
+    <link rel="stylesheet" href="static/css/all.min.css" type="text/css" media="all">
+    <!-- Font Flaticon CSS Link -->
+    <link rel="stylesheet" href="static/css/flaticon.css" type="text/css" media="all">
+    <!-- Custom default CSS Link -->
+    <link rel="stylesheet" href="static/css/custom-default.css" type="text/css" media="all">
+    <!-- Meanmenu CSS Link -->
+    <link rel="stylesheet" href="static/css/meanmenu.min.css" type="text/css" media="all">
+    <!-- Transitions CSS Link -->
+    <link rel="stylesheet" href="static/css/owl.transitions.css" type="text/css" media="all">
+    <!-- Venobox CSS Link -->
+    <link rel="stylesheet" href="static/css/venobox.css" type="text/css" media="all">
+    <!-- Bootstrap Icons Link -->
+    <link rel="stylesheet" href="static/css/bootstrap-icons.css" type="text/css" media="all">
+    <!-- Custom Style CSS Link -->
+    <link rel="stylesheet" href="static/css/style.css" type="text/css" media="all">
+    <!-- Responsive CSS Link -->
+    <link rel="stylesheet" href="static/css/responsive.css" type="text/css" media="all">
+    <link href="static/css/clash-display.css" rel="stylesheet">
+    <link href="static/css/css2_ll.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/bootstrap_ll.min.css">
+    <link rel="stylesheet" href="static/css/animate_ll.css">
+    <link rel="stylesheet" href="static/css/owl.carousel_ll.min.css">
+    <link rel="stylesheet" href="static/css/aos_ll.css">
+    <link rel="stylesheet" href="static/css/bootstrap-datepicker_ll.css">
+    <link rel="stylesheet" href="static/css/jquery_ll.timepicker.css">
+    <link rel="stylesheet" href="static/css/fancybox_ll.min.css">
+    <link rel="stylesheet" href="static/css/ionicons_ll.min.css">
+    <link rel="stylesheet" href="static/css/font-awesome_ll.min.css">
+
+    <link rel="stylesheet" href="static/css/style_ll.css">
+
+    <style>
+
+        /* 自定义弹窗背景样式 */
+        .modal-content {
+            background-image: url('static/picture/tab-22-L.jpg'); /* 设置背景图片路径 */
+            background-size: cover; /* 背景图片铺满模态框 */
+            border-radius: 10px; /* 设置边框圆角 */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* 设置阴影效果 */
+        }
+    </style>
+
+
+    <!--==================================================-->
+    <!-- Start Adira City Header Menu Section -->
+    <!--==================================================-->
+</head>
+<body>
+
+<!-- Preloader -->
+<div class="loader_bg">
+    <div class="loader"></div>
+    <h4 class="loading-title">智能推荐中...</h4>
+</div>
+
+
+<header class="header-manu-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-10">
+                <nav class="header-menu ">
+                    <ul>
+                        <li><a href="index.html" class="active">首页 <i class="bi bi-chevron-down"></i></a>
+                        </li>
+                        <li><a href="w_MLanguageSupport.html">非遗档案<i class="bi "></i></a>
+                        </li>
+                        <li><a href="#">文创<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="work.html">文创精选</a></li>
+                                    <li><a href="mycollectp.html#potfolio-details-section-2">文创助手</a></li>
+                                    <li><a href="dream.html">非遗游戏</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="heartpp.html">智能推荐<i class="bi "></i></a>
+                        </li>
+                        <li><a href="#">数字非遗<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="number.html">非遗数字体验馆</a></li>
+                                    <li><a href="knowledge.html">非遗知识图谱</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">非遗旅游<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="mycollectp.html#potfolio-details-section-1">非遗旅游AI定制</a></li>
+                                    <li><a href="appointment.html">【中国非物质遗产文化馆】预约</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">探索 <i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="z_map.html">非遗地图</a></li>
+                                    <li><a href="t_line.html">非遗传承人</a></li>
+                                    <li><a href="z_test.html">非遗测试</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">欢迎, {{ session['username'] }}<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="mycollectp.html"> {{ session['username'] }}的收藏</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!--==================================================-->
+<!-- End Adira City Header Main Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Main Menu Area -->
+<!--==================================================-->
+<div class="mobile-menu-area sticky d-sm-block d-md-block d-lg-none ">
+    <div class="mobile-menu">
+        <nav class="header-menu">
+            <ul class="nav_scroll">
+                <li class="menu-item-has-children"><a href="index.html">首页</a>
+                </li>
+                <li class="menu-item-has-children"><a href="w_MLanguageSupport.html">非遗档案</a>
+                </li>
+                <li class="menu-item-has-children"><a href="#">文创</a>
+                    <ul class="sub-menu">
+                        <li><a href="work.html">文创精选</a></li>
+                        <li><a href="mycollectp.html#potfolio-details-section-2">文创助手</a></li>
+                        <li><a href="dream.html">非遗游戏</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="heartpp.html">智能推荐</a></li>
+                <li class="menu-item-has-children"><a href="#">数字非遗</a>
+                    <ul class="sub-menu">
+                        <li><a href="number.html">非遗数字体验馆</a></li>
+                        <li><a href="knowledge.html">非遗知识图谱</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">非遗旅游</a>
+                    <ul class="sub-menu">
+                        <li><a href="mycollectp.html#potfolio-details-section-1">非遗旅游AI定制</a></li>
+                        <li><a href="appointment.html">【中国非物质遗产文化馆】预约</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">探索</a>
+                    <ul class="sub-menu">
+                        <li><a href="z_map.html">非遗地图</a></li>
+                        <li><a href="t_line.html">非遗传承人</a></li>
+                        <li><a href="z_test.html">非遗测试</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<section class="site-hero site-hero1 overlay" id="section-home">
+    <div class="container">
+        <div class="row site-hero-inner justify-content-center align-items-center">
+            <div class="col-md-10 text-center" data-aos="fade-up">
+                <h1 class="heading">非物质文化遗产与文创推荐中心</h1>
+            </div>
+        </div>
+    </div>
+
+    <a class="mouse smoothscroll" href="#next">
+        <div class="mouse-icon">
+            <span class="mouse-wheel"></span>
+        </div>
+    </a>
+</section>
+<!--==================================================-->
+<!-- End Main Menu Area -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Adira City Banner Inner Section -->
+<!--==================================================-->
+
+<!--==================================================-->
+<!-- End Adira City Banner Inner Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Adira City Shop Section -->
+<!--==================================================-->
+
+
+<section class="shop-inner-section">
+    <div class="container">
+        <div class="shop-section-title wow fadeInDown animated">
+            <h3>猜您喜欢♥</h3>
+        </div>
+        {% for project in user_projects.items %}
+        <section class="potfolio-details-section-1">
+            <div class="portfolio-info-6">
+                <div class="tab-item">
+                    <div class="row align-items-center">
+                        <div class="col-lg-3">
+                            <div class="shop-content-thumb">
+                                {% set image_path = 'projectf/' + project.specific_number + '.jpg' %}
+                                <img src="{{ url_for('static', filename=image_path) }}" alt="thumb">
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="shop-tab-details">
+                                <div class="tab-item-title">
+                                    <h4>{{ project.project_name }}</h4>
+                                </div>
+                                <!-- Assuming 'rating' is a field in your model representing the rating -->
+                                <div class="item-rate">
+                                    <div class="item-rate-icon">
+                                        <ul>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-half"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tab-item-desc">
+                                    <p>大类：{{ project.category_big }}</p>
+                                </div>
+                                <div class="tab-item-desc">
+                                    <p>小类：{{ project.category_small }}</p>
+                                </div>
+                                <div class="tab-item-desc">
+                                    <p>简述：{{ project.description }}</p>
+                                </div>
+                                <div class="add-to-cart">
+                                    <!-- 修改前端代码，为浏览按钮添加点击事件 -->
+                                    <a href="#"
+                                       onclick="openBaiduBaike('{{ project.project_name }}', '{{ project.category_big }}'); handleBrowse('{{ project.id }}');return false;"><i
+                                            class="bi "></i> 浏览</a>
+                                    <a href="#" class="like-button"
+                                       onclick="handleLikeClick('{{ project.id }}','{{ project.project_name }}', '{{ project.category_big }}'); return false;"
+                                       id="likeButton{{ project.id }}" data-project-id="{{ project.id }}">
+                                        <i class="bi bi-heart"></i> 收藏
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endfor %}
+
+        <!-- 分页链接 -->
+        <div class="pagination_project">
+            {% if user_projects.has_prev %}
+            <a href="{{ url_for('show_user_projects', page_projects=user_projects.prev_num) }}">上一页</a>
+            {% endif %}
+
+            {% for page_num in user_projects.iter_pages() %}
+            {% if page_num %}
+            {% if user_projects.page == page_num %}
+            <strong>{{ page_num }}</strong>
+            {% else %}
+            <a href="{{ url_for('show_user_projects', page_projects=page_num) }}">{{ page_num }}</a>
+            {% endif %}
+            {% else %}
+            <span class="ellipsis">...</span>
+            {% endif %}
+            {% endfor %}
+
+            {% if user_projects.has_next %}
+            <a href="{{ url_for('show_user_projects', page_projects=user_projects.next_num) }}">下一页</a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="successModalLabel">成功添加到收藏夹</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- 可选：添加成功提示信息 -->
+                <p>已成功添加到您的收藏夹，在“我的收藏”中可查看收藏内容</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section class="banner-inner-section-heartpp">
+    <div class="container ">
+        <div class="row ">
+            <div class="col-lg-12">
+                <div class="banner-inner-section-title wow fadeInRight animated">
+                    <h1>精美文创</h1>
+                </div>
+                <div class="banner-inner-link wow fadeInRight animated">
+                    <a href="index.html"><i class="fas fa-home"></i> home </a>
+                    <span>.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--非遗文创-->
+<section class="latest-news-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="adiracity-section-sub-title wow fadeInLeft animated">
+                    <h4>Recommended for you</h4>
+                </div>
+                <div class="adiracity-section-title wow fadeInLeft animated">
+                    <h1>猜您喜欢</h1>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="latest-news-desc wow fadeInRight animated">
+                    <p>
+                        "非遗加文创"融合了传统的非物质文化遗产和现代文化创意，展现了历史的传承与创新的活力，彰显了独特的文化魅力和时代的前沿。</p>
+                </div>
+            </div>
+        </div>
+        <div class="latest-news-box">
+            <div class="row">
+                {% for project in user_works.items %}
+                <div class="col-lg-3 col-md-6">
+                    <div class="latest-news-single-box wow fadeInLeft animated">
+                        <div class="new-single-box-thumb">
+                            {% set image_path = 'projectm/' + project.specific_number + '.png' %}
+                            <img src="{{ url_for('static', filename=image_path) }}" alt="thumb">
+                        </div>
+                        <div class="news-single-box-content">
+                            <div class="news-single-box-title">
+                                <h6>{{ project.work_name }}</h6>
+                            </div>
+                            <div class="news-single-content-desc">
+                                <p>{{ project.category_big }} {{ project.category_small }}</p>
+                            </div>
+                            <div class="news-single-box-btn">
+                                <div class="add-to-cart">
+                                    <!-- 修改前端代码，为浏览按钮添加点击事件 -->
+                                    <a href="#"
+                                       onclick="openTaobaoSearch('{{ project.work_name }}'); handleBrowse_work('{{ project.id }}'); return false;"><i
+                                            class="bi "></i> 购买</a>
+
+                                    <a href="#"
+                                       onclick="handleLikeClick_work('{{ project.id }}','{{ project.work_name }}', '{{ project.category_big }}'); return false;"
+                                       id="likeButton2{{ project.id }}" data-project-id="{{ project.id }}"><i
+                                            class="bi "></i>收藏</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <!-- 分页链接 -->
+            <div class="pagination_work">
+                {% if user_works.has_prev %}
+                <a href="{{ url_for('show_user_projects', page_works=user_works.prev_num) }}">上一页</a>
+                {% endif %}
+
+                {% for page_num in user_works.iter_pages() %}
+                {% if page_num %}
+                {% if user_works.page == page_num %}
+                <strong>{{ page_num }}</strong>
+                {% else %}
+                <a href="{{ url_for('show_user_projects', page_works=page_num) }}">{{ page_num }}</a>
+                {% endif %}
+                {% else %}
+                <span class="ellipsis">...</span>
+                {% endif %}
+                {% endfor %}
+
+                {% if user_works.has_next %}
+                <a href="{{ url_for('show_user_projects', page_works=user_works.next_num) }}">下一页</a>
+                {% endif %}
+            </div>
+            <div class="latest-news-btn wow fadeInLeft animated">
+                <a href="work.html">更多细节</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="successModal2" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="successModalLabel2">成功添加到收藏夹</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- 可选：添加成功提示信息 -->
+                <p>已成功添加到您的收藏夹，在“我的收藏”中可查看收藏内容</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--==================================================-->
+<!-- End Adira City Shop Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Carvally Product Details Info Section -->
+<!--==================================================-->
+
+<!--==================================================-->
+<!-- End Carvally Product Details Info Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Carvally Product Details Related Section -->
+<!--==================================================-->
+
+<!--==================================================-->
+<!-- End Carvally Product Details Related Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Adira City Footer Section -->
+<!--==================================================-->
+<footer class="footer-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 wow fadeInLeft animated">
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInDown animated">
+                <div class="footer-explore">
+                    <div class="footer-explore-title">
+                        <h6>友情链接</h6>
+                    </div>
+                    <ul>
+                        <li><a href="https://www.mct.gov.cn/">中华人民共和国文化和旅游部</a></li>
+                        <li><a href="https://fyrhome.cn/">中国非物质文化遗产网</a></li>
+                        <li><a href="http://www.ncha.gov.cn/">国家文物局</a></li>
+                        <li><a href="https://www.chinesefolklore.org.cn/">中国民俗学网</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <div class="footer-bootom">
+                        <p>“遗”见倾心<a></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--==================================================-->
+<!-- End Adira City Footer Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start scrollup Section Here-->
+<!--==================================================-->
+<div class="scroll-area">
+    <div class="top-wrap">
+        <div class="go-top-btn-wraper">
+            <div class="prgoress_indicator active-progress">
+                <svg class="progress-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">
+                    <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+                          style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 270.456;"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+<!--==================================================-->
+<!-- Ends scrollup Section Here -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Search Popup Area -->
+<!--==================================================-->
+<div class="search-popup">
+    <button class="close-search style-two"><i class="fas fa-times"></i></button>
+    <button class="close-search"><i class="fas fa-arrow-up"></i></button>
+    <form method="post" action="#" id="dreamit-forms">
+        <div class="form-group">
+            <input type="search" name="search-field" value="" placeholder="Search Here" required="">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+    </form>
+</div>
+<!--==================================================-->
+<!-- End Search Popup Area -->
+<!--==================================================-->
+
+<script>
+
+    function handleLikeClick(projectId,projectName, categoryBig) {
+        addToFavorites(projectName, categoryBig);
+        addToFavorites_2(projectId);
+    }
+</script>
+<script>
+    function addToFavorites(projectName, categoryBig) {
+        // 这里可以添加向后端发送请求将项目添加到收藏夹的逻辑
+
+        // 设置弹窗消息内容
+        var successMessage = "项目名称：" + projectName + "<br>大类：" + categoryBig;
+
+        // 显示弹窗
+        var modal = $('#successModal');
+        var messageElement = $('#successMessage');
+        messageElement.html(successMessage);
+        modal.modal('show'); // 使用 Bootstrap modal 方法显示弹窗
+    }
+
+    // 在点击“喜欢”按钮时调用 addToFavorites 方法
+    $(document).ready(function() {
+        // 使用 jQuery 来绑定点击事件
+        $('a.like-button').click(function(event) {
+            event.preventDefault(); // 阻止默认链接行为
+
+            // 获取项目名称和大类信息
+            var projectName = $(this).data('project-name');
+            var categoryBig = $(this).data('category-big');
+
+            // 调用 addToFavorites 方法
+            addToFavorites(projectName, categoryBig);
+        });
+    });
+</script>
+<script>
+    function openBaiduBaike(projectName, categoryBig) {
+        // 构造百度百科搜索链接
+        var searchUrl = 'https://baike.baidu.com/item/' + encodeURIComponent(projectName);
+
+        // 输出调试信息
+        console.log('搜索链接：', searchUrl);
+
+        // 定义弹出窗口的大小和位置
+        var windowWidth = 800;
+        var windowHeight = 600;
+        var windowLeft = (screen.width - windowWidth) / 2;
+        var windowTop = (screen.height - windowHeight) / 2;
+
+        // 打开小窗口并显示百度百科搜索结果页面
+        var baiduBaikeWindow = window.open(searchUrl, 'BaiduBaikeWindow', 'width=' + windowWidth + ', height=' + windowHeight + ', left=' + windowLeft + ', top=' + windowTop);
+
+        // 构造 fetch 请求
+        var requestOptions = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                project_name: projectName,
+                category_big: categoryBig  // 替换为实际的非遗类别名称
+            })
+        };
+
+        // 输出 fetch 请求信息
+        console.log('发送后端请求：', requestOptions);
+
+
+    }
+</script>
+
+<script>
+    function addToFavorites_2(projectId) {
+fetch('/favorite', {
+   method: 'POST',
+   headers: {
+       'Content-Type': 'application/json',
+   },
+   body: JSON.stringify({
+       project_id: projectId
+   }),
+})
+.then(response => {
+   if (response.ok) {
+       // 更新按钮状态为已收藏
+       const likeButton = document.getElementById('likeButton' + projectId); // 使用 projectId 动态获取按钮元素
+       likeButton.innerHTML = '<i class="bi"></i> 已收藏';
+       likeButton.classList.add('favorited'); // 添加一个CSS类来修改样式
+
+   } else {
+       alert('添加收藏时出现问题，请稍后重试。');
+   }
+})
+.catch(error => {
+   console.error('Error:', error);
+   alert('添加收藏时出现错误，请稍后重试。');
+});
+}
+</script>
+
+
+<script>
+    function handleBrowse(projectId) {
+        // Send AJAX request to Flask backend
+        fetch('/log_project_interaction', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                project_id: projectId
+            })
+        })
+        .then(function(response) {
+            if (response.ok) {
+                console.log('Project interaction logged successfully.');
+                // Optionally update the UI or perform other actions upon success
+            } else {
+                throw new Error('Failed to log project interaction.');
+            }
+        })
+        .catch(function(error) {
+            console.error('Error logging project interaction:', error);
+        });
+    }
+</script>
+<script>
+    function handleBrowse_work(workId) {
+        // Send AJAX request to Flask backend
+        fetch('/log_work_interaction', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                work_id: workId
+            })
+        })
+        .then(function(response) {
+            if (response.ok) {
+                console.log('work interaction logged successfully.');
+                // Optionally update the UI or perform other actions upon success
+            } else {
+                throw new Error('Failed to log work interaction.');
+            }
+        })
+        .catch(function(error) {
+            console.error('Error logging work interaction:', error);
+        });
+    }
+</script>
+<script>
+    // JavaScript 函数用于在居中位置打开淘宝搜索窗口
+    function openTaobaoSearch(workName) {
+        // 构造淘宝搜索链接
+        var searchUrl = 'https://s.taobao.com/search?q=' + encodeURIComponent(workName);
+
+        // 定义窗口大小和居中位置
+        var windowWidth = 800;
+        var windowHeight = 600;
+        var windowLeft = (window.screen.width - windowWidth) / 2;
+        var windowTop = (window.screen.height - windowHeight) / 2;
+
+        // 构建窗口特性字符串
+        var windowFeatures = 'width=' + windowWidth + ',height=' + windowHeight + ',left=' + windowLeft + ',top=' + windowTop +
+                             ',menubar=no,toolbar=no,location=no,resizable=yes,scrollbars=yes,status=yes';
+
+        // 打开新窗口以居中显示淘宝搜索结果
+        var taobaoSearchWindow = window.open(searchUrl, '_blank', windowFeatures);
+
+        if (taobaoSearchWindow) {
+            // 等待新窗口加载完成后填入搜索框
+            taobaoSearchWindow.addEventListener('load', function() {
+                // 在新窗口中查找搜索框元素
+                var searchInput = taobaoSearchWindow.document.getElementById('q');
+
+                // 将关键词填入搜索框
+                if (searchInput) {
+                    searchInput.value = decodeURIComponent(workName); // 将 URL 编码的关键词解码后填入搜索框
+
+                    // 触发搜索（可选）
+                    searchInput.form.submit(); // 提交搜索表单，执行搜索
+                }
+            });
+
+            // 在新窗口加载完成后可以进行其他操作（可选）
+            console.log('成功打开淘宝搜索窗口。');
+
+        } else {
+            // 处理弹窗被阻止的情况（如果适用）
+            console.error('无法打开淘宝搜索窗口。可能被弹窗阻止了。');
+        }
+    }
+</script>
+<script>
+
+    function handleLikeClick_work(workId,workName, categoryBig) {
+        addToFavorites_work(workName, categoryBig);
+        addToFavorites_2_work(workId);
+    }
+</script>
+<script>
+    function addToFavorites_work(workName, categoryBig) {
+        // 这里可以添加向后端发送请求将项目添加到收藏夹的逻辑
+
+        // 设置弹窗消息内容
+        var successMessage = "项目名称：" + workName + "<br>大类：" + categoryBig;
+
+        // 显示弹窗
+        var modal = $('#successModal2');
+        var messageElement = $('#successMessage');
+        messageElement.html(successMessage);
+        modal.modal('show'); // 使用 Bootstrap modal 方法显示弹窗
+    }
+
+    // 在点击“喜欢”按钮时调用 addToFavorites 方法
+    $(document).ready(function() {
+        // 使用 jQuery 来绑定点击事件
+        $('a.like-button').click(function(event) {
+            event.preventDefault(); // 阻止默认链接行为
+
+            // 获取项目名称和大类信息
+            var workName = $(this).data('work-name');
+            var categoryBig = $(this).data('category-big');
+
+            // 调用 addToFavorites 方法
+            addToFavorites(workName, categoryBig);
+        });
+    });
+</script>
+<script>
+    function addToFavorites_2_work(workId) {
+fetch('/favorite_work', {
+   method: 'POST',
+   headers: {
+       'Content-Type': 'application/json',
+   },
+   body: JSON.stringify({
+       work_id: workId
+   }),
+})
+.then(response => {
+   if (response.ok) {
+       // 更新按钮状态为已收藏
+       const likeButton = document.getElementById('likeButton2' + workId); // 使用 projectId 动态获取按钮元素
+       likeButton.innerHTML = '<i class="bi"></i> 已收藏';
+       likeButton.classList.add('favorited'); // 添加一个CSS类来修改样式
+
+   } else {
+       alert('添加收藏时出现问题，请稍后重试。');
+   }
+})
+.catch(error => {
+   console.error('Error:', error);
+   alert('添加收藏时出现错误，请稍后重试。');
+});
+}
+</script>
+
+
+<!--==================================================-->
+<!-- Start Curser Section Here -->
+<!--==================================================-->
+<div class="curser"></div>
+<div class="curser2"></div>
+<!--==================================================-->
+<!-- Ends Curser Section Here -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start JavaScrift CDN Section -->
+<!--==================================================-->
+
+<!-- Modernizr JS -->
+<script src="static/js/modernizr-3.5.0.min.js"></script>
+<!-- Vendor JS CDN -->
+<script src="static/js/jquery-3.6.2.min.js"></script>
+<!-- Popper JS CDN -->
+<script src="static/js/popper.min.js"></script>
+<!-- Bootstrap JS CDN -->
+<script src="static/js/bootstrap.min.js"></script>
+<!-- Owl Carousel JS CDN -->
+<script src="static/js/owl.carousel.min.js"></script>
+<!-- CounterUp JS CDN -->
+<script src="static/js/jquery.counterup.min.js"></script>
+<!-- WayPoints JS CDN -->
+<script src="static/js/waypoints.min.js"></script>
+<!-- WOW JS CDN -->
+<script src="static/js/wow.js"></script>
+<!-- Imageloaded JS CDN -->
+<script src="static/js/imagesloaded.pkgd.min.js"></script>
+<!-- Venubox JS CDN -->
+<script src="static/js/venobox.js"></script>
+<!-- Animated JS CDN -->
+<script src="static/js/animated-text.js"></script>
+<!-- VenuBox JS CDN -->
+<script src="static/js/venobox.min.js"></script>
+<!-- PKG JS CDN -->
+<script src="static/js/isotope.pkgd.min.js"></script>
+<!-- MeanMenu JS CDN -->
+<script src="static/js/jquery.meanmenu.js"></script>
+<!-- ScrollUp JS CDN -->
+<script src="static/js/jquery.scrollUp.js"></script>
+<!-- Burfiller JS CDN -->
+<script src="static/js/jquery.barfiller.js"></script>
+<!-- Custom JS CDN -->
+<script src="static/js/custom.js"></script>
+
+<script>
+    /*  Cart Plus Minus Button
+/*----------------------------------------*/
+
+"use strict";
+window.onload = function() {
+    const   plus    = document.querySelector(".plus"),
+            minus   = document.querySelector(".minus"),
+            num     = document.querySelector(".num");
+
+    let     a = 1;
+
+    plus.addEventListener("click", ()=>{
+        if  (a < 999) {
+            a++;
+            insertingText();
+        }
+    });
+
+    minus.addEventListener("click", ()=>{
+        if (a > 1) {
+            a--;
+            insertingText();
+        }
+    });
+
+    function insertingText() {
+        a = (a < 10) ? "0" + a : a;
+        num.innerText =  a;
+    }
+};
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="static/js/jquery-3.3.1_ll.min.js" type="1b4fda07c87c67a8d0160fb5-text/javascript"></script>
+<script src="static/js/jquery-migrate-3.0.1_ll.min.js" type="1b4fda07c87c67a8d0160fb5-text/javascript"></script>
+<script src="static/js/popper_ll.min.js" type="1b4fda07c87c67a8d0160fb5-text/javascript"></script>
+<script src="static/js/bootstrap_ll.min.js" type="1b4fda07c87c67a8d0160fb5-text/javascript"></script>
+<script src="static/js/owl.carousel_ll.min.js" type="1b4fda07c87c67a8d0160fb5-text/javascript"></script>
+<script src="static/js/jquery.stellar_ll.min.js" type="1b4fda07c87c67a8d0160fb5-text/javascript"></script>
+<script src="static/js/jquery.fancybox_ll.min.js" type="1b4fda07c87c67a8d0160fb5-text/javascript"></script>
+<script src="static/js/jquery.easing.1.3_ll.js" type="1b4fda07c87c67a8d0160fb5-text/javascript"></script>
+<script src="static/js/aos_ll.js" type="1b4fda07c87c67a8d0160fb5-text/javascript"></script>
+<script src="static/js/bootstrap-datepicker_ll.js" type="1b4fda07c87c67a8d0160fb5-text/javascript"></script>
+<script src="static/js/jquery.timepicker_ll.min.js" type="1b4fda07c87c67a8d0160fb5-text/javascript"></script>
+<script src="static/js/main_ll.js" type="1b4fda07c87c67a8d0160fb5-text/javascript"></script>
+<script src="static/js/rocket-loader_ll.min.js" data-cf-settings="1b4fda07c87c67a8d0160fb5-|49" defer=""></script>
+<script>
+    (function(){var js = "window['__CF$cv$params']={r:'7fa1e7141b6952d7',t:'MTY5MjYxMDcwMS42MjcwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/invisible.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();
+</script>
+
+</body>
+
+</html>

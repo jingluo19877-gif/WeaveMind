@@ -1,0 +1,455 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>非遗数字体验馆</title>
+    <!-- Favicon -->
+
+    <!-- Bootstrap CSS Link -->
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" media="all">
+    <!-- Owl Carousel CSS Link -->
+    <link rel="stylesheet" href="static/css/owl.carousel.min.css" type="text/css" media="all">
+    <!-- Animate CSS Link -->
+    <link rel="stylesheet" href="static/css/animate.css" type="text/css" media="all">
+    <!-- Animated text CSS Link -->
+    <link rel="stylesheet" href="static/css/animated-text.css" type="text/css" media="all">
+    <!-- Font Awesome CSS Link -->
+    <link rel="stylesheet" href="static/css/all.min.css" type="text/css" media="all">
+    <!-- Font Flaticon CSS Link -->
+    <link rel="stylesheet" href="static/css/flaticon.css" type="text/css" media="all">
+    <!-- Custom default CSS Link -->
+    <link rel="stylesheet" href="static/css/custom-default.css" type="text/css" media="all">
+    <!-- Meanmenu CSS Link -->
+    <link rel="stylesheet" href="static/css/meanmenu.min.css" type="text/css" media="all">
+    <!-- Transitions CSS Link -->
+    <link rel="stylesheet" href="static/css/owl.transitions.css" type="text/css" media="all">
+    <!-- Venobox CSS Link -->
+    <link rel="stylesheet" href="static/css/venobox.css" type="text/css" media="all">
+    <!-- Bootstrap Icons Link -->
+    <link rel="stylesheet" href="static/css/bootstrap-icons.css" type="text/css" media="all">
+    <!-- Custom Style CSS Link -->
+    <link rel="stylesheet" href="static/css/style.css" type="text/css" media="all">
+    <!-- Responsive CSS Link -->
+    <link rel="stylesheet" href="static/css/responsive.css" type="text/css" media="all">
+    <link href="static/css/clash-display.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<!-- Preloader -->
+<div class="loader_bg">
+    <div class="loader"></div>
+    <h4 class="loading-title">Loading...</h4>
+</div>
+
+
+<!--==================================================-->
+<!-- Start Adira City Header Menu Section -->
+<!--==================================================-->
+<header class="header-manu-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-10">
+                <nav class="header-menu ">
+                    <ul>
+                        <li><a href="index.html" class="active">首页 <i class="bi bi-chevron-down"></i></a>
+                        </li>
+                        <li><a href="w_MLanguageSupport.html">非遗档案<i class="bi "></i></a>
+                        </li>
+                        <li><a href="#">文创<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="work.html">文创精选</a></li>
+                                    <li><a href="mycollectp.html#potfolio-details-section-2">文创助手</a></li>
+                                    <li><a href="dream.html">非遗游戏</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="heartpp.html">智能推荐<i class="bi "></i></a>
+                        </li>
+                        <li><a href="#">数字非遗<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="number.html">非遗数字体验馆</a></li>
+                                    <li><a href="knowledge.html">非遗知识图谱</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">非遗旅游<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="mycollectp.html#potfolio-details-section-1">非遗旅游AI定制</a></li>
+                                    <li><a href="appointment.html">【中国非物质遗产文化馆】预约</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">探索 <i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="z_map.html">非遗地图</a></li>
+                                    <li><a href="t_line.html">非遗传承人</a></li>
+                                    <li><a href="z_test.html">非遗测试</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">欢迎, {{ session['username'] }}<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="mycollectp.html"> {{ session['username'] }}的收藏</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!--==================================================-->
+<!-- End Adira City Header Main Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Main Menu Area -->
+<!--==================================================-->
+<div class="mobile-menu-area sticky d-sm-block d-md-block d-lg-none ">
+    <div class="mobile-menu">
+        <nav class="header-menu">
+            <ul class="nav_scroll">
+                <li class="menu-item-has-children"><a href="index.html">首页</a>
+                </li>
+                <li class="menu-item-has-children"><a href="w_MLanguageSupport.html">非遗档案</a>
+                </li>
+                <li class="menu-item-has-children"><a href="#">文创</a>
+                    <ul class="sub-menu">
+                        <li><a href="work.html">文创精选</a></li>
+                        <li><a href="mycollectp.html#potfolio-details-section-2">文创助手</a></li>
+                        <li><a href="dream.html">非遗游戏</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="heartpp.html">智能推荐</a></li>
+                <li class="menu-item-has-children"><a href="#">数字非遗</a>
+                    <ul class="sub-menu">
+                        <li><a href="number.html">非遗数字体验馆</a></li>
+                        <li><a href="knowledge.html">非遗知识图谱</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">非遗旅游</a>
+                    <ul class="sub-menu">
+                        <li><a href="mycollectp.html#potfolio-details-section-1">非遗旅游AI定制</a></li>
+                        <li><a href="appointment.html">【中国非物质遗产文化馆】预约</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">探索</a>
+                    <ul class="sub-menu">
+                        <li><a href="z_map.html">非遗地图</a></li>
+                        <li><a href="t_line.html">非遗传承人</a></li>
+                        <li><a href="z_test.html">非遗测试</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<!--==================================================-->
+<!-- End Adira City Header Main Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Main Menu Area -->
+<!--==================================================-->
+
+<!--==================================================-->
+<!-- End Main Menu Area -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Adira City Slider Section -->
+<!--==================================================-->
+<div class="banner-slider owl-carousel">
+    <section class="slider-section-2 ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="banner-sub-title">
+                        <h4>View</h4>
+                    </div>
+                    <div class="banner-title">
+                        <h1>上海宝山国际民间艺术博览馆</h1>
+                    </div>
+                    <div class="banner-desc">
+                        <p>
+                            上海宝山国际民间艺术博览馆是上海大学与宝山政府合作建设的上海第一家融非物质文化遗产的展示、研究和保护为一体的博览馆，也是中国国内规模最大的世界非物质文化遗产展览馆。
+                            上海宝山国际民间艺术博览馆坐落于沪太路和外环线交界处的顾村公园1号门旁，建筑面积14600平方米。博览馆的建筑设计理念取自于“中国结”这一民间文化形象，整体布局浑然一体，互为映衬，是名副其实的“文化大观园”。
+                        </p>
+                    </div>
+                    <div class="banner-btn">
+                        <a href="https://www.720yun.com/t/26vktqilpr7?scene_id=74490308">VR看展</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slider-section style-2-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="banner-sub-title">
+                        <h4>View</h4>
+                    </div>
+                    <div class="banner-title">
+                        <h1>上海市群众艺术馆</h1>
+                    </div>
+                    <div class="banner-desc">
+                        <p>
+                            上海市群众艺术馆建于1956年12月30日，已有55年的历史，（早在民国时期，上海就设有“市立通俗教育馆”后改称为“市立民众教育馆”，始建于1912年，首任馆长柳亚子）。
+                            常年致力于组织、开展、推动群众性的文学、文艺作品的创作，繁荣群众文艺创作，为全市群众文化建设提供内容支持。
+                        </p>
+                    </div>
+                    <div class="banner-btn">
+                        <a href="https://www.720yun.com/t/09vktqr9zre?scene_id=74668689">VR看展</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slider-section style-3-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="banner-sub-title">
+                        <h4>View</h4>
+                    </div>
+                    <div class="banner-title">
+                        <h1>金桥碧云美术馆</h1>
+                    </div>
+                    <div class="banner-desc">
+                        <p>
+                            金桥碧云美术馆（Being Art
+                            Museum）成立于2019年4月18日，是浦东新区人民政府立项兴建的第一所集收藏、研究展览、审美教育、文化交流、公众服务于一体的公益美术馆。
+                            它坐落于上海市浦东新区金桥碧云国际社区的黄金位置，总建筑面积约为5100平方米，其中展览面积约1900平方米、三楼两个露台花园，并包含一个近400平方米的恒温恒湿地下作品仓储空间，致力于打造以「新海派」文化为核心的「新美术馆」空间。
+                            2020年10月18日，金桥碧云美术馆携手上海浦东图书馆联合打造了上海浦东图书馆艺术分馆（金桥碧云美术馆内），汇集了双方精挑细选的专业艺术类书籍6000余册，其中包括在中国当代艺术领域具有图书文献志趣的30位当代艺术家与艺术批评家捐赠个人的代表图书文献600余本。
+                            2020年10月18日起上海浦东图书馆艺术分馆免费对公众开放。
+                        </p>
+                    </div>
+                    <div class="banner-btn">
+                        <a href="https://www.720yun.com/t/04vktm7ydfb?scene_id=74942862">VR看展</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slider-section  style-4-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="banner-sub-title">
+                        <h4>View</h4>
+                    </div>
+                    <div class="banner-title">
+                        <h1>抱朴美术馆</h1>
+                    </div>
+                    <div class="banner-desc">
+                        <p>
+                            上海市虹口区抱朴美术馆是以收藏、研究、展示中国当代艺术作品为重点的民营美术馆。抱朴美术馆始终秉持“抱朴守拙·行稳致远”的理念，致力于传承和弘扬中华民族优秀传统文化，将抱朴精神以及民族自豪感、社会责任感传递给每一位艺术爱好者。
+                            抱朴美术馆坐落于虹口区北外滩核心区域，与东方明珠、上海中心隔江相望，建筑面积3500平米，为虹口区的主要艺术展览和社会美育窗口之一。
+                        </p>
+                    </div>
+                    <div class="banner-btn">
+                        <a href="https://www.720yun.com/t/24vktq1bOim?scene_id=74815351">VR看展</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slider-section  style-5-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="banner-sub-title">
+                        <h4>View</h4>
+                    </div>
+                    <div class="banner-title">
+                        <h1>毛麻仓库展厅</h1>
+                    </div>
+                    <div class="banner-desc">
+                        <p>
+                            毛麻仓库是一个时空的相遇，是百年以前的历史和现在的一个相遇。也是一种审美上的相遇，上世纪20年代的工业建筑技术之美，和当下这些艺术作品、艺术活动的艺术之美相遇。
+                            作为场所，它又是一个场所的相遇，滨江地区和艺术空间的相遇。
+                        </p>
+                    </div>
+                    <div class="banner-btn">
+                        <a href="https://www.720yun.com/t/25vktmp9r2q?scene_id=75047907">VR看展</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slider-section  style-6-6">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="banner-sub-title">
+                        <h4>View</h4>
+                    </div>
+                    <div class="banner-title">
+                        <h1>上海海派艺术馆</h1>
+                    </div>
+                    <div class="banner-desc">
+                        <p>
+                            上海海派艺术馆坐落在闵行心脏区域七宝镇闵行文化公园内，与四周宁静、美丽的公园环境交融呼应，呈现出海派文化的勃勃生机。
+                            展馆建筑面积1.5万余平方米，引入上海市文联和上海各文艺家协会优质艺术资源，展出顶级海派美术作品，成为专业艺术资源与社区文化建设相结合的新平台。
+                        </p>
+                    </div>
+                    <div class="banner-btn">
+                        <a href="https://www.720yun.com/t/36vktm7h51b?scene_id=75013391">VR看展</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!--==================================================-->
+<!-- End Adira City Slider Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Adira City Tabs Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Adira City Footer Section -->
+<!--==================================================-->
+<footer class="footer-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 wow fadeInLeft animated">
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInDown animated">
+                <div class="footer-explore">
+                    <div class="footer-explore-title">
+                        <h6>友情链接</h6>
+                    </div>
+                    <ul>
+                        <li><a href="https://www.mct.gov.cn/">中华人民共和国文化和旅游部</a></li>
+                        <li><a href="https://fyrhome.cn/">中国非物质文化遗产网</a></li>
+                        <li><a href="http://www.ncha.gov.cn/">国家文物局</a></li>
+                        <li><a href="https://www.chinesefolklore.org.cn/">中国民俗学网</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <div class="footer-bootom">
+                        <p>“遗”见倾心<a></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--==================================================-->
+<!-- End Adira City Footer Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start scrollup Section Here-->
+<!--==================================================-->
+<div class="scroll-area">
+    <div class="top-wrap">
+        <div class="go-top-btn-wraper">
+            <div class="prgoress_indicator active-progress">
+                <svg class="progress-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">
+                    <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+                          style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 270.456;"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+<!--==================================================-->
+<!-- Ends scrollup Section Here -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Curser Section Here -->
+<!--==================================================-->
+<div class="curser"></div>
+<div class="curser2"></div>
+<!--==================================================-->
+<!-- Ends Curser Section Here -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Search Popup Area -->
+<!--==================================================-->
+<div class="search-popup">
+    <button class="close-search style-two"><i class="fas fa-times"></i></button>
+    <button class="close-search"><i class="fas fa-arrow-up"></i></button>
+    <form method="post" action="#" id="dreamit-forms">
+        <div class="form-group">
+            <input type="search" name="search-field" value="" placeholder="Search Here" required="">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+    </form>
+</div>
+<!--==================================================-->
+<!-- End Search Popup Area -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start JavaScrift CDN Section -->
+<!--==================================================-->
+
+<!-- Modernizr JS -->
+<script src="static/js/modernizr-3.5.0.min.js"></script>
+<!-- Vendor JS CDN -->
+<script src="static/js/jquery-3.6.2.min.js"></script>
+<!-- Popper JS CDN -->
+<script src="static/js/popper.min.js"></script>
+<!-- Bootstrap JS CDN -->
+<script src="static/js/bootstrap.min.js"></script>
+<!-- Owl Carousel JS CDN -->
+<script src="static/js/owl.carousel.min.js"></script>
+<!-- CounterUp JS CDN -->
+<script src="static/js/jquery.counterup.min.js"></script>
+<!-- WayPoints JS CDN -->
+<script src="static/js/waypoints.min.js"></script>
+<!-- WOW JS CDN -->
+<script src="static/js/wow.js"></script>
+<!-- Imageloaded JS CDN -->
+<script src="static/js/imagesloaded.pkgd.min.js"></script>
+<!-- Venubox JS CDN -->
+<script src="static/js/venobox.js"></script>
+<!-- Animated JS CDN -->
+<script src="static/js/animated-text.js"></script>
+<!-- VenuBox JS CDN -->
+<script src="static/js/venobox.min.js"></script>
+<!-- PKG JS CDN -->
+<script src="static/js/isotope.pkgd.min.js"></script>
+<!-- MeanMenu JS CDN -->
+<script src="static/js/jquery.meanmenu.js"></script>
+<!-- ScrollUp JS CDN -->
+<script src="static/js/jquery.scrollUp.js"></script>
+<!-- Burfiller JS CDN -->
+<script src="static/js/jquery.barfiller.js"></script>
+<!-- Custom JS CDN -->
+<script src="static/js/custom.js"></script>
+</body>
+
+</html>

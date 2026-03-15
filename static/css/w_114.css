@@ -1,0 +1,29 @@
+
+.profile-icon {
+
+    display: inline-block;
+
+    width: 40px; /* 根据实际需求调整头像宽度 */
+
+    height: 40px; /* 根据实际需求调整头像高度 */
+
+    border-radius: 50%; /* 使头像呈现为圆形 */
+
+    overflow: hidden; /* 隐藏超出部分，保证圆形效果 */
+
+    background-color: #f1f1f1; /* 设置默认背景色，当图片加载失败时显示 */
+
+}
+
+
+/* 为头像图片设置样式 */
+
+.profile-icon img {
+
+    width: 100%;
+
+    height: auto;
+
+    object-fit: cover; /* 保持图片填充整个容器且不失真 */
+
+}

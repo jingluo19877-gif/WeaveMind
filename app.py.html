@@ -1,0 +1,135 @@
+<html>
+<head>
+<title>app.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+app.py</font>
+</center></td></tr></table>
+<pre><span class="s0">from </span><span class="s1">flask </span><span class="s0">import </span><span class="s1">Flask</span><span class="s2">, </span><span class="s1">render_template</span><span class="s2">, </span><span class="s1">request</span>
+<span class="s0">from </span><span class="s1">flask_bootstrap </span><span class="s0">import </span><span class="s1">Bootstrap</span>
+<span class="s0">from </span><span class="s1">MLLM_L</span><span class="s2">.</span><span class="s1">database </span><span class="s0">import </span><span class="s1">db</span>
+<span class="s0">from </span><span class="s1">MLLM_L</span><span class="s2">.</span><span class="s1">utils </span><span class="s0">import </span><span class="s1">submit_1</span>
+<span class="s0">from </span><span class="s1">MLLM_L</span><span class="s2">.</span><span class="s1">user_management </span><span class="s0">import </span><span class="s1">user_login</span>
+<span class="s0">from </span><span class="s1">MLLM_L</span><span class="s2">.</span><span class="s1">view </span><span class="s0">import </span><span class="s1">index_session</span>
+
+
+<span class="s1">app </span><span class="s2">= </span><span class="s1">Flask</span><span class="s2">(</span><span class="s1">__name__</span><span class="s2">)</span>
+<span class="s1">bootstrap </span><span class="s2">= </span><span class="s1">Bootstrap</span><span class="s2">(</span><span class="s1">app</span><span class="s2">)</span>
+<span class="s1">app</span><span class="s2">.</span><span class="s1">config</span><span class="s2">[</span><span class="s3">'SQLALCHEMY_DATABASE_URI'</span><span class="s2">] = </span><span class="s3">'mysql+pymysql://root:0000@localhost/fychat'</span>
+<span class="s1">app</span><span class="s2">.</span><span class="s1">config</span><span class="s2">[</span><span class="s3">'SECRET_KEY'</span><span class="s2">] = </span><span class="s3">'0000'</span>
+<span class="s4"># 设置会话保护级别</span>
+<span class="s1">app</span><span class="s2">.</span><span class="s1">config</span><span class="s2">[</span><span class="s3">'SESSION_PROTECTION'</span><span class="s2">] = </span><span class="s3">'strong'</span>
+
+<span class="s1">db</span><span class="s2">.</span><span class="s1">init_app</span><span class="s2">(</span><span class="s1">app</span><span class="s2">)</span>
+
+
+<span class="s2">@</span><span class="s1">app</span><span class="s2">.</span><span class="s1">route</span><span class="s2">(</span><span class="s3">&quot;/&quot;</span><span class="s2">)</span>
+<span class="s0">def </span><span class="s1">index</span><span class="s2">():</span>
+    <span class="s0">return </span><span class="s1">render_template</span><span class="s2">(</span><span class="s3">'index.html'</span><span class="s2">)</span>
+
+<span class="s2">@</span><span class="s1">app</span><span class="s2">.</span><span class="s1">route</span><span class="s2">(</span><span class="s3">&quot;/index.html&quot;</span><span class="s2">)</span>
+<span class="s0">def </span><span class="s1">index_1</span><span class="s2">():</span>
+    <span class="s0">return </span><span class="s1">render_template</span><span class="s2">(</span><span class="s3">'index.html'</span><span class="s2">)</span>
+
+<span class="s2">@</span><span class="s1">app</span><span class="s2">.</span><span class="s1">route</span><span class="s2">(</span><span class="s3">'/404.html'</span><span class="s2">)</span>
+<span class="s0">def </span><span class="s1">page_404</span><span class="s2">():</span>
+    <span class="s0">return </span><span class="s1">render_template</span><span class="s2">(</span><span class="s3">'404.html'</span><span class="s2">)</span>
+
+<span class="s2">@</span><span class="s1">app</span><span class="s2">.</span><span class="s1">route</span><span class="s2">(</span><span class="s3">'/about.html'</span><span class="s2">)</span>
+<span class="s0">def </span><span class="s1">about</span><span class="s2">():</span>
+    <span class="s0">return </span><span class="s1">render_template</span><span class="s2">(</span><span class="s3">'about.html'</span><span class="s2">)</span>
+
+<span class="s2">@</span><span class="s1">app</span><span class="s2">.</span><span class="s1">route</span><span class="s2">(</span><span class="s3">'/blog.html'</span><span class="s2">)</span>
+<span class="s0">def </span><span class="s1">blog</span><span class="s2">():</span>
+    <span class="s0">return </span><span class="s1">render_template</span><span class="s2">(</span><span class="s3">'blog.html'</span><span class="s2">)</span>
+
+<span class="s2">@</span><span class="s1">app</span><span class="s2">.</span><span class="s1">route</span><span class="s2">(</span><span class="s3">'/blog-details.html'</span><span class="s2">)</span>
+<span class="s0">def </span><span class="s1">blog_details</span><span class="s2">():</span>
+    <span class="s0">return </span><span class="s1">render_template</span><span class="s2">(</span><span class="s3">'blog-details.html'</span><span class="s2">)</span>
+
+<span class="s2">@</span><span class="s1">app</span><span class="s2">.</span><span class="s1">route</span><span class="s2">(</span><span class="s3">'/blog-grid.html'</span><span class="s2">)</span>
+<span class="s0">def </span><span class="s1">blog_grid</span><span class="s2">():</span>
+    <span class="s0">return </span><span class="s1">render_template</span><span class="s2">(</span><span class="s3">'blog-grid.html'</span><span class="s2">)</span>
+
+<span class="s2">@</span><span class="s1">app</span><span class="s2">.</span><span class="s1">route</span><span class="s2">(</span><span class="s3">'/client.html'</span><span class="s2">)</span>
+<span class="s0">def </span><span class="s1">client</span><span class="s2">():</span>
+    <span class="s0">return </span><span class="s1">render_template</span><span class="s2">(</span><span class="s3">'client.html'</span><span class="s2">)</span>
+
+<span class="s2">@</span><span class="s1">app</span><span class="s2">.</span><span class="s1">route</span><span class="s2">(</span><span class="s3">'/contact.html'</span><span class="s2">)</span>
+<span class="s0">def </span><span class="s1">contact</span><span class="s2">():</span>
+    <span class="s0">return </span><span class="s1">render_template</span><span class="s2">(</span><span class="s3">'contact.html'</span><span class="s2">)</span>
+
+<span class="s2">@</span><span class="s1">app</span><span class="s2">.</span><span class="s1">route</span><span class="s2">(</span><span class="s3">'/embed.html'</span><span class="s2">)</span>
+<span class="s0">def </span><span class="s1">embed</span><span class="s2">():</span>
+    <span class="s0">return </span><span class="s1">render_template</span><span class="s2">(</span><span class="s3">'embed.html'</span><span class="s2">)</span>
+
+<span class="s2">@</span><span class="s1">app</span><span class="s2">.</span><span class="s1">route</span><span class="s2">(</span><span class="s3">'/index2.html'</span><span class="s2">)</span>
+<span class="s0">def </span><span class="s1">index2</span><span class="s2">():</span>
+    <span class="s0">return </span><span class="s1">render_template</span><span class="s2">(</span><span class="s3">'index2.html'</span><span class="s2">)</span>
+
+<span class="s2">@</span><span class="s1">app</span><span class="s2">.</span><span class="s1">route</span><span class="s2">(</span><span class="s3">'/index3.html'</span><span class="s2">)</span>
+<span class="s0">def </span><span class="s1">index3</span><span class="s2">():</span>
+    <span class="s0">return </span><span class="s1">render_template</span><span class="s2">(</span><span class="s3">'index3.html'</span><span class="s2">)</span>
+
+<span class="s2">@</span><span class="s1">app</span><span class="s2">.</span><span class="s1">route</span><span class="s2">(</span><span class="s3">'/portfolio.html'</span><span class="s2">)</span>
+<span class="s0">def </span><span class="s1">portfolio</span><span class="s2">():</span>
+    <span class="s0">return </span><span class="s1">render_template</span><span class="s2">(</span><span class="s3">'portfolio.html'</span><span class="s2">)</span>
+
+<span class="s2">@</span><span class="s1">app</span><span class="s2">.</span><span class="s1">route</span><span class="s2">(</span><span class="s3">'/portfolio-details.html'</span><span class="s2">)</span>
+<span class="s0">def </span><span class="s1">portfolio_details</span><span class="s2">():</span>
+    <span class="s0">return </span><span class="s1">render_template</span><span class="s2">(</span><span class="s3">'portfolio-details.html'</span><span class="s2">)</span>
+
+<span class="s2">@</span><span class="s1">app</span><span class="s2">.</span><span class="s1">route</span><span class="s2">(</span><span class="s3">'/project.html'</span><span class="s2">)</span>
+<span class="s0">def </span><span class="s1">project</span><span class="s2">():</span>
+    <span class="s0">return </span><span class="s1">render_template</span><span class="s2">(</span><span class="s3">'project.html'</span><span class="s2">)</span>
+
+<span class="s2">@</span><span class="s1">app</span><span class="s2">.</span><span class="s1">route</span><span class="s2">(</span><span class="s3">'/service.html'</span><span class="s2">)</span>
+<span class="s0">def </span><span class="s1">service</span><span class="s2">():</span>
+    <span class="s0">return </span><span class="s1">render_template</span><span class="s2">(</span><span class="s3">'service.html'</span><span class="s2">)</span>
+
+<span class="s2">@</span><span class="s1">app</span><span class="s2">.</span><span class="s1">route</span><span class="s2">(</span><span class="s3">'/shop.html'</span><span class="s2">)</span>
+<span class="s0">def </span><span class="s1">shop</span><span class="s2">():</span>
+    <span class="s0">return </span><span class="s1">render_template</span><span class="s2">(</span><span class="s3">'shop.html'</span><span class="s2">)</span>
+
+<span class="s2">@</span><span class="s1">app</span><span class="s2">.</span><span class="s1">route</span><span class="s2">(</span><span class="s3">'/shop-details.html'</span><span class="s2">)</span>
+<span class="s0">def </span><span class="s1">shop_details</span><span class="s2">():</span>
+    <span class="s0">return </span><span class="s1">render_template</span><span class="s2">(</span><span class="s3">'shop-details.html'</span><span class="s2">)</span>
+
+<span class="s2">@</span><span class="s1">app</span><span class="s2">.</span><span class="s1">route</span><span class="s2">(</span><span class="s3">'/team-member.html'</span><span class="s2">)</span>
+<span class="s0">def </span><span class="s1">team_member</span><span class="s2">():</span>
+    <span class="s0">return </span><span class="s1">render_template</span><span class="s2">(</span><span class="s3">'team-member.html'</span><span class="s2">)</span>
+
+<span class="s2">@</span><span class="s1">app</span><span class="s2">.</span><span class="s1">route</span><span class="s2">(</span><span class="s3">'/login.html'</span><span class="s2">)</span>
+<span class="s0">def </span><span class="s1">login_l</span><span class="s2">():</span>
+    <span class="s0">return </span><span class="s1">render_template</span><span class="s2">(</span><span class="s3">'login.html'</span><span class="s2">)</span>
+
+<span class="s4">#注册功能</span>
+<span class="s2">@</span><span class="s1">app</span><span class="s2">.</span><span class="s1">route</span><span class="s2">(</span><span class="s3">&quot;/register&quot;</span><span class="s2">, </span><span class="s1">methods</span><span class="s2">=[</span><span class="s3">'POST'</span><span class="s2">])</span>
+<span class="s0">def </span><span class="s1">submit_route</span><span class="s2">():</span>
+    <span class="s0">return </span><span class="s1">submit_1</span><span class="s2">()</span>
+
+<span class="s4">#登录功能</span>
+<span class="s2">@</span><span class="s1">app</span><span class="s2">.</span><span class="s1">route</span><span class="s2">(</span><span class="s3">'/login'</span><span class="s2">, </span><span class="s1">methods</span><span class="s2">=[</span><span class="s3">'GET'</span><span class="s2">, </span><span class="s3">'POST'</span><span class="s2">])</span>
+<span class="s0">def </span><span class="s1">login</span><span class="s2">():</span>
+    <span class="s0">return </span><span class="s1">user_login</span><span class="s2">()</span>
+
+<span class="s2">@</span><span class="s1">app</span><span class="s2">.</span><span class="s1">route</span><span class="s2">(</span><span class="s3">'/index'</span><span class="s2">)</span>
+<span class="s0">def </span><span class="s1">index_route</span><span class="s2">():</span>
+    <span class="s0">return </span><span class="s1">index_session</span><span class="s2">()  </span><span class="s4"># 使用导入的index函数</span>
+
+<span class="s0">if </span><span class="s1">__name__ </span><span class="s2">== </span><span class="s3">'__main__'</span><span class="s2">:</span>
+    <span class="s1">app</span><span class="s2">.</span><span class="s1">run</span><span class="s2">(</span><span class="s1">debug</span><span class="s2">=</span><span class="s0">True</span><span class="s2">)</span>
+</pre>
+</body>
+</html>

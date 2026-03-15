@@ -1,0 +1,1349 @@
+<!DOCTYPE HTML>
+<html lang="en-US" xmlns:max-width="http://www.w3.org/1999/xhtml">
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>“遗”见倾心</title>
+    <!-- Favicon -->
+
+    <!-- Bootstrap CSS Link -->
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" media="all">
+    <!-- Owl Carousel CSS Link -->
+    <link rel="stylesheet" href="static/css/owl.carousel.min.css" type="text/css" media="all">
+    <!-- Animate CSS Link -->
+    <link rel="stylesheet" href="static/css/animate.css" type="text/css" media="all">
+    <!-- Animated text CSS Link -->
+    <link rel="stylesheet" href="static/css/animated-text.css" type="text/css" media="all">
+    <!-- Font Awesome CSS Link -->
+    <link rel="stylesheet" href="static/css/all.min.css" type="text/css" media="all">
+    <!-- Font Flaticon CSS Link -->
+    <link rel="stylesheet" href="static/css/flaticon.css" type="text/css" media="all">
+    <!-- Custom default CSS Link -->
+    <link rel="stylesheet" href="static/css/custom-default.css" type="text/css" media="all">
+    <!-- Meanmenu CSS Link -->
+    <link rel="stylesheet" href="static/css/meanmenu.min.css" type="text/css" media="all">
+    <!-- Transitions CSS Link -->
+    <link rel="stylesheet" href="static/css/owl.transitions.css" type="text/css" media="all">
+    <!-- Venobox CSS Link -->
+    <link rel="stylesheet" href="static/css/venobox.css" type="text/css" media="all">
+    <!-- Bootstrap Icons Link -->
+    <link rel="stylesheet" href="static/css/bootstrap-icons.css" type="text/css" media="all">
+    <!-- Custom Style CSS Link -->
+    <link rel="stylesheet" href="static/css/style.css" type="text/css" media="all">
+    <!-- Responsive CSS Link -->
+    <link rel="stylesheet" href="static/css/responsive.css" type="text/css" media="all">
+    <link href="static/css/clash-display.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/modal_l.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/button_l.css') }}">
+    <link rel="stylesheet" href="static/assets_2/css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="static/assets_2/css/custom.css">
+
+
+</head>
+
+<body>
+
+
+<!-- Button to trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#messageModal" id="messageBtn"
+        style="display: none;">
+    Open Modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="messageModalLabel">温馨提示</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="messageText"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Preloader -->
+<div class="loader_bg">
+    <div class="loader"></div>
+    <h4 class="loading-title">Loading...</h4>
+</div>
+
+
+<!--==================================================-->
+<!-- Start Adira City Header Menu Section -->
+<!--==================================================-->
+<header class="header-manu-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-10">
+                <nav class="header-menu ">
+                    <ul>
+                        <li><a href="index.html" class="active">首页 <i class="bi bi-chevron-down"></i></a>
+                        </li>
+                        <li><a href="w_MLanguageSupport.html">非遗档案<i class="bi "></i></a>
+                        </li>
+                        <li><a href="#">文创<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="work.html">文创精选</a></li>
+                                    <li><a href="mycollectp.html#potfolio-details-section-2">文创助手</a></li>
+                                    <li><a href="dream.html">非遗游戏</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="heartpp.html">智能推荐<i class="bi "></i></a>
+                        </li>
+                        <li><a href="#">数字非遗<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="number.html">非遗数字体验馆</a></li>
+                                    <li><a href="knowledge.html">非遗知识图谱</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">非遗旅游<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="mycollectp.html#potfolio-details-section-1">非遗旅游AI定制</a></li>
+                                    <li><a href="appointment.html">【中国非物质遗产文化馆】预约</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">探索 <i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="z_map.html">非遗地图</a></li>
+                                    <li><a href="t_line.html">非遗传承人</a></li>
+                                    <li><a href="z_test.html">非遗测试</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">欢迎, {{ session['username'] }}<i class="bi bi-chevron-down"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="mycollectp.html"> {{ session['username'] }}的收藏</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!--==================================================-->
+<!-- End Adira City Header Main Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Main Menu Area -->
+<!--==================================================-->
+<div class="mobile-menu-area sticky d-sm-block d-md-block d-lg-none ">
+    <div class="mobile-menu">
+        <nav class="header-menu">
+            <ul class="nav_scroll">
+                <li class="menu-item-has-children"><a href="index.html">首页</a>
+                </li>
+                <li class="menu-item-has-children"><a href="w_MLanguageSupport.html">非遗档案</a>
+                </li>
+                <li class="menu-item-has-children"><a href="#">文创</a>
+                    <ul class="sub-menu">
+                        <li><a href="work.html">文创精选</a></li>
+                        <li><a href="mycollectp.html#potfolio-details-section-2">文创助手</a></li>
+                        <li><a href="dream.html">非遗游戏</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="heartpp.html">智能推荐</a></li>
+                <li class="menu-item-has-children"><a href="#">数字非遗</a>
+                    <ul class="sub-menu">
+                        <li><a href="number.html">非遗数字体验馆</a></li>
+                        <li><a href="knowledge.html">非遗知识图谱</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">非遗旅游</a>
+                    <ul class="sub-menu">
+                        <li><a href="mycollectp.html#potfolio-details-section-1">非遗旅游AI定制</a></li>
+                        <li><a href="appointment.html">【中国非物质遗产文化馆】预约</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">探索</a>
+                    <ul class="sub-menu">
+                        <li><a href="z_map.html">非遗地图</a></li>
+                        <li><a href="t_line.html">非遗传承人</a></li>
+                        <li><a href="z_test.html">非遗测试</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<!--==================================================-->
+<!-- End Main Menu Area -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Adira City Slider Section -->
+<!--==================================================-->
+<div class="banner-slider owl-carousel">
+    <section class="slider-section ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="banner-sub-title">
+                        <h4>Encounter with Intangible Cultural Heritage</h4>
+                    </div>
+                    <div class="banner-title">
+                        <h1>与非遗邂逅</h1>
+                    </div>
+                    <div class="banner-desc">
+                        <p>
+                            在悠然时光里，与非遗邂逅，时间与天地，见证了这里无数的灿烂传奇，绵延了数千年的文化根脉，永远在中华大地上熠熠生辉。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slider-section style-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="banner-sub-title">
+                        <h4>Initiation of Intangible Cultural Heritage</h4>
+                    </div>
+                    <div class="banner-title">
+                        <h1>与非遗初识</h1>
+                    </div>
+                    <div class="banner-desc">
+                        <p>虽历经8,5000年岁月斑驳，仍难掩动人魅力，桃色明丽但不炫目，静静凝脂，成为历史那头的一抹红。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slider-section style-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="banner-sub-title">
+                        <h4>Understanding Intangible Cultural Heritage</h4>
+                    </div>
+                    <div class="banner-title">
+                        <h1>与非遗相知</h1>
+                    </div>
+                    <div class="banner-desc">
+                        <p>
+                            我们屈身俯听大地，同时抬头仰望星辰，来自千年外的叩问，声声回响，山水相依世代相拥，华夏文明五千年在江南天地，孕育着秀美清逸与波澜壮阔。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slider-section  style-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="banner-sub-title">
+                        <h4>Enter Intangible Cultural Heritage</h4>
+                    </div>
+                    <div class="banner-title">
+                        <h1>走进非遗</h1>
+                    </div>
+                    <div class="banner-desc">
+                        <p>
+                            深埋于沃土的根，延绵不绝燃起于心中的火，灼烈不息，传颂于人间的乐，永世流传，守千年文明之璀璨，寻传统文化之根脉。</p>
+                    </div>
+                    <div class="banner-btn">
+                        <a href="#tabs-section-1">走进非遗</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!--==================================================-->
+<!-- End Adira City Slider Section -->
+<!--==================================================-->
+<!--==================================================-->
+<!-- Start Adira City Tabs Section -->
+<!--==================================================-->
+<section class="tabs-section" id="tabs-section-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="tabs-btn wow fadeInRight animated">
+                    <ul>
+                        <li>
+                            <button type="button" class="tab-btn active">非遗之窗</button>
+                        </li>
+                        <li>
+                            <button type="button" class="tab-btn ">魅力非遗</button>
+                        </li>
+                        <li>
+                            <button type="button" class="tab-btn">非遗之声</button>
+                        </li>
+                        <!--<li><button type="button" class="tab-btn">Who WE are</button></li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-view active">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="tabs-content">
+                        <div class="adiracity-section-title wow fadeInLeft animated">
+                            <h1>中国非遗：世界第一的文化宝库</h1>
+                        </div>
+                        <div class="tab-desc wow fadeInLeft animated">
+                            <p>
+                                中国以其丰富多样的非物质文化遗产而闻名于世，共有43个项目被列入联合国教科文组织的非物质文化遗产名录和名册，这一数字位居全球之首。
+                                这些项目涵盖了中国悠久历史和多元文化的方方面面，包括传统技艺、民间艺术等各个领域。
+                                它们承载着丰富的历史记忆、民族精神和文化智慧，是中华民族宝贵的文化遗产，也是全人类共同的文化财富。
+                            </p>
+                        </div>
+                        <div class="tab-list wow fadeInRight animated">
+                            <div class="tab-list-icon">
+                                <img src="static/picture/tab-icon-2.png" alt="icon">
+                            </div>
+                            <div class="tab-list-content">
+                                <div class="tab-list-title">
+                                    <h4>中国入选联合国教科文组织非物质文化遗产名录（名册）项目</h4>
+                                </div>
+                                <div class="tab-list-desc">
+                                    <p>The projects inscribed on UNESCO's Representative List of the Intangible Cultural
+                                        Heritage of Humanity in China.</p>
+                                    <a href="https://www.mct.gov.cn/preview/special/8757/8764/201906/t20190604_844121.htm">点击此处跳转</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-list style2 wow fadeInLeft animated">
+                            <div class="tab-list-icon">
+                                <img src="static/picture/tab-icon.png" alt="icon">
+                            </div>
+                            <div class="tab-list-content">
+                                <div class="tab-list-title">
+                                    <h4>中国非物质文化遗产网 · 中国非物质文化遗产数字博物馆</h4>
+                                </div>
+                                <div class="tab-list-desc">
+                                    <p>Intangible Cultural Heritage News</p>
+                                    <a href="https://www.ihchina.cn/">点击此处跳转</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="tab-thumb wow fadeInUp animated">
+                        <a href="https://www.bilibili.com/video/BV1wV4y127F3/?p=2&vd_source=43ecfc626cf2fb4ac9fad59fb7595c76">
+                            <img src="static/picture/tab-2-L.jpg" alt="thumb">
+                            <div class="">
+                                <a class="" data-vbtype="" data-autoplay=""
+                                   href="https://www.bilibili.com/video/BV1wV4y127F3/?p=2&vd_source=43ecfc626cf2fb4ac9fad59fb7595c76"
+                                   data-gall=""><i class=""></i></a>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-view ">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="tabs-content">
+                        <div class="adiracity-section-title wow fadeInLeft animated">
+                            <h1>文化自信</h1>
+                        </div>
+                        <div class="tab-desc wow fadeInLeft animated">
+                            <p>文化自信是一个国家和民族对自身文化价值的充分肯定和积极践行。
+                                中华民族传统文化建立在五千多年文明传承的基础之上，积淀着中华民族深厚的精神追求，是当代中国的文化软实力，也是国人浸润于心中“日用而不觉”的价值观。</p>
+                        </div>
+                        <div class="tab-list wow fadeInRight animated">
+                            <div class="tab-list-icon">
+                                <img src="static/picture/tab-icon-2.png" alt="icon">
+                            </div>
+                            <div class="tab-list-content">
+                                <div class="tab-list-title">
+                                    <h4>文化：中国力量的源泉</h4>
+                                </div>
+                                <div class="tab-list-desc">
+                                    <p>当代中国力量的崛起，内核源自于中华民族优秀传统文化的回归，文化自信日益增强。中华文化在中国广袤土地上传承了数千年，具有顽强的生命力和内在活力。
+                                        这种力量充满智慧，在不同的时代和历史发展进程中完成自洽，活下来并持续传承。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-list style2 wow fadeInLeft animated">
+                            <div class="tab-list-icon">
+                                <img src="static/picture/tab-icon.png" alt="icon">
+                            </div>
+                            <div class="tab-list-content">
+                                <div class="tab-list-title">
+                                    <h4>中国非遗：传承与创新</h4>
+                                </div>
+                                <div class="tab-list-desc">
+                                    <p>传承非遗，正是借助于多种物质载体向世界展示中国人的审美创造和文化智慧。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="tab-thumb wow fadeInUp animated">
+                        <div class="tab-thumb wow fadeInUp animated">
+                            <!-- 添加视频 -->
+                            <video id="myVideo" width="700" height="600" controls>
+                                <source src="{{ url_for('static', filename='video/端午节.mp4') }}" type="video/mp4">
+                            </video>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-view ">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="tabs-content">
+                        <div class="adiracity-section-title wow fadeInLeft animated">
+                            <h1>永嘉昆曲——流转千年的文化瑰宝</h1>
+                        </div>
+                        <div class="tab-desc wow fadeInLeft animated">
+                            <p>
+                                青山枕抱着碧水，滩林掩映着古村，文人荟萃的悠久历史与流光溢彩的瓯越文化融为一体，与奇山秀水交映生辉，使“永嘉”这个名字久久缠绕于心底。</p>
+                        </div>
+                        <div class="tab-list wow fadeInRight animated">
+                            <div class="tab-list-icon">
+                                <img src="static/picture/tab-icon-2.png" alt="icon">
+                            </div>
+                            <div class="tab-list-content">
+                                <div class="tab-list-title">
+                                    <h4>悠悠古韵扬</h4>
+                                </div>
+                                <div class="tab-list-desc">
+                                    <p>永嘉昆曲是我国古老剧种之一，是在南戏即永嘉杂剧的根底上汲取昆山腔长处，经长时间的艺术实践，水乳交融，发展求新而形成的。
+                                        它是流传于浙南闽北一带的戏曲剧种，是昆曲的一个流派，在中国戏剧发展史上有着特殊的地位。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-list style2 wow fadeInLeft animated">
+                            <div class="tab-list-icon">
+                                <img src="static/picture/tab-icon.png" alt="icon">
+                            </div>
+                            <div class="tab-list-content">
+                                <div class="tab-list-title">
+                                    <h4>漫漫传承史</h4>
+                                </div>
+                                <div class="tab-list-desc">
+                                    <p>这样一个保存着丰富传统，唱腔朴实、旋律明快、表演粗犷的永嘉昆曲，成为中国昆曲中独树一帜的流派，却经历了一段艰难的传承保护史，几度遭遇湮灭的厄运。
+                                        面临“一波三折”的发展历程，艰难辛酸的抢救传承，人手短缺、场地不足的尴尬境地，永昆依然坚守着，这离不开老一辈艺人们对永昆执着深厚的热爱。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="tab-thumb wow fadeInUp animated">
+                        <!-- 添加视频 -->
+                        <video width="700" height="800" controls>
+                            <source src="{{ url_for('static', filename='video/m-1.mp4') }}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--==================================================-->
+<!-- End Adira City Tabs Section -->
+<!--==================================================-->
+
+<section class="best-work">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="best-work-tab">
+                    <div class="best-work-tab-btn">
+                        <ul>
+                            <li>
+                                <button type="button" class="best-tab-btn"><img
+                                        src="static/picture/best-work-tab-icon.png" alt="icon"></button>
+                            </li>
+                            <li>
+                                <button type="button" class="best-tab-btn active"><img
+                                        src="static/picture/best-work-tab-icon-2.png" alt="icon"></button>
+                            </li>
+                            <li>
+                                <button type="button" class="best-tab-btn"><img
+                                        src="static/picture/best-wok-tab-icon-3.png" alt="icon"></button>
+                            </li>
+                            <li>
+                                <button type="button" class="best-tab-btn"><img
+                                        src="static/picture/best-wok-tab-icon-4.png" alt="icon"></button>
+                            </li>
+                            <li>
+                                <button type="button" class="best-tab-btn"><img
+                                        src="static/picture/best-wok-tab-icon-5.png" alt="icon"></button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="best-work-tab-content ">
+                        <div class="best-work-tab-icon">
+                            <img src="static/picture/best-work-tab-icon.png" alt="icon">
+                        </div>
+                        <div class="best-work-tab-title">
+                            <h4>梁祝传说</h4>
+                        </div>
+                        <div class="best-work-tab-desc">
+                            <p>
+                                梁祝传说是中国四大民间传说之一，是中华文化的瑰宝。千百年来，它以提倡求知、崇尚爱情、歌颂生命生生不息的鲜明主题打动着人们的心灵。</p>
+                        </div>
+                    </div>
+                    <div class="best-work-tab-content active">
+                        <div class="best-work-tab-icon">
+                            <img src="static/picture/best-work-tab-icon-2.png" alt="icon">
+                        </div>
+                        <div class="best-work-tab-title">
+                            <h4>京剧</h4>
+                        </div>
+                        <div class="best-work-tab-desc">
+                            <p>京剧，又称平剧、京戏等，（Beijing
+                                Opera）中国国粹之一，是中国影响力最大的戏曲剧种，分布地以北京为中心，遍及全国各地。</p>
+                        </div>
+                    </div>
+                    <div class="best-work-tab-content">
+                        <div class="best-work-tab-icon">
+                            <img src="static/picture/best-wok-tab-icon-3.png" alt="icon">
+                        </div>
+                        <div class="best-work-tab-title">
+                            <h4>中医药学</h4>
+                        </div>
+                        <div class="best-work-tab-desc">
+                            <p>
+                                中医生命与疾病的知识起源于传说中的远古黄帝、岐伯时代，以《黄帝内经》为标志的中医生命与疾病知识体系的形成至今已有两千多年的历史。</p>
+                        </div>
+                    </div>
+                    <div class="best-work-tab-content ">
+                        <div class="best-work-tab-icon">
+                            <img src="static/picture/best-wok-tab-icon-4.png" alt="icon">
+                        </div>
+                        <div class="best-work-tab-title">
+                            <h4>春节</h4>
+                        </div>
+                        <div class="best-work-tab-desc">
+                            <p>
+                                春节起源于早期人类的原始信仰与自然崇拜，由上古时代岁首祈岁祭祀演变而来，人们会在年初之际举行祭祀活动，祈求来年五谷丰登、人畜兴旺。</p>
+                        </div>
+                    </div>
+                    <div class="best-work-tab-content ">
+                        <div class="best-work-tab-icon">
+                            <img src="static/picture/best-wok-tab-icon-5.png" alt="icon">
+                        </div>
+                        <div class="best-work-tab-title">
+                            <h4>太极拳</h4>
+                        </div>
+                        <div class="best-work-tab-desc">
+                            <p>
+                                太极拳，是以中国传统儒、道哲学中的太极、阴阳辩证理念为核心思想，集颐养性情、强身健体、技击对抗等多种功能为一体，内外兼修、刚柔相济的中国传统拳术。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="best-work-content">
+                    <div class="adiracity-section-sub-title wow fadeInRight animated">
+                        <h4>Law of the People's Republic of China on the Protection of Intangible Cultural Heritage</h4>
+                    </div>
+                    <div class="adiracity-section-title wow fadeInRight animated">
+                        <h1>《中华人民共和国非物质文化遗产法》的定义</h1>
+                    </div>
+                    <div class="best-work-desc wow fadeInUp animated">
+                        <p>
+                            非物质文化遗产，是指各族人民世代相传并视为其文化遗产组成部分的各种传统文化表现形式，以及与传统文化表现形式相关的实物和场所。</p>
+                        <p>包括：（一）传统口头文学以及作为其载体的语言； （二）传统美术、书法、音乐、舞蹈、戏剧、曲艺和杂技；
+                            （三）传统技艺、医药和历法；
+                            （四）传统礼仪、节庆等民俗；（五）传统体育和游艺； （六）其他非物质文化遗产。
+                            属于非物质文化遗产组成部分的实物和场所，凡属文物的，适用《中华人民共和国文物保护法》的有关规定。</p>
+                    </div>
+
+                    <div class="best-work-btn wow fadeInUp animated">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--非遗资讯-->
+<section class="py-5 bg-light" id="education">
+    <div class="container py-5">
+        <header class="mb-5 pb-4">
+            <p class="fw-bold text-primary text-uppercase letter-spacing-3">Intangible Cultural Heritage News</p>
+            <h2 class="text-uppercase lined">
+                <a href="https://www.ihchina.cn/zixun">非遗资讯</a>
+            </h2>
+        </header>
+        <!--  Timeline -->
+        <ul class="timeline">
+            <!-- Timeline item-->
+            <li class="timeline-item ms-3 pb-4">
+                <div class="timeline-arrow"></div>
+                <div class="row gx-0 gy-4">
+                    <div class="col-lg-5">
+                        <p class="fw-bold mb-2 text-primary text-sm">2024-04-16</p>
+                        <h2 class="h5 mb-0 text-uppercase">习近平：加强文化遗产保护传承 弘扬中华优秀传统文化</h2>
+                        <!--<p class="text-sm mb-0">Oxford University</p><span class="small text-muted">United Kingdeom</span>-->
+                    </div>
+                    <div class="col-lg-7">
+                        <p class="text-muted">新华社北京4月15日电 4月16日出版的第8期《求是》杂志将发表中共中央总书记、国家主席、中央军委主席习近平的重要文章《加强文化遗产保护传承
+                            弘扬中华优秀传统文化》。文章强调要加强同全球各地的文化交流，共同推动文化繁荣发展、文化遗产保护、文明交流互鉴，践行全球文明倡议，为推动构建人类命运共同体注入深厚持久的文化力量。
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <!-- Timeline item-->
+            <li class="timeline-item ms-3 pb-4">
+                <div class="timeline-arrow"></div>
+                <div class="row gx-0 gy-4">
+                    <div class="col-lg-5">
+                        <p class="fw-bold mb-2 text-primary text-sm">2024.04.12</p>
+                        <h2 class="h5 mb-0 text-uppercase">百项非遗项目亮相第二届中国—东盟（南宁）非物质文化遗产周</h2>
+                        <!--<p class="text-sm mb-0">IT Academy</p><span class="small text-muted">Portland, OR</span>-->
+                    </div>
+                    <div class="col-lg-7">
+                        <p class="text-muted">
+                            4月12日，第二届中国—东盟（南宁）非物质文化遗产周在广西壮族自治区南宁市开幕。此次活动将持续至4月18日，来自中国黑龙江、贵州、新疆、内蒙古、海南等17个省（市、区）与东盟6个国家88项非遗项目，以及广西区内的27项非遗项目汇聚非遗周，323位非遗传承人精彩亮相绿城南宁。</p>
+                    </div>
+                </div>
+            </li>
+            <!-- Timeline item-->
+            <li class="timeline-item ms-3 pb-4">
+                <div class="timeline-arrow"></div>
+                <div class="row gx-0 gy-4">
+                    <div class="col-lg-5">
+                        <p class="fw-bold mb-2 text-primary text-sm">2024.04.11</p>
+                        <h2 class="h5 mb-0 text-uppercase">来广东省广州市文化馆，品山西忻州的味道</h2>
+                        <!--<p class="text-sm mb-0">IT Academy</p><span class="small text-muted">Portland, OR</span>-->
+                    </div>
+                    <div class="col-lg-7">
+                        <p class="text-muted">4月11日，“三关又三川
+                            两山一曲一圣地”山西忻州文化遗产暨“一县一品”精品展示月系列活动在广东省广州市文化馆开幕。本次活动通过静态展览、动态展示、活态展演等形式，系统展示忻州山灵水秀的物质文化遗产和丰富多彩的非遗项目，同时精选全市14个县（市、区）传统工艺项目作品，助推忻州非遗“一县一品”战略实施。
+                        </p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="testimonial-section">
+    <div class="testimonial-slider owl-carousel">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="testimonial-shape ">
+                        <i class="bi bi-quote"></i>
+                    </div>
+                    <div class="testimonial-desc ">
+                        <p>联合国教科文组织《保护非物质文化遗产公约》的定义： “非物质文化遗产”，指被各社区、群体，有时是个人，
+                            视为其文化遗产组成部分的各种社会实践、观念表述、表现形式、知识、技能以及相关的工具、实物、手工艺品和文化场所。
+                            这种非物质文化遗产世代相传，在各社区和群体适应周围环境以及与自然和历史的互动中，被不断地再创造，
+                            为这些社区和群体提供认同感和持续感，从而增强对文化多样性和人类创造力的尊重。</p>
+                    </div>
+                    <div class="testimonial-profile ">
+                        <div class="testimonial-icon">
+                            <img src="static/picture/tab-16-L.jpg" alt="profile" style="max-width: 80px;">
+                        </div>
+                        <div class="tesimonial-title">
+                            <h5>非遗智慧助手</h5>
+                        </div>
+                        <div class="testimonial-designation">
+                            <h6>暮词</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="testimonial-shape">
+                        <i class="bi bi-quote"></i>
+                    </div>
+                    <div class="testimonial-desc ">
+                        <p>自2015年“中国非物质文化遗产传承人群研修研习培训计划”实施以来，完成了“十三五”培训传承人群10万人次的目标任务，
+                            形成了较为明确的教学体系、工作规范和管理方式，有效调动了院校参与非物质文化遗产（以下简称“非遗”）保护工作，为非遗保护引入了重要力量；
+                            扩大了非遗传承人才队伍，促进了非遗保护理念的社会传播；提高了传统工艺设计制作水平，改善了一批项目保护传承情况；拓展了非遗保护传承的手段和方式，推动了一批示范性项目和探索性项目。
+                            同时，在振兴传统工艺、促进曲艺传承发展、助力脱贫攻坚等方面发挥了积极作用，社会影响力不断增强。“中国非物质文化遗产传承人群研修研习培训计划”已经成为非遗保护事业的一项基础性、战略性工作。</p>
+                    </div>
+                    <div class="testimonial-profile ">
+                        <div class="testimonial-icon">
+                            <img src="static/picture/tab-16-L.jpg" alt="profile" style="max-width: 80px;">
+                        </div>
+                        <div class="tesimonial-title">
+                            <h5>非遗智慧助手</h5>
+                        </div>
+                        <div class="testimonial-designation">
+                            <h6>暮词</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--中国非物质文化遗产馆预约-->
+<section class="shop-details-section" id="shop-details">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 ">
+                <div class="thumb-tabs">
+                    <div class="tab-content active">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="shop-details-thumb">
+                                    <img src="static/picture/c40.jpg" alt="thumb">
+                                    <div class="add-to-favourite">
+                                        <a href="#"><i class="far fa-heart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="shop-details-thumb">
+                                    <img src="static/picture/c41.jpg" alt="thumb">
+                                    <div class="add-to-favourite">
+                                        <a href="#"><i class="far fa-heart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="shop-details-thumb">
+                                    <img src="static/picture/c42.jpg" alt="thumb">
+                                    <div class="add-to-favourite">
+                                        <a href="#"><i class="far fa-heart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="thumb-tab-btn">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="tab-btn active">
+                                    <button><img src="static/picture/c40.jpg" alt="icon"></button>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="tab-btn ">
+                                    <button><img src="static/picture/c46.jpg" alt="icon"></button>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="tab-btn">
+                                    <button><img src="static/picture/c47.jpg" alt="icon"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 ">
+                <div class="shop-details-content">
+                    <div class="shop-details-title">
+                        <h2>中国工艺美术馆•中国非物质遗产文化馆</h2>
+                    </div>
+                    <div class="shop-details-rate">
+                        <div class="rate-left">
+                            <ul>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star-half-alt"></i></li>
+                            </ul>
+                        </div>
+                        <div class="rate-right">
+                            <p>4.6(4882评价)</p>
+                        </div>
+                    </div>
+                    <div class="shop-details-price">
+                        <h5>免费开放 公益景区<span></span></h5>
+                    </div>
+                    <div class="shop-details-desc">
+                        <p>
+                            中国工艺美术馆•中国非物质遗产文化馆隶属于文化和旅游部的公益一类事业单位，以收藏展示中国工艺美术精品、展示非物质文化遗产代表性项目，传承和弘扬中华优秀传统文化为宗旨，以开展中国工艺美术、非物质文化遗产研究、数字化保护展示，中国工艺美术、非物质文化遗产代表性精品征集、收藏、鉴定，举办相关展览、演出，开展国内外交流合作，研发文创产品，开展相关社会服务和教育培训为主体业务。</p>
+                    </div>
+                    <div class="shop-details-color">
+                        <h5>温馨提示: <span>周一例行闭馆（节假日不闭馆）</span></h5>
+                    </div>
+
+                    <div class="shop-features">
+                        <table>
+                            <tr>
+                                <td class="table-title">开馆时间</td>
+                                <td class="table-title">:</td>
+                                <td>9:00</td>
+                            </tr>
+                            <tr>
+                                <td class="table-title">停止入馆</td>
+                                <td class="table-title">:</td>
+                                <td>16:00</td>
+                            </tr>
+                            <tr>
+                                <td class="table-title">闭馆时间</td>
+                                <td class="table-title">:</td>
+                                <td>17:00</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="shop-details-color">
+                        <h5><span></span></h5>
+                    </div>
+
+
+                    <div class="add-to-cart-btn">
+                        <a href="appointment.html">在线预约</a>
+                        <a href="appointment.html#portfolio-info-2">交通路线</a>
+                        <a href="appointment.html#portfolio-strategy">参观须知</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--==================================================-->
+<!-- Start Adira City Counter Section -->
+<!--==================================================-->
+<section class="counter-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 wow fadeInLeft animated">
+                <div class="counter-box">
+                    <div class="counter-number">
+                        <h1 class="counter">3057</h1>
+                    </div>
+                    <div class="counter-title">
+                        <h5>国家级非物质文化遗产代表性项目代表性传承人</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInDown animated">
+                <div class="counter-box style2">
+                    <div class="counter-number">
+                        <h1 class="counter">3610</h1>
+                    </div>
+                    <div class="counter-title">
+                        <h5>国家级非物质文化遗产代表性项目</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp animated">
+                <div class="counter-box style3">
+                    <div class="counter-number">
+                        <h1 class="counter">730</h1>
+                    </div>
+                    <div class="counter-title">
+                        <h5>联合国教科文组织非物质文化遗产名录（名册）项目</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInRight animated">
+                <div class="counter-box style4">
+                    <div class="counter-number">
+                        <h1 class="counter">43</h1>
+                    </div>
+                    <div class="counter-title">
+                        <h5>中国入选联合国教科文组织非物质文化遗产名录项目</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--==================================================-->
+<!-- End Adira City Counter Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Adira City Case Study Section -->
+<!--==================================================-->
+<section class="case-study-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="case-study-top">
+                    <div class="adiracity-section-sub-title wow fadeInLeft animated">
+                        <h4>Intangible Cultural Heritage Around Us</h4>
+                    </div>
+                    <div class="adiracity-section-title wow fadeInLeft animated">
+                        <h1>身边的非遗</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="case-study-grid-items wow fadeInLeft animated">
+
+                <div class="case-study-grid-item wow fadeInDown animated">
+                    <img src="static/image/c1.jpg" alt="thumb">
+                    <div class="case-study-thumb-inner">
+                        <a class="portfolio-icon venobox vbox-item" data-gall="myportfolio"
+                           href="static/image/c1.jpg"><i class="bi bi-plus-lg"></i></a>
+                    </div>
+                </div>
+                <div class="case-study-grid-item wow fadeInUp animated">
+                    <img src="static/picture/tab-14-L.jpg" alt="thumb">
+                    <div class="case-study-thumb-inner">
+                        <a class="portfolio-icon venobox vbox-item" data-gall="myportfolio"
+                           href="static/picture/tab-14-L.jpg"><i class="bi bi-plus-lg"></i></a>
+                    </div>
+                </div>
+                <div class="case-study-grid-item wow fadeInRight animated">
+                    <img src="static/picture/tab-13-L.jpg" alt="thumb">
+                    <div class="case-study-thumb-inner">
+                        <a class="portfolio-icon venobox vbox-item" data-gall="myportfolio"
+                           href="static/picture/tab-13-L.jpg"><i class="bi bi-plus-lg"></i></a>
+                    </div>
+                </div>
+                <div class="case-study-grid-item wow fadeInLeft animated">
+                    <img src="static/picture/tab-11-L.jpg" alt="thumb">
+                    <div class="case-study-thumb-inner">
+                        <a class="portfolio-icon venobox vbox-item" data-gall="myportfolio"
+                           href="static/picture/tab-11-L.jpg"><i class="bi bi-plus-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="latest-news-btn wow fadeInLeft animated">
+                <a href="w_MLanguageSupport.html">更多非遗</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--==================================================-->
+<!-- End Adira City Case Study Section -->
+<!--==================================================-->
+
+
+<!--非遗文创-->
+<section class="shop-inner-section">
+    <div class="container">
+        <div class="shop-top">
+            <div class="row align-items-center">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="case-study-top">
+                            <div class="adiracity-section-sub-title wow fadeInLeft animated">
+                                <h4>Selected Intangible Cultural Heritage Creative Products</h4>
+                            </div>
+                            <div class="adiracity-section-title wow fadeInLeft animated">
+                                <h1>非遗文创精选</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="shop-item">
+                        <div class="shop-item-thumb">
+                            <img src="static/goods/g(1).png" alt="thumb">
+                            <div class="shop-social">
+                                <ul>
+                                    <li>
+                                        <a href="https://item.taobao.com/item.htm?abbucket=17&id=631687602557&ns=1&spm=a21n57.1.item.12.7595523cE1WvUy"><i
+                                                class="bi bi-cart4"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="shop-content">
+                            <div class="item-title">
+                                <h6>景泰蓝掐丝珐琅书签</h6>
+                            </div>
+                            <div class="item-price">
+                                <h6>¥9.6起</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="shop-item">
+                        <div class="shop-item-thumb">
+                            <img src="static/goods/g(2).png" alt="thumb">
+                            <div class="shop-social">
+                                <ul>
+                                    <li>
+                                        <a href="https://detail.tmall.com/item.htm?abbucket=17&id=687982005609&ns=1&spm=a21n57.1.item.29.7595523cE1WvUy"><i
+                                                class="bi bi-cart4"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="shop-content">
+                            <div class="item-title">
+                                <h6>手工纸雕灯</h6>
+                            </div>
+                            <div class="item-price">
+                                <h6>¥26.8起</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="shop-item">
+                        <div class="shop-item-thumb">
+                            <img src="static/goods/g(3).png" alt="thumb">
+                            <div class="shop-social">
+                                <ul>
+                                    <li>
+                                        <a href="https://item.taobao.com/item.htm?abbucket=17&id=736734278584&ns=1&spm=a21n57.1.item.42.7595523cE1WvUy"><i
+                                                class="bi bi-cart4"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="shop-content">
+                            <div class="item-title">
+                                <h6>云南瓦猫桌面摆件</h6>
+                            </div>
+                            <div class="item-price">
+                                <h6>¥25</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="shop-item">
+                        <div class="shop-item-thumb">
+                            <img src="static/goods/g(4).png" alt="thumb">
+                            <div class="shop-social">
+                                <ul>
+                                    <li>
+                                        <a href="https://item.taobao.com/item.htm?abbucket=17&id=656926393277&ns=1&spm=a21n57.1.item.86.7595523cE1WvUy"><i
+                                                class="bi bi-cart4"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="shop-content">
+                            <div class="item-title">
+                                <h6>剪纸明信片</h6>
+                            </div>
+                            <div class="item-price">
+                                <h6>¥38</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="latest-news-btn wow fadeInLeft animated">
+                    <a href="work.html">更多文创</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--==================================================-->
+<!-- Start Adira City Case Study Section -->
+<!--==================================================-->
+
+<!--==================================================-->
+<!-- End Adira City Case Study Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Adira City Testimonial Study Section -->
+<!--==================================================-->
+
+<!--==================================================-->
+<!-- End Adira City Testimonial Study Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Adira City Latest News Section -->
+<!--==================================================-->
+<section class="latest-news-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="adiracity-section-sub-title wow fadeInLeft animated">
+                    <h4>Inheritor of Intangible Cultural Heritage</h4>
+                </div>
+                <div class="adiracity-section-title wow fadeInLeft animated">
+                    <h1>非遗传承人</h1>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="latest-news-desc wow fadeInRight animated">
+                    <p>非遗工作首先是一份坚守，是整个中华民族对传统文化的坚守，也是每一位非遗传承人对自己所从事的非遗项目的坚守。
+                        作为非遗传承人，必须有一种任岁月不居时节如流，我自坚韧不拔只争朝夕的毅力；必须有功成不必在我，功成必定有我的担当，才能真正把中华非遗传承好。</p>
+                </div>
+            </div>
+        </div>
+        <div class="latest-news-box">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="latest-news-single-box wow fadeInLeft animated">
+                        <div class="new-single-box-thumb">
+                            <img src="static/picture/tab-17-L.jpg" alt="thumb">
+                        </div>
+                        <div class="news-single-box-content">
+                            <div class="news-single-box-title">
+                                <h6>杉泽</h6>
+                            </div>
+                            <div class="news-single-content-desc">
+                                <p>百鬼画师，90后神魅画师挑战传统绘画方式，画出中国绝美《山海经》</p>
+                            </div>
+                            <div class="news-single-box-btn">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInDown animated">
+                    <div class="latest-news-single-box">
+                        <div class="new-single-box-thumb">
+                            <img src="static/picture/tab-18-L.jpg" alt="thumb">
+                        </div>
+                        <div class="news-single-box-content">
+                            <div class="news-single-box-title">
+                                <h6>刘霞冰</h6>
+                            </div>
+                            <div class="news-single-content-desc">
+                                <p>竹编手艺人，非遗结合宠物用品，让老手艺「破圈」成时代宠儿</p>
+                            </div>
+                            <div class="news-single-box-btn">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp animated">
+                    <div class="latest-news-single-box">
+                        <div class="new-single-box-thumb">
+                            <img src="static/picture/tab-19-L.jpg" alt="thumb">
+                        </div>
+                        <div class="news-single-box-content">
+                            <div class="news-single-box-title">
+                                <h6>陆金喜</h6>
+                            </div>
+                            <div class="news-single-content-desc">
+                                <p>曜变建盏复原第一人，用近20年呕心沥血的钻研，终于复原了中国历史长河中消失的珍贵瓷器</p>
+                            </div>
+                            <div class="news-single-box-btn">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInRight animated">
+                    <div class="latest-news-single-box">
+                        <div class="new-single-box-thumb">
+                            <img src="static/picture/tab-20-L.jpg" alt="thumb">
+                        </div>
+                        <div class="news-single-box-content">
+                            <div class="news-single-box-title">
+                                <h6>赵云亮</h6>
+                            </div>
+                            <div class="news-single-content-desc">
+                                <p>花丝镶嵌大师，传承中国手艺40年，让世界感受金银细工的魅力</p>
+                            </div>
+                            <div class="news-single-box-btn">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="latest-news-btn wow fadeInLeft animated">
+                <a href="t_line.html">了解更多</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--==================================================-->
+<!-- End Adira City Latest News Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Adira City Footer Section -->
+<!--==================================================-->
+<footer class="footer-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 wow fadeInLeft animated">
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInDown animated">
+                <div class="footer-explore">
+                    <div class="footer-explore-title">
+                        <h6>友情链接</h6>
+                    </div>
+                    <ul>
+                        <li><a href="https://www.mct.gov.cn/">中华人民共和国文化和旅游部</a></li>
+                        <li><a href="https://fyrhome.cn/">中国非物质文化遗产网</a></li>
+                        <li><a href="http://www.ncha.gov.cn/">国家文物局</a></li>
+                        <li><a href="https://www.chinesefolklore.org.cn/">中国民俗学网</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <div class="footer-bootom">
+                        <p>“遗”见倾心<a></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--==================================================-->
+<!-- End Adira City Footer Section -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start scrollup Section Here-->
+<!--==================================================-->
+<div class="scroll-area">
+    <div class="top-wrap">
+        <div class="go-top-btn-wraper">
+            <div class="prgoress_indicator active-progress">
+                <svg class="progress-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">
+                    <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+                          style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 270.456;"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+<!--==================================================-->
+<!-- Ends scrollup Section Here -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Curser Section Here -->
+<!--==================================================-->
+<div class="curser"></div>
+<div class="curser2"></div>
+<!--==================================================-->
+<!-- Ends Curser Section Here -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Search Popup Area -->
+<!--==================================================-->
+<div class="search-popup">
+    <button class="close-search style-two"><i class="fas fa-times"></i></button>
+    <button class="close-search"><i class="fas fa-arrow-up"></i></button>
+    <form method="post" action="#" id="dreamit-forms">
+        <div class="form-group">
+            <input type="search" name="search-field" value="" placeholder="Search Here" required="">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+    </form>
+</div>
+<!--==================================================-->
+<!-- End Search Popup Area -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start JavaScrift CDN Section -->
+<!--==================================================-->
+
+<!-- Modernizr JS -->
+<script src="static/js/modernizr-3.5.0.min.js"></script>
+<!-- Vendor JS CDN -->
+<script src="static/js/jquery-3.6.2.min.js"></script>
+<!-- Popper JS CDN -->
+<script src="static/js/popper.min.js"></script>
+<!-- Bootstrap JS CDN -->
+<script src="static/js/bootstrap.min.js"></script>
+<!-- Owl Carousel JS CDN -->
+<script src="static/js/owl.carousel.min.js"></script>
+<!-- CounterUp JS CDN -->
+<script src="static/js/jquery.counterup.min.js"></script>
+<!-- WayPoints JS CDN -->
+<script src="static/js/waypoints.min.js"></script>
+<!-- WOW JS CDN -->
+<script src="static/js/wow.js"></script>
+<!-- Imageloaded JS CDN -->
+<script src="static/js/imagesloaded.pkgd.min.js"></script>
+<!-- Venubox JS CDN -->
+<script src="static/js/venobox.js"></script>
+<!-- Animated JS CDN -->
+<script src="static/js/animated-text.js"></script>
+<!-- VenuBox JS CDN -->
+<script src="static/js/venobox.min.js"></script>
+<!-- PKG JS CDN -->
+<script src="static/js/isotope.pkgd.min.js"></script>
+<!-- MeanMenu JS CDN -->
+<script src="static/js/jquery.meanmenu.js"></script>
+<!-- ScrollUp JS CDN -->
+<script src="static/js/jquery.scrollUp.js"></script>
+<!-- Burfiller JS CDN -->
+<script src="static/js/jquery.barfiller.js"></script>
+<!-- Custom JS CDN -->
+<script src="static/js/custom.js"></script>
+<script src="static/assets_2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="static/assets_2/js/front.js"></script>
+<!-- jQuery and Bootstrap JS -->
+<script src="/static/js/jquery-3.6.2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Script to trigger modal with message -->
+<script>
+    // Function to show message modal
+    function showMessageModal(message) {
+        $('#messageText').text(message);
+        $('#messageModal').modal('show');
+    }
+
+    // Check if message is available, then show modal
+    $(document).ready(function() {
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    showMessageModal("{{ message }}");
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    });
+</script>
+
+
+</body>
+
+</html>

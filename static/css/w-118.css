@@ -1,0 +1,64 @@
+margin-bottom: 50px; /* 根据实际需求调整数值大小，比如设置为50像素 */
+
+  }
+
+
+  /* 调整图片与其下方描述文字的距离 */
+
+  .blog-details-thumb {
+
+    margin-bottom: 30px; /* 设置图片与下方文字的间距，例如30像素 */
+
+  }
+
+
+  /* 如果图片尺寸过大导致布局问题，可调整图片的最大宽度 */
+
+  .blog-details-thumb img {
+
+    max-width: 100%;
+
+    height: auto;
+
+  }
+
+
+  /*申请人填写申请信息*/
+
+ .centered-form {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            height: calc(100vh - 100px); /* 根据实际情况调整高度，留出页眉和页脚空间 */
+
+        }
+
+
+        /* 表单元素宽度变窄 */
+
+        .narrow-form-control {
+
+            max-width: 300px;
+
+        }
+
+
+        /* 文本区域宽度也相应调整 */
+
+        .narrow-textarea {
+
+            max-width: 300px;
+
+            resize: none;
+
+        }
+
+        .form-group {
+
+            margin-bottom: 1rems;
+
+        }
