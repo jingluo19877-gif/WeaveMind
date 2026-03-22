@@ -8,14 +8,14 @@
 
 ## 系统展示
 [![查看](doc/images/pdf.png)](https://pan.baidu.com/s/1-dJK0RAaBLo2Ac_e5zSu3g?pwd=3emx) 提取码：3emx
-[![查看](doc/images/屏幕截图 2026-03-22 231929.png)]
-[![查看](doc/images/屏幕截图 2026-03-22 231946.png)]
-[![查看](doc/images/屏幕截图 2026-03-22 232007.png)]
-[![查看](doc/images/屏幕截图 2026-03-22 232023.png)]
-[![查看](doc/images/屏幕截图 2026-03-22 232046.png)]
-[![查看](doc/images/屏幕截图 2026-03-22 232111.png)]
-[![查看](doc/images/屏幕截图 2026-03-22 232132.png)]
-[![查看](doc/images/屏幕截图 2026-03-22 232143.png)]
-[![查看](doc/images/屏幕截图 2026-03-22 232227.png)]
-[![查看](doc/images/屏幕截图 2026-03-22 232245.png)]
+[![查看](doc/images/1.png)]
+[![查看](doc/images/2.png)]
+[![查看](doc/images/3.png)]
+[![查看](doc/images/4.png)]
+[![查看](doc/images/5.png)]
+[![查看](doc/images/6.png)]
+[![查看](doc/images/7.png)]
+[![查看](doc/images/8.png)]
+[![查看](doc/images/9.png)]
+[![查看](doc/images/10.png)]
 
